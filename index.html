@@ -136,8 +136,8 @@
         .nb-name.expanded{white-space:normal;overflow:visible;text-overflow:unset}
 
         @media (max-width: 768px) {
-            thead th:first-child{min-width:120px}
-            .nb-name{max-width:120px;font-size:11px}
+            thead th:first-child{min-width:100px}
+            .nb-name{max-width:100px;font-size:11px}
             tbody td{padding:8px 8px}
             thead th{padding:8px 8px}
         }
@@ -972,7 +972,8 @@ function sendHeight() {
 }
 window.addEventListener('load', sendHeight);
 window.addEventListener('resize', sendHeight);
-new MutationObserver(sendHeight).observe(document.body, { subtree: true, childList: true, attributes: true });
+// Send height after any user interaction that changes content
+setInterval(sendHeight, 500);
 </script>
 </body>
 </html>
