@@ -635,7 +635,7 @@ function buildThead(){
     // Group header row (non-sortable labels)
     let row1 = `<tr>`;
     row1 += `<th style="background:#1a1a1a"></th>`;
-    row1 += `<th colspan="3" style="background:#1a1a1a"></th>`;
+    row1 += `<th colspan="3" class="group-header" style="border-left:2px solid #444">All Types</th>`;
     pts.forEach(pt=>{
         row1 += `<th colspan="5" class="group-header" style="border-left:2px solid #444">${pt}</th>`;
     });
@@ -644,7 +644,7 @@ function buildThead(){
     // Sortable column headers
     let row2 = `<tr>`;
     row2 += `<th class="sortable${sortKey==='name'?' sort-active':''}" style="text-align:left" onclick="setSort('name')">Neighbourhood ${arrow('name')}</th>`;
-    row2 += `<th class="sortable${sortKey==='totalSold'?' sort-active':''}" onclick="setSort('totalSold')">Sales ${arrow('totalSold')}</th>`;
+    row2 += `<th class="sortable${sortKey==='totalSold'?' sort-active':''}" style="border-left:2px solid #444" onclick="setSort('totalSold')">Sales ${arrow('totalSold')}</th>`;
     row2 += `<th class="sortable${sortKey==='avgSPAll'?' sort-active':''}" onclick="setSort('avgSPAll')">Avg SP ${arrow('avgSPAll')}</th>`;
     row2 += `<th class="sortable${sortKey==='avgSPLPAll'?' sort-active':''}" onclick="setSort('avgSPLPAll')">SP/LP ${arrow('avgSPLPAll')}</th>`;
     pts.forEach(pt=>{
