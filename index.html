@@ -6,10 +6,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Neighbourhood Analytics — City of Edmonton</title>
     <style>
+        :root{--blue:#185FA5;--green:#1a6e3c;--red:#b94a2c;--text:#2d2d2d;--text-mid:#555555;--text-soft:#999999;--border:#e2e8f0;--white:#ffffff;--radius:12px;--radius-sm:8px}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Lato',sans-serif;background:#f5f5f7;color:#1d1d1f;padding:24px}
-        h1{font-size:1.6rem;font-weight:700;text-align:center;margin-bottom:12px}
+        body{font-family:'Lato',sans-serif;background:transparent;color:var(--text)}
 
+        /* Header */
+        .dashboard-header{padding:1.5rem 0.5rem 1rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+        .header-left h1{font-size:1.6rem;font-weight:700;color:var(--text);text-align:left;margin:0}
+        .header-left p{font-size:.95rem;color:var(--text-soft);margin-top:2px}
 
         /* Time-style toggle */
         .pill-toggle{display:inline-flex;align-items:center;gap:0}
@@ -23,19 +27,20 @@
 
         /* Top 5 sections */
         .top5-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-bottom:10px}
-        .top5-card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-        .top5-card h3{font-size:1.15rem;font-weight:700;margin-bottom:12px;color:#1d1d1f}
+        .top5-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+        .top5-card h3{font-size:1.15rem;font-weight:700;margin-bottom:4px;color:var(--text)}
+        .top5-subtitle{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text-soft);margin-bottom:12px}
         .top5-list{list-style:none}
         .top5-list li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:.95rem}
         .top5-list li:last-child{border:none}
-        .top5-rank{width:22px;height:22px;border-radius:50%;background:#185FA5;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-right:8px;flex-shrink:0}
+        .top5-rank{width:22px;height:22px;border-radius:50%;background:var(--blue);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-right:8px;flex-shrink:0}
         .top5-name{flex:1;font-weight:500}
-        .top5-val{font-weight:700;font-size:.95rem;color:#185FA5}
+        .top5-val{font-weight:700;font-size:.95rem;color:var(--blue)}
 
         /* Search dropdown */
         .search-wrap{position:relative;width:750px;max-width:100%}
-        .search-box{width:100%;padding:10px 14px;border:1px solid #d2d2d7;border-radius:8px;font-size:.95rem;font-family:'Lato',sans-serif;outline:none;transition:border .2s}
-        .search-box:focus{border-color:#185FA5}
+        .search-box{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.95rem;font-family:'Lato',sans-serif;outline:none;transition:border .2s}
+        .search-box:focus{border-color:var(--blue)}
         .dropdown-list{position:absolute;top:100%;left:0;right:0;max-height:260px;overflow-y:auto;background:#fff;border:1px solid #d2d2d7;border-top:none;border-radius:0 0 10px 10px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:100;display:none}
         .dropdown-list.open{display:block}
         .dropdown-item{padding:8px 14px;font-size:.95rem;cursor:pointer}
@@ -51,11 +56,11 @@
         /* Controls & filter */
         .controls{display:flex;flex-direction:column;gap:10px;margin:14px 0}
         .controls-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-        .filter-btn{padding:8px 16px;border:1px solid #d2d2d7;border-radius:8px;background:#fff;font-size:.95rem;font-weight:400;cursor:pointer;transition:all .15s}
-        .filter-btn.active{background:#185FA5;color:#fff;border-color:#185FA5}
+        .filter-btn{padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);font-size:.95rem;font-weight:400;cursor:pointer;transition:all .15s}
+        .filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
         .search-hint{font-size:.82rem;color:#86868b;margin-top:-4px;padding-left:4px}
         /* Floating selection bar */
-        .floating-bar{position:sticky;bottom:0;background:#fff;border-top:1px solid #d2d2d7;box-shadow:0 -2px 12px rgba(0,0,0,.1);padding:12px 24px;display:none;align-items:center;gap:12px;z-index:50}
+        .floating-bar{position:sticky;bottom:0;background:var(--white);border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,.1);padding:12px 24px;display:none;align-items:center;gap:12px;z-index:50}
         .floating-bar.visible{display:flex}
         .sel-btn.view{border-color:#185FA5;color:#185FA5;background:rgba(24,95,165,0.06)}
         .sel-btn.view.active{background:#185FA5;color:#fff}
@@ -80,7 +85,7 @@
         .result-count{font-size:12px;color:#6e6e73}
 
         /* Table */
-        .table-wrap{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow-x:auto;position:relative}
+        .table-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow-x:auto;position:relative}
         table{border-collapse:separate;border-spacing:0;font-size:12px;white-space:nowrap;width:max-content}
         thead th{position:sticky;top:0;background:#2d2d2d;color:#fff;padding:10px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.3px;font-weight:600;text-align:center;white-space:nowrap;z-index:2}
         thead th:first-child{text-align:left;width:auto;min-width:180px;position:sticky;left:0;z-index:3;background:#2d2d2d}
@@ -108,7 +113,7 @@
         .cdom-warm{color:#ff9500;font-weight:600}
         .cdom-cool{color:#b94a2c;font-weight:600}
 
-        .footer{text-align:center;color:#86868b;font-size:.82rem;margin-top:24px;line-height:1.6}
+        .footer{text-align:center;color:var(--text-soft);font-size:.82rem;margin-top:24px;line-height:1.6}
 
         /* Neighbourhood name truncation */
         .nb-cell{display:flex;align-items:center;gap:4px}
@@ -126,13 +131,17 @@
 </head>
 <body>
 <div style="max-width:1170px;margin:0 auto">
-    <h1>Neighbourhood Analytics</h1>
-    <p id="monthLabel" style="font-weight:700;color:#1d1d1f;font-size:1.6rem;margin-bottom:24px;text-align:center"></p>
+    <div class="dashboard-header">
+        <div class="header-left">
+            <h1>Neighbourhood Analytics</h1>
+            <p id="monthLabel"></p>
+        </div>
+    </div>
 
     <div id="mainContent">
         <div class="top5-grid" id="top5Grid"></div>
 
-        <h2 style="font-size:1.15rem;font-weight:700;margin:28px 0 0">Neighbourhood Details</h2>
+        <h2 style="font-size:1.15rem;font-weight:700;margin:28px 0 0;color:var(--text)">Neighbourhood Details</h2>
         <div class="controls" id="controlsBar">
             <!-- Row 1: Search bar -->
             <div class="controls-row">
@@ -268,8 +277,8 @@ function loadMonth(key){
     // Update subtitle and month label (show current month, i.e. month after data month)
     const [y, m] = key.split('-').map(Number);
     const currentDate = new Date(y, m); // month is 0-indexed, so m (e.g. 3 for March) gives April
-    const currentLabel = currentDate.toLocaleString('en-US',{month:'long',year:'numeric'});
-    document.getElementById('monthLabel').textContent = currentLabel;
+    currentLabel = currentDate.toLocaleString('en-US',{month:'long',year:'numeric'});
+    document.getElementById('monthLabel').textContent = 'Data as of ' + currentLabel;
     document.title = 'Neighbourhood Analytics — ' + currentLabel;
 
     renderAll();
@@ -349,7 +358,7 @@ function renderAll(){
     const top5Grid = document.getElementById('top5Grid');
     function renderTop5(title,items,valFn){
         let lis=items.map((it,i)=>`<li><span class="top5-rank">${i+1}</span><span class="top5-name">${displayName(it.name)}</span><span class="top5-val">${valFn(it)}</span></li>`).join('');
-        return `<div class="top5-card"><h3>${title}</h3><div style="font-size:11px;color:#6e6e73;margin:-8px 0 10px">For Last Month</div><ul class="top5-list">${lis}</ul></div>`;
+        return `<div class="top5-card"><h3>${title}</h3><div class="top5-subtitle">${currentLabel}</div><ul class="top5-list">${lis}</ul></div>`;
     }
     top5Grid.innerHTML = renderTop5('Most Popular Neighbourhoods',topCount,it=>it.n+' sales')
         + renderTop5('Most Sales Volume',topVol,it=>fmtM(it.v))
@@ -472,6 +481,7 @@ function clearSearch(){
 
 // --- Row click handling (mobile: first click expands name, second click selects) ---
 let expandedName = null;
+let currentLabel = '';
 const isMobile = () => window.innerWidth <= 768;
 
 function handleRowClick(event, name){
