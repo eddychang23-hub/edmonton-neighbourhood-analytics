@@ -970,14 +970,15 @@ allData = NEIGHBOURHOOD_DATA;
 (function(){
   let timer = null;
   let lastHeight = 0;
+  let firstSent = false;
   function sendHeight() {
+    const h = document.body.scrollHeight;
+    if(h === lastHeight) return;
+    if(!firstSent){ firstSent=true; lastHeight=h; window.parent.postMessage(h,'*'); return; }
     clearTimeout(timer);
     timer = setTimeout(function(){
-      const h = document.body.scrollHeight;
-      if(h !== lastHeight){
-        lastHeight = h;
-        window.parent.postMessage(h, '*');
-      }
+      const h2 = document.body.scrollHeight;
+      if(h2 !== lastHeight){ lastHeight=h2; window.parent.postMessage(h2,'*'); }
     }, 150);
   }
   window.addEventListener('load', sendHeight);
