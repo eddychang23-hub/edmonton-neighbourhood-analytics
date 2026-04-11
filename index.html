@@ -56,14 +56,14 @@
         /* Controls & filter */
         .controls{display:flex;flex-direction:column;gap:10px;margin:14px 0}
         .controls-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-        .filter-btn{padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);font-size:.95rem;font-weight:400;cursor:pointer;transition:all .15s}
+        .filter-btn{padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);font-size:.95rem;font-weight:400;cursor:pointer;transition:all .15s;min-width:110px;text-align:center}
         .filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
         .search-hint{font-size:.82rem;color:#86868b;margin-top:-4px;padding-left:4px}
-        /* Floating selection bar */
-        .floating-bar{position:sticky;bottom:0;background:var(--white);border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,.1);padding:12px 24px;display:none;align-items:center;gap:12px;z-index:50}
-        .floating-bar.visible{display:flex}
-        .sel-btn.view{border-color:#185FA5;color:#185FA5;background:rgba(24,95,165,0.06)}
-        .sel-btn.view.active{background:#185FA5;color:#fff}
+        /* Selection bar (inline above table) */
+        .selection-bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 14px;background:rgba(24,95,165,0.04);border:1px solid var(--border);border-radius:var(--radius-sm)}
+        .sel-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+        .sel-btn.view{border-color:var(--blue);color:var(--blue);background:rgba(24,95,165,0.06)}
+        .sel-btn.view.active{background:var(--blue);color:#fff}
         .sel-btn{padding:6px 14px;border:1px solid #d2d2d7;border-radius:8px;background:#fff;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s}
         .sel-btn:hover{border-color:#185FA5;color:#185FA5}
         .sel-btn.active{background:#185FA5;color:#fff;border-color:#185FA5}
@@ -75,7 +75,7 @@
         tr.pending-remove td:first-child{background:#fff5f5 !important}
 
         /* Pagination */
-        .table-footer{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;gap:10px 20px;padding:12px 16px;font-size:12px;color:#6e6e73;border-top:1px solid #f0f0f0;background:#fff;border-radius:0 0 14px 14px}
+        .table-footer{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;gap:10px 20px;padding:12px 4px;font-size:12px;color:#6e6e73}
         .page-controls{display:flex;align-items:center;gap:6px}
         .page-btn{width:30px;height:30px;border:1px solid #d2d2d7;border-radius:6px;background:#fff;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;transition:all .15s}
         .page-btn:hover:not(:disabled){border-color:#185FA5;color:#185FA5}
@@ -84,8 +84,20 @@
         .rows-select{padding:4px 8px;border:1px solid #d2d2d7;border-radius:6px;font-size:12px;font-weight:600;background:#fff;cursor:pointer}
         .result-count{font-size:12px;color:#6e6e73}
 
+        /* Column settings */
+        .col-settings-wrap{position:relative}
+        .col-settings-btn{padding:6px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--white);font-size:.82rem;font-weight:600;cursor:pointer;color:var(--text-mid);transition:all .15s}
+        .col-settings-btn:hover{border-color:var(--blue);color:var(--blue)}
+        .col-settings-dropdown{display:none;position:absolute;right:0;top:100%;margin-top:4px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:0 4px 12px rgba(0,0,0,.1);padding:8px 0;z-index:100;min-width:150px}
+        .col-settings-dropdown.open{display:block}
+        .col-settings-dropdown label{display:flex;align-items:center;gap:8px;padding:6px 14px;font-size:.82rem;font-weight:500;color:var(--text);cursor:pointer;transition:background .1s}
+        .col-settings-dropdown label:hover{background:rgba(24,95,165,0.04)}
+        .col-settings-dropdown input[type="checkbox"]{accent-color:var(--blue);width:14px;height:14px}
+        .col-select-all{font-weight:700 !important}
+        .col-divider{height:1px;background:var(--border);margin:2px 0}
+
         /* Table */
-        .table-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow-x:auto;position:relative}
+        .table-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow-x:auto;position:relative;width:fit-content;max-width:100%}
         table{border-collapse:separate;border-spacing:0;font-size:12px;white-space:nowrap;width:max-content}
         thead th{position:sticky;top:0;background:#2d2d2d;color:#fff;padding:10px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.3px;font-weight:600;text-align:center;white-space:nowrap;z-index:2}
         thead th:first-child{text-align:left;width:auto;min-width:180px;position:sticky;left:0;z-index:3;background:#2d2d2d}
@@ -95,7 +107,9 @@
         thead th.sortable:hover{background:#3d3d3d}
         thead th .sort-arrow{font-size:9px;margin-left:3px;opacity:.5}
         thead th.sort-active .sort-arrow{opacity:1}
-        tbody td{padding:9px 12px;border-bottom:1px solid #f0f0f0;text-align:center}
+        tbody td{padding:9px 12px;border-bottom:1px solid #f0f0f0;text-align:center;width:90px}
+        thead th:not(:first-child){width:90px}
+        tbody td:first-child,thead th:first-child{width:auto}
         tbody td:first-child{text-align:left;font-weight:600;font-size:12px;position:sticky;left:0;background:#fff;z-index:1;box-shadow:2px 0 4px rgba(0,0,0,.04)}
         tbody tr:nth-child(even) td:first-child{background:#fafafa}
         tbody tr:nth-child(even){background:#fafafa}
@@ -143,16 +157,7 @@
 
         <h2 style="font-size:1.15rem;font-weight:700;margin:28px 0 0;color:var(--text)">Neighbourhood Details</h2>
         <div class="controls" id="controlsBar">
-            <!-- Row 1: Search bar -->
-            <div class="controls-row">
-                <div class="search-wrap" id="searchWrap">
-                    <div class="selected-chips" id="selectedChips"></div>
-                    <input type="text" class="search-box" id="search" placeholder="Type or search for neighbourhoods..." autocomplete="off">
-                    <div class="dropdown-list" id="dropdownList"></div>
-                </div>
-            </div>
-            <div class="search-hint">Select multiple neighbourhoods to compare. You can also click rows in the table.</div>
-            <!-- Row 2: Property type filters -->
+            <!-- Row 1: Property type filters -->
             <div class="controls-row">
                 <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All Types</button>
                 <button class="filter-btn" data-filter="Detached" onclick="setFilter('Detached',this)">Detached</button>
@@ -160,7 +165,7 @@
                 <button class="filter-btn" data-filter="Townhouse" onclick="setFilter('Townhouse',this)">Townhouse</button>
                 <button class="filter-btn" data-filter="Apartment Condo" onclick="setFilter('Apartment Condo',this)">Apt Condo</button>
             </div>
-            <!-- Row 3: View toggle -->
+            <!-- Row 2: View toggle + Column settings -->
             <div class="controls-row">
                 <div class="pill-toggle" id="tableToggle">
                     <button class="active" onclick="setTableView('month',this)">This Month</button>
@@ -171,6 +176,37 @@
                     <span class="divider"></span>
                     <button id="summaryToggleBtn" onclick="setTableView('12',this)">12M Summary</button>
                 </div>
+                <span class="divider"></span>
+                <div class="col-settings-wrap" id="colSettingsWrap">
+                    <button class="col-settings-btn" onclick="toggleColSettings()">⚙ Columns ▾</button>
+                    <div class="col-settings-dropdown" id="colSettingsDropdown">
+                        <label class="col-select-all"><input type="checkbox" id="colSelectAll" checked onchange="toggleAllColumns(this)"> All</label>
+                        <div class="col-divider"></div>
+                        <label><input type="checkbox" value="sold" checked onchange="toggleColumn('sold')"> Sold</label>
+                        <label><input type="checkbox" value="overList" checked onchange="toggleColumn('overList')"> Over List</label>
+                        <label><input type="checkbox" value="avgSPLP" checked onchange="toggleColumn('avgSPLP')"> SP/LP</label>
+                        <label><input type="checkbox" value="avgSP" checked onchange="toggleColumn('avgSP')"> Avg SP</label>
+                        <label><input type="checkbox" value="avgCDOM" checked onchange="toggleColumn('avgCDOM')"> CDOM</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Row 3: Search bar -->
+            <div class="controls-row">
+                <div class="search-wrap" id="searchWrap">
+                    <input type="text" class="search-box" id="search" placeholder="Type or search for neighbourhoods..." autocomplete="off">
+                    <div class="dropdown-list" id="dropdownList"></div>
+                </div>
+            </div>
+            <div class="search-hint">Select multiple neighbourhoods to compare. You can also click rows in the table.</div>
+            <!-- Row 4: Selection bar (chips + actions) -->
+            <div class="selection-bar" id="selectionBar" style="display:none">
+                <div class="selected-chips" id="selectedChips"></div>
+                <div class="sel-actions">
+                    <span style="font-size:.82rem;font-weight:600;color:var(--text)"><span id="selCount">0</span> selected</span>
+                    <button class="sel-btn view" id="viewSelBtn" onclick="toggleViewSelected()">View Selected</button>
+                    <button class="sel-btn reset" onclick="resetSelection()">Reset</button>
+                    <button class="sel-btn save" id="saveRemovalsBtn" onclick="saveRemovals()" style="display:none">Save Changes (<span id="removalCount">0</span>)</button>
+                </div>
             </div>
         </div>
         <div class="table-wrap">
@@ -178,22 +214,23 @@
                 <thead id="thead"></thead>
                 <tbody id="tbody"></tbody>
             </table>
-            <div class="table-footer" id="tableFooter">
-                <div class="result-count" id="resultCount"></div>
-                <div class="page-controls">
-                    <span style="margin-right:6px">Rows:</span>
-                    <select class="rows-select" id="rowsPerPage" onchange="changePageSize()">
-                        <option value="25" selected>25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                        <option value="0">All</option>
-                    </select>
-                    <button class="page-btn" id="pgFirst" onclick="goPage('first')" title="First page">⟨⟨</button>
-                    <button class="page-btn" id="pgPrev" onclick="goPage('prev')" title="Previous page">‹</button>
-                    <span class="page-info" id="pageInfo">Page 1 of 1</span>
-                    <button class="page-btn" id="pgNext" onclick="goPage('next')" title="Next page">›</button>
-                    <button class="page-btn" id="pgLast" onclick="goPage('last')" title="Last page">⟩⟩</button>
-                </div>
+        </div>
+        <!-- Pagination outside table card -->
+        <div class="table-footer" id="tableFooter">
+            <div class="result-count" id="resultCount"></div>
+            <div class="page-controls">
+                <span style="margin-right:6px">Rows:</span>
+                <select class="rows-select" id="rowsPerPage" onchange="changePageSize()">
+                    <option value="25" selected>25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="0">All</option>
+                </select>
+                <button class="page-btn" id="pgFirst" onclick="goPage('first')" title="First page">⟨⟨</button>
+                <button class="page-btn" id="pgPrev" onclick="goPage('prev')" title="Previous page">‹</button>
+                <span class="page-info" id="pageInfo">Page 1 of 1</span>
+                <button class="page-btn" id="pgNext" onclick="goPage('next')" title="Next page">›</button>
+                <button class="page-btn" id="pgLast" onclick="goPage('last')" title="Last page">⟩⟩</button>
             </div>
         </div>
     </div>
@@ -204,12 +241,6 @@
     </p>
 </div>
 
-<div class="floating-bar" id="selectionActions">
-    <span style="font-size:12px;font-weight:600;color:#1d1d1f"><span id="selCount">0</span> selected</span>
-    <button class="sel-btn view" id="viewSelBtn" onclick="toggleViewSelected()">View Selected</button>
-    <button class="sel-btn reset" onclick="resetSelection()">Reset</button>
-    <button class="sel-btn save" id="saveRemovalsBtn" onclick="saveRemovals()" style="display:none">Save Changes (<span id="removalCount">0</span>)</button>
-</div>
 
 <script src="neighbourhood_data.js"></script>
 <script>
@@ -229,6 +260,7 @@ let rowsPerPage = 25;
 let viewingSelected = false;
 let lastFilteredCount = 0;
 let pendingRemovals = new Set();
+let visibleColumns = new Set(['sold','overList','avgSPLP','avgSP','avgCDOM']);
 
 
 // --- Helpers ---
@@ -358,7 +390,7 @@ function renderAll(){
     const top5Grid = document.getElementById('top5Grid');
     function renderTop5(title,items,valFn){
         let lis=items.map((it,i)=>`<li><span class="top5-rank">${i+1}</span><span class="top5-name">${displayName(it.name)}</span><span class="top5-val">${valFn(it)}</span></li>`).join('');
-        return `<div class="top5-card"><h3>${title}</h3><div class="top5-subtitle">${currentLabel}</div><ul class="top5-list">${lis}</ul></div>`;
+        return `<div class="top5-card"><h3>${title}</h3><div class="top5-subtitle">Last Month</div><ul class="top5-list">${lis}</ul></div>`;
     }
     top5Grid.innerHTML = renderTop5('Most Popular Neighbourhoods',topCount,it=>it.n+' sales')
         + renderTop5('Most Sales Volume',topVol,it=>fmtM(it.v))
@@ -424,7 +456,8 @@ function renderChips(){
     el.innerHTML = html;
 }
 
-searchEl.addEventListener('input', ()=>{ buildDropdown(searchEl.value); if(!selectedNeighbourhoods.size) renderTable(); });
+let suppressInput = false;
+searchEl.addEventListener('input', ()=>{ if(suppressInput){suppressInput=false;return;} buildDropdown(searchEl.value); if(!selectedNeighbourhoods.size) renderTable(); });
 searchEl.addEventListener('focus', ()=>{ buildDropdown(searchEl.value); });
 document.addEventListener('click', e=>{ if(!document.getElementById('searchWrap').contains(e.target)) dropdownList.classList.remove('open'); });
 
@@ -432,7 +465,7 @@ searchEl.addEventListener('keydown', e=>{
     const items = dropdownList.querySelectorAll('.dropdown-item');
     if(e.key==='ArrowDown'){ e.preventDefault(); highlightIdx=Math.min(highlightIdx+1,items.length-1); updateHighlight(items); }
     else if(e.key==='ArrowUp'){ e.preventDefault(); highlightIdx=Math.max(highlightIdx-1,0); updateHighlight(items); }
-    else if(e.key==='Enter'){ e.preventDefault(); if(highlightIdx>=0&&items[highlightIdx]){ items[highlightIdx].click(); } else if(items.length){ items[0].click(); } }
+    else if(e.key==='Enter'){ e.preventDefault(); if(highlightIdx>=0&&items[highlightIdx]){ items[highlightIdx].click(); } else if(items.length){ items[0].click(); } suppressInput=true; searchEl.value=''; dropdownList.classList.remove('open'); }
     else if(e.key==='Escape'){ dropdownList.classList.remove('open'); searchEl.blur(); }
 });
 
@@ -447,7 +480,10 @@ function toggleNeighbourhood(idx){
     if(selectedNeighbourhoods.has(d.name)){ selectedNeighbourhoods.delete(d.name); }
     else { selectedNeighbourhoods.add(d.name); }
     updateSelectionUI();
-    // Refresh dropdown items in place (update checkmarks) without closing
+    // Clear search text so table doesn't filter by the search query
+    suppressInput = true;
+    searchEl.value = '';
+    // Keep dropdown open and update checkmarks for continued selection
     refreshDropdownItems();
     renderTable();
 }
@@ -537,13 +573,13 @@ function saveRemovals(){
 
 function updateSelectionUI(){
     const count = selectedNeighbourhoods.size;
-    const actions = document.getElementById('selectionActions');
+    const bar = document.getElementById('selectionBar');
     const countEl = document.getElementById('selCount');
     if(count > 0){
-        actions.classList.add('visible');
+        bar.style.display = '';
         countEl.textContent = count;
     } else {
-        actions.classList.remove('visible');
+        bar.style.display = 'none';
         viewingSelected = false;
         document.getElementById('viewSelBtn').classList.remove('active');
     }
@@ -607,6 +643,46 @@ function setFilter(f, btn){
     renderTable();
 }
 
+// --- Column settings ---
+function toggleColSettings(){
+    document.getElementById('colSettingsDropdown').classList.toggle('open');
+}
+document.addEventListener('click', e=>{
+    if(!document.getElementById('colSettingsWrap').contains(e.target)){
+        document.getElementById('colSettingsDropdown').classList.remove('open');
+    }
+});
+function toggleColumn(col){
+    if(visibleColumns.has(col)) visibleColumns.delete(col);
+    else visibleColumns.add(col);
+    if(visibleColumns.size === 0){ visibleColumns.add(col); document.querySelector(`input[value="${col}"]`).checked = true; return; }
+    syncAllCheckbox();
+    renderTable();
+}
+function toggleAllColumns(cb){
+    const allCols = ['sold','overList','avgSPLP','avgSP','avgCDOM'];
+    if(cb.checked){
+        allCols.forEach(c=>visibleColumns.add(c));
+    } else {
+        visibleColumns.clear();
+        visibleColumns.add('sold');
+        cb.checked = false;
+    }
+    document.querySelectorAll('#colSettingsDropdown input[value]').forEach(el=>{
+        el.checked = visibleColumns.has(el.value);
+    });
+    syncAllCheckbox();
+    renderTable();
+}
+function syncAllCheckbox(){
+    const allCb = document.getElementById('colSelectAll');
+    const allCols = ['sold','overList','avgSPLP','avgSP','avgCDOM'];
+    const allOn = allCols.every(c=>visibleColumns.has(c));
+    const noneExtra = visibleColumns.size < allCols.length;
+    allCb.checked = allOn;
+    allCb.indeterminate = !allOn && visibleColumns.size > 0;
+}
+
 // --- Sort ---
 function setSort(key){
     if(sortKey===key){ sortDir = sortDir==='desc'?'asc':'desc'; }
@@ -623,9 +699,15 @@ function getVisibleTypes(){
 
 function buildThead(){
     const pts = getVisibleTypes();
-    const subCols = ['sold','overList','avgSPLP','avgSP','avgCDOM'];
-    const subLabels = ['Sold','Over List','SP/LP','Avg SP','CDOM'];
-    const ptShort = {"Detached":"Det","Townhouse":"TH","Half Duplex":"HD","Apartment Condo":"AC"};
+    const allSubCols = ['sold','overList','avgSPLP','avgSP','avgCDOM'];
+    const allSubLabels = {'sold':'Sold','overList':'Over List','avgSPLP':'SP/LP','avgSP':'Avg SP','avgCDOM':'CDOM'};
+    const ptDisplay = {"Detached":"Detached","Half Duplex":"Half Duplex","Townhouse":"Townhouse","Apartment Condo":"Apt Condo"};
+    const visCols = allSubCols.filter(c=>visibleColumns.has(c));
+    const colCount = visCols.length;
+
+    // Sort key mapping for All Types columns
+    const allTypeSortKeys = {'sold':'totalSold','overList':'totalOL','avgSPLP':'avgSPLPAll','avgSP':'avgSPAll','avgCDOM':'avgCDOMAll'};
+    const showAllTypes = activeFilters.size === 0;
 
     let arrow = (key)=>{
         let dir = sortKey===key ? (sortDir==='asc'?'↑':'↓') : '↕';
@@ -635,23 +717,29 @@ function buildThead(){
     // Group header row (non-sortable labels)
     let row1 = `<tr>`;
     row1 += `<th style="background:#1a1a1a"></th>`;
-    row1 += `<th colspan="3" class="group-header" style="border-left:2px solid #444">All Types</th>`;
+    if(showAllTypes) row1 += `<th colspan="${colCount}" class="group-header" style="border-left:2px solid #444">All Types</th>`;
     pts.forEach(pt=>{
-        row1 += `<th colspan="5" class="group-header" style="border-left:2px solid #444">${pt}</th>`;
+        row1 += `<th colspan="${colCount}" class="group-header" style="border-left:2px solid #444">${ptDisplay[pt]||pt}</th>`;
     });
     row1 += `</tr>`;
 
     // Sortable column headers
     let row2 = `<tr>`;
     row2 += `<th class="sortable${sortKey==='name'?' sort-active':''}" style="text-align:left" onclick="setSort('name')">Neighbourhood ${arrow('name')}</th>`;
-    row2 += `<th class="sortable${sortKey==='totalSold'?' sort-active':''}" style="border-left:2px solid #444" onclick="setSort('totalSold')">Sales ${arrow('totalSold')}</th>`;
-    row2 += `<th class="sortable${sortKey==='avgSPAll'?' sort-active':''}" onclick="setSort('avgSPAll')">Avg SP ${arrow('avgSPAll')}</th>`;
-    row2 += `<th class="sortable${sortKey==='avgSPLPAll'?' sort-active':''}" onclick="setSort('avgSPLPAll')">SP/LP ${arrow('avgSPLPAll')}</th>`;
+    // All Types columns (only when no filter active)
+    if(showAllTypes){
+        visCols.forEach((col,ci)=>{
+            const sk = allTypeSortKeys[col];
+            const border = ci===0 ? ' style="border-left:2px solid #444"' : '';
+            row2 += `<th class="sortable${sortKey===sk?' sort-active':''}"${border} onclick="setSort('${sk}')">${allSubLabels[col]} ${arrow(sk)}</th>`;
+        });
+    }
+    // Per-type columns
     pts.forEach(pt=>{
-        subCols.forEach((col,ci)=>{
+        visCols.forEach((col,ci)=>{
             let sk = pt+'_'+col;
             let border = ci===0 ? ' style="border-left:2px solid #444"' : '';
-            row2 += `<th class="sortable${sortKey===sk?' sort-active':''}"${border} onclick="setSort('${sk}')">${subLabels[ci]} ${arrow(sk)}</th>`;
+            row2 += `<th class="sortable${sortKey===sk?' sort-active':''}"${border} onclick="setSort('${sk}')">${allSubLabels[col]} ${arrow(sk)}</th>`;
         });
     });
     row2 += `</tr>`;
@@ -662,8 +750,10 @@ function buildThead(){
 function getSortVal(d, key){
     if(key==='name') return d.name.toLowerCase();
     if(key==='totalSold') return d.totalSold||0;
+    if(key==='totalOL') return d.totalOL||0;
     if(key==='avgSPAll') return d.totalSold ? Math.round(d.totalVol/d.totalSold) : 0;
     if(key==='avgSPLPAll') return d.avgSPLP||0;
+    if(key==='avgCDOMAll') return d.avgCDOM!=null ? d.avgCDOM : 9999;
     const parts = key.split('_');
     const col = parts.pop();
     const pt = parts.join('_');
@@ -722,37 +812,85 @@ function renderTable(){
     document.getElementById('pgLast').disabled = currentPage >= totalPages;
 
     const pts = getVisibleTypes();
+    const visCols = ['sold','overList','avgSPLP','avgSP','avgCDOM'].filter(c=>visibleColumns.has(c));
+    const showAllTypes = activeFilters.size === 0;
+
+    // Helper: render visible columns for a type entry
+    function renderTypeCols(t, borderColor){
+        let h='';
+        if(t && t.sold > 0){
+            const vals = {
+                sold: t.sold,
+                overList: `${t.overList} (${(t.overList/t.sold*100).toFixed(1)}%)`,
+                avgSPLP: splpHtml(t.avgSPLP),
+                avgSP: fmt(t.avgSP),
+                avgCDOM: cdomHtml(t.avgCDOM)
+            };
+            visCols.forEach((col,ci)=>{
+                const border = ci===0 ? ` style="border-left:2px solid ${borderColor}"` : '';
+                h += `<td${border}>${vals[col]}</td>`;
+            });
+        } else {
+            visCols.forEach((_,ci)=>{
+                const border = ci===0 ? ` style="border-left:2px solid ${borderColor}"` : '';
+                h += `<td${border} class="empty-cell">—</td>`;
+            });
+        }
+        return h;
+    }
+
     let html='';
     pageData.forEach(d=>{
         const isSelected = selectedNeighbourhoods.has(d.name);
         const isPending = pendingRemovals.has(d.name);
         const escapedName = d.name.replace(/'/g,"\\'");
-        const avgSPAll = d.totalSold ? fmt(Math.round(d.totalVol/d.totalSold)) : '<span class="empty-cell">—</span>';
         let trClass = isPending ? ' class="pending-remove"' : '';
         let trStyle = isSelected && !isPending ? ' style="cursor:pointer;background:#e8f0fe"' : ' style="cursor:pointer"';
         html+=`<tr${trClass}${trStyle} onclick="handleRowClick(event,'${escapedName}')">`;
         const dn = displayName(d.name);
         const checkmark = isPending ? '<span class="nb-check" style="color:#b94a2c">✗</span>' : (isSelected ? '<span class="nb-check">✓</span>' : '');
-        html+=`<td><div class="nb-cell">${checkmark}<span class="nb-name" title="${dn}">${dn}</span></div></td><td><strong>${d.totalSold}</strong></td><td>${avgSPAll}</td><td>${splpHtml(d.avgSPLP)}</td>`;
-        pts.forEach(pt=>{
-            const t=d.types&&d.types[pt];
-            if(t&&t.sold>0){
-                const olPct = (t.overList/t.sold*100).toFixed(1);
-                html+=`<td style="border-left:2px solid #f0f0f0">${t.sold}</td>`;
-                html+=`<td>${t.overList} (${olPct}%)</td>`;
-                html+=`<td>${splpHtml(t.avgSPLP)}</td>`;
-                html+=`<td>${fmt(t.avgSP)}</td>`;
-                html+=`<td>${cdomHtml(t.avgCDOM)}</td>`;
+
+        html+=`<td><div class="nb-cell">${checkmark}<span class="nb-name" title="${dn}">${dn}</span></div></td>`;
+
+        // All Types columns (only when no filter active)
+        if(showAllTypes){
+            const allTypeData = d.totalSold ? {
+                sold: d.totalSold,
+                overList: d.totalOL||0,
+                avgSPLP: d.avgSPLP,
+                avgSP: Math.round(d.totalVol/d.totalSold),
+                avgCDOM: d.avgCDOM
+            } : null;
+
+            if(allTypeData){
+                const vals = {
+                    sold: `<strong>${allTypeData.sold}</strong>`,
+                    overList: `${allTypeData.overList} (${(allTypeData.overList/allTypeData.sold*100).toFixed(1)}%)`,
+                    avgSPLP: splpHtml(allTypeData.avgSPLP),
+                    avgSP: fmt(allTypeData.avgSP),
+                    avgCDOM: cdomHtml(allTypeData.avgCDOM)
+                };
+                visCols.forEach((col,ci)=>{
+                    const border = ci===0 ? ' style="border-left:2px solid #f0f0f0"' : '';
+                    html += `<td${border}>${vals[col]}</td>`;
+                });
             } else {
-                html+=`<td style="border-left:2px solid #f0f0f0" class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td>`;
+                visCols.forEach((_,ci)=>{
+                    const border = ci===0 ? ' style="border-left:2px solid #f0f0f0"' : '';
+                    html += `<td${border} class="empty-cell">—</td>`;
+                });
             }
+        }
+
+        // Per-type columns
+        pts.forEach(pt=>{
+            html += renderTypeCols(d.types&&d.types[pt], '#f0f0f0');
         });
         html+=`</tr>`;
     });
 
     // Summary totals row when neighbourhoods are selected
     if(selectedNeighbourhoods.size > 1 && viewingSelected){
-        // Aggregate across displayed rows
         let tSold=0, tVol=0, tOL=0, wCDOM=0, wSPLP=0, splpN=0;
         const ptAgg = {};
         pts.forEach(pt=>{ ptAgg[pt] = {sold:0, ol:0, vol:0, wCDOM:0, wSPLP:0, splpN:0}; });
@@ -775,26 +913,44 @@ function renderTable(){
             });
         });
 
-        const avgSPTotal = tSold > 0 ? fmt(Math.round(tVol/tSold)) : '—';
-        const avgSPLPTotal = splpN > 0 ? splpHtml(+(wSPLP/splpN).toFixed(1)) : '—';
-
         html += `<tr class="totals-row">`;
         html += `<td>Total / Average (${pageData.length} areas)</td>`;
-        html += `<td>${tSold}</td><td>${avgSPTotal}</td><td>${avgSPLPTotal}</td>`;
+
+        // All Types totals (only when no filter active)
+        if(showAllTypes){
+            const totVals = {
+                sold: tSold,
+                overList: tSold > 0 ? `${tOL} (${(tOL/tSold*100).toFixed(1)}%)` : '—',
+                avgSPLP: splpN > 0 ? splpHtml(+(wSPLP/splpN).toFixed(1)) : '—',
+                avgSP: tSold > 0 ? fmt(Math.round(tVol/tSold)) : '—',
+                avgCDOM: tSold > 0 ? cdomHtml(+(wCDOM/tSold).toFixed(1)) : '—'
+            };
+            visCols.forEach((col,ci)=>{
+                const border = ci===0 ? ' style="border-left:2px solid #d0d8e8"' : '';
+                html += `<td${border}>${totVals[col]}</td>`;
+            });
+        }
+
+        // Per-type totals
         pts.forEach(pt=>{
             const a = ptAgg[pt];
             if(a.sold > 0){
-                const olPct = (a.ol/a.sold*100).toFixed(1);
-                const avgSP = fmt(Math.round(a.vol/a.sold));
-                const avgSPLP = a.splpN>0 ? splpHtml(+(a.wSPLP/a.splpN).toFixed(1)) : '—';
-                const avgCDOM = cdomHtml(+(a.wCDOM/a.sold).toFixed(1));
-                html += `<td style="border-left:2px solid #d0d8e8">${a.sold}</td>`;
-                html += `<td>${a.ol} (${olPct}%)</td>`;
-                html += `<td>${avgSPLP}</td>`;
-                html += `<td>${avgSP}</td>`;
-                html += `<td>${avgCDOM}</td>`;
+                const vals = {
+                    sold: a.sold,
+                    overList: `${a.ol} (${(a.ol/a.sold*100).toFixed(1)}%)`,
+                    avgSPLP: a.splpN>0 ? splpHtml(+(a.wSPLP/a.splpN).toFixed(1)) : '—',
+                    avgSP: fmt(Math.round(a.vol/a.sold)),
+                    avgCDOM: cdomHtml(+(a.wCDOM/a.sold).toFixed(1))
+                };
+                visCols.forEach((col,ci)=>{
+                    const border = ci===0 ? ' style="border-left:2px solid #d0d8e8"' : '';
+                    html += `<td${border}>${vals[col]}</td>`;
+                });
             } else {
-                html += `<td style="border-left:2px solid #d0d8e8" class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td>`;
+                visCols.forEach((_,ci)=>{
+                    const border = ci===0 ? ' style="border-left:2px solid #d0d8e8"' : '';
+                    html += `<td${border} class="empty-cell">—</td>`;
+                });
             }
         });
         html += `</tr>`;
