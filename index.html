@@ -967,12 +967,23 @@ allData = NEIGHBOURHOOD_DATA;
 }
 </script>
 <script>
-function sendHeight() {
-  window.parent.postMessage(document.body.scrollHeight, '*');
-}
-window.addEventListener('load', sendHeight);
-window.addEventListener('resize', sendHeight);
-new MutationObserver(sendHeight).observe(document.body, { subtree: true, childList: true, attributes: true });
+(function(){
+  let timer = null;
+  let lastHeight = 0;
+  function sendHeight() {
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      const h = document.body.scrollHeight;
+      if(h !== lastHeight){
+        lastHeight = h;
+        window.parent.postMessage(h, '*');
+      }
+    }, 150);
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  new MutationObserver(sendHeight).observe(document.body, { subtree: true, childList: true, attributes: true });
+})();
 </script>
 </body>
 </html>
