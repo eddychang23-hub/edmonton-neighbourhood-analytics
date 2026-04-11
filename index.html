@@ -138,7 +138,7 @@
             <div class="controls-row">
                 <div class="search-wrap" id="searchWrap">
                     <div class="selected-chips" id="selectedChips"></div>
-                    <input type="text" class="search-box" id="search" placeholder="Search neighbourhoods..." autocomplete="off">
+                    <input type="text" class="search-box" id="search" placeholder="Type or search for neighbourhoods..." autocomplete="off">
                     <div class="dropdown-list" id="dropdownList"></div>
                 </div>
             </div>
@@ -147,8 +147,8 @@
             <div class="controls-row">
                 <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All Types</button>
                 <button class="filter-btn" data-filter="Detached" onclick="setFilter('Detached',this)">Detached</button>
-                <button class="filter-btn" data-filter="Townhouse" onclick="setFilter('Townhouse',this)">Townhouse</button>
                 <button class="filter-btn" data-filter="Half Duplex" onclick="setFilter('Half Duplex',this)">Half Duplex</button>
+                <button class="filter-btn" data-filter="Townhouse" onclick="setFilter('Townhouse',this)">Townhouse</button>
                 <button class="filter-btn" data-filter="Apartment Condo" onclick="setFilter('Apartment Condo',this)">Apt Condo</button>
             </div>
             <!-- Row 3: View toggle -->
@@ -190,7 +190,7 @@
     </div>
 
     <p class="footer" id="footer">
-        Data: City of Edmonton MLS · Includes Detached, Townhouse, Half Duplex, Apartment Condo only<br>
+        Data: City of Edmonton MLS · Includes Detached, Half Duplex, Townhouse, Apartment Condo only<br>
         "Over List" = sold price exceeds list price at time of sale. CDOM = Cumulative Days on Market.
     </p>
 </div>
@@ -303,7 +303,7 @@ function computeSummaryTableData(numMonths){
             agg.totalOL += n.totalOL||0;
             if(n.avgCDOM!=null) agg.weightedCDOM += (n.avgCDOM||0) * (n.totalSold||0);
             if(n.avgSPLP!=null && n.totalSold>0){ agg.splpWeighted += n.avgSPLP * n.totalSold; agg.splpCount += n.totalSold; }
-            const pts = ["Detached","Townhouse","Half Duplex","Apartment Condo"];
+            const pts = ["Detached","Half Duplex","Townhouse","Apartment Condo"];
             pts.forEach(pt=>{
                 const t = n.types && n.types[pt];
                 if(!t || !t.sold) return;
@@ -321,7 +321,7 @@ function computeSummaryTableData(numMonths){
     return Object.values(nMap).map(n=>{
         n.avgCDOM = n.totalSold>0 ? +(n.weightedCDOM/n.totalSold).toFixed(1) : null;
         n.avgSPLP = n.splpCount>0 ? +(n.splpWeighted/n.splpCount).toFixed(1) : null;
-        const pts = ["Detached","Townhouse","Half Duplex","Apartment Condo"];
+        const pts = ["Detached","Half Duplex","Townhouse","Apartment Condo"];
         const finalTypes = {};
         pts.forEach(pt=>{
             const at = n.types[pt];
@@ -606,7 +606,7 @@ function setSort(key){
 }
 
 function getVisibleTypes(){
-    const allTypes = ["Detached","Townhouse","Half Duplex","Apartment Condo"];
+    const allTypes = ["Detached","Half Duplex","Townhouse","Apartment Condo"];
     if(activeFilters.size === 0) return allTypes;
     return allTypes.filter(t=>activeFilters.has(t));
 }
