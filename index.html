@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Neighbourhood Analytics — City of Edmonton</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Lato',sans-serif;background:#f5f5f7;color:#1d1d1f;padding:24px}
+        h1{font-size:1.6rem;font-weight:700;text-align:center;margin-bottom:12px}
+
+
+        /* Time-style toggle */
+        .pill-toggle{display:inline-flex;align-items:center;gap:0}
+        .pill-toggle button{padding:6px 12px;border:none;background:transparent;font-size:12px;font-weight:400;cursor:pointer;color:#86868b;transition:all .15s;border-radius:6px}
+        .pill-toggle button:hover{color:#1d1d1f}
+        .pill-toggle button.active{color:#185FA5;font-weight:700;background:rgba(24,95,165,0.08)}
+        .pill-toggle .divider{width:1px;height:14px;background:#d2d2d7}
+
+        /* Volume cards */
+        .dot-detached{color:#185FA5}.dot-townhouse{color:#1a6e3c}.dot-half-duplex{color:#ff9500}.dot-apartment{color:#af52de}
+
+        /* Top 5 sections */
+        .top5-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-bottom:10px}
+        .top5-card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+        .top5-card h3{font-size:1.15rem;font-weight:700;margin-bottom:12px;color:#1d1d1f}
+        .top5-list{list-style:none}
+        .top5-list li{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:.95rem}
+        .top5-list li:last-child{border:none}
+        .top5-rank{width:22px;height:22px;border-radius:50%;background:#185FA5;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin-right:8px;flex-shrink:0}
+        .top5-name{flex:1;font-weight:500}
+        .top5-val{font-weight:700;font-size:.95rem;color:#185FA5}
+
+        /* Search dropdown */
+        .search-wrap{position:relative;width:750px;max-width:100%}
+        .search-box{width:100%;padding:10px 14px;border:1px solid #d2d2d7;border-radius:8px;font-size:.95rem;font-family:'Lato',sans-serif;outline:none;transition:border .2s}
+        .search-box:focus{border-color:#185FA5}
+        .dropdown-list{position:absolute;top:100%;left:0;right:0;max-height:260px;overflow-y:auto;background:#fff;border:1px solid #d2d2d7;border-top:none;border-radius:0 0 10px 10px;box-shadow:0 4px 12px rgba(0,0,0,.1);z-index:100;display:none}
+        .dropdown-list.open{display:block}
+        .dropdown-item{padding:8px 14px;font-size:.95rem;cursor:pointer}
+        .dropdown-item:hover,.dropdown-item.highlighted{background:#f0f5ff}
+        .dropdown-item.selected{font-weight:600;color:#185FA5;background:#f0f5ff}
+        .selected-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 0 6px}
+        .chip{display:inline-flex;align-items:center;gap:4px;background:#e8f0fe;color:#185FA5;font-size:.82rem;font-weight:700;padding:4px 10px;border-radius:20px}
+        .chip-x{cursor:pointer;font-size:14px;line-height:1;color:#6e6e73;margin-left:2px}
+        .chip-x:hover{color:#b94a2c}
+        .chip-clear{font-size:11px;color:#6e6e73;cursor:pointer;padding:4px 8px}
+        .chip-clear:hover{color:#b94a2c}
+
+        /* Controls & filter */
+        .controls{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+        .controls-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+        .filter-btn{padding:8px 16px;border:1px solid #d2d2d7;border-radius:8px;background:#fff;font-size:.95rem;font-weight:400;cursor:pointer;transition:all .15s}
+        .filter-btn.active{background:#185FA5;color:#fff;border-color:#185FA5}
+        .search-hint{font-size:.82rem;color:#86868b;margin-top:-4px;padding-left:4px}
+        /* Floating selection bar */
+        .floating-bar{position:sticky;bottom:0;background:#fff;border-top:1px solid #d2d2d7;box-shadow:0 -2px 12px rgba(0,0,0,.1);padding:12px 24px;display:none;align-items:center;gap:12px;z-index:50}
+        .floating-bar.visible{display:flex}
+        .sel-btn.view{border-color:#185FA5;color:#185FA5;background:rgba(24,95,165,0.06)}
+        .sel-btn.view.active{background:#185FA5;color:#fff}
+        .sel-btn{padding:6px 14px;border:1px solid #d2d2d7;border-radius:8px;background:#fff;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .15s}
+        .sel-btn:hover{border-color:#185FA5;color:#185FA5}
+        .sel-btn.active{background:#185FA5;color:#fff;border-color:#185FA5}
+        .sel-btn.reset{color:#b94a2c;border-color:#ffcdd2}
+        .sel-btn.reset:hover{background:#fff5f5;border-color:#b94a2c}
+        .sel-btn.save{color:#1a6e3c;border-color:#1a6e3c;background:#f0faf4}
+        .sel-btn.save:hover{background:#1a6e3c;color:#fff}
+        tr.pending-remove{opacity:.4;text-decoration:line-through}
+        tr.pending-remove td:first-child{background:#fff5f5 !important}
+
+        /* Pagination */
+        .table-footer{display:flex;justify-content:flex-start;align-items:center;flex-wrap:wrap;gap:10px 20px;padding:12px 16px;font-size:12px;color:#6e6e73;border-top:1px solid #f0f0f0;background:#fff;border-radius:0 0 14px 14px}
+        .page-controls{display:flex;align-items:center;gap:6px}
+        .page-btn{width:30px;height:30px;border:1px solid #d2d2d7;border-radius:6px;background:#fff;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+        .page-btn:hover:not(:disabled){border-color:#185FA5;color:#185FA5}
+        .page-btn:disabled{opacity:.3;cursor:default}
+        .page-info{font-size:12px;font-weight:600;padding:0 8px}
+        .rows-select{padding:4px 8px;border:1px solid #d2d2d7;border-radius:6px;font-size:12px;font-weight:600;background:#fff;cursor:pointer}
+        .result-count{font-size:12px;color:#6e6e73}
+
+        /* Table */
+        .table-wrap{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.07);overflow-x:auto;position:relative}
+        table{border-collapse:separate;border-spacing:0;font-size:12px;white-space:nowrap;width:max-content}
+        thead th{position:sticky;top:0;background:#2d2d2d;color:#fff;padding:10px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.3px;font-weight:600;text-align:center;white-space:nowrap;z-index:2}
+        thead th:first-child{text-align:left;width:auto;min-width:180px;position:sticky;left:0;z-index:3;background:#2d2d2d}
+        thead th.group-header{background:#1a1a1a;font-size:11px;letter-spacing:.5px}
+        thead th.group-header:first-child{background:#1a1a1a}
+        thead th.sortable{cursor:pointer;user-select:none}
+        thead th.sortable:hover{background:#3d3d3d}
+        thead th .sort-arrow{font-size:9px;margin-left:3px;opacity:.5}
+        thead th.sort-active .sort-arrow{opacity:1}
+        tbody td{padding:9px 12px;border-bottom:1px solid #f0f0f0;text-align:center}
+        tbody td:first-child{text-align:left;font-weight:600;font-size:12px;position:sticky;left:0;background:#fff;z-index:1;box-shadow:2px 0 4px rgba(0,0,0,.04)}
+        tbody tr:nth-child(even) td:first-child{background:#fafafa}
+        tbody tr:nth-child(even){background:#fafafa}
+        tbody tr:hover{background:#f0f5ff;cursor:pointer}
+        tbody tr:hover td:first-child{background:#f0f5ff}
+        tbody tr[style*="background:#e8f0fe"] td:first-child{background:#e8f0fe}
+        .empty-cell{color:#ccc}
+        tr.totals-row{background:#f0f5ff !important;border-top:2px solid #185FA5;font-weight:700}
+        tr.totals-row td{padding:11px 8px;border-bottom:none}
+        tr.totals-row td:first-child{background:#f0f5ff !important}
+        .splp-over{color:#1a6e3c;font-weight:600}
+        .splp-even{color:#6e6e73}
+        .splp-under{color:#b94a2c;font-weight:600}
+        .cdom-hot{color:#1a6e3c;font-weight:600}
+        .cdom-warm{color:#ff9500;font-weight:600}
+        .cdom-cool{color:#b94a2c;font-weight:600}
+
+        .footer{text-align:center;color:#86868b;font-size:.82rem;margin-top:24px;line-height:1.6}
+
+        /* Neighbourhood name truncation */
+        .nb-cell{display:flex;align-items:center;gap:4px}
+        .nb-check{color:#185FA5;flex-shrink:0}
+        .nb-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:180px}
+        .nb-name.expanded{white-space:normal;overflow:visible;text-overflow:unset}
+
+        @media (max-width: 768px) {
+            thead th:first-child{min-width:120px}
+            .nb-name{max-width:120px;font-size:11px}
+            tbody td{padding:8px 8px}
+            thead th{padding:8px 8px}
+        }
+    </style>
+</head>
+<body>
+<div style="max-width:1170px;margin:0 auto">
+    <h1>Neighbourhood Analytics</h1>
+    <p id="monthLabel" style="font-weight:700;color:#1d1d1f;font-size:1.6rem;margin-bottom:24px;text-align:center"></p>
+
+    <div id="mainContent">
+        <div class="top5-grid" id="top5Grid"></div>
+
+        <h2 style="font-size:1.15rem;font-weight:700;margin:28px 0 0">Neighbourhood Details</h2>
+        <div class="controls" id="controlsBar">
+            <!-- Row 1: Search bar -->
+            <div class="controls-row">
+                <div class="search-wrap" id="searchWrap">
+                    <div class="selected-chips" id="selectedChips"></div>
+                    <input type="text" class="search-box" id="search" placeholder="Search neighbourhoods..." autocomplete="off">
+                    <div class="dropdown-list" id="dropdownList"></div>
+                </div>
+            </div>
+            <div class="search-hint">Select multiple neighbourhoods to compare. You can also click rows in the table.</div>
+            <!-- Row 2: Property type filters -->
+            <div class="controls-row">
+                <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All Types</button>
+                <button class="filter-btn" data-filter="Detached" onclick="setFilter('Detached',this)">Detached</button>
+                <button class="filter-btn" data-filter="Townhouse" onclick="setFilter('Townhouse',this)">Townhouse</button>
+                <button class="filter-btn" data-filter="Half Duplex" onclick="setFilter('Half Duplex',this)">Half Duplex</button>
+                <button class="filter-btn" data-filter="Apartment Condo" onclick="setFilter('Apartment Condo',this)">Apt Condo</button>
+            </div>
+            <!-- Row 3: View toggle -->
+            <div class="controls-row">
+                <div class="pill-toggle" id="tableToggle">
+                    <button class="active" onclick="setTableView('month',this)">This Month</button>
+                    <span class="divider"></span>
+                    <button onclick="setTableView('3',this)">3M Summary</button>
+                    <span class="divider"></span>
+                    <button onclick="setTableView('6',this)">6M Summary</button>
+                    <span class="divider"></span>
+                    <button id="summaryToggleBtn" onclick="setTableView('12',this)">12M Summary</button>
+                </div>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead id="thead"></thead>
+                <tbody id="tbody"></tbody>
+            </table>
+            <div class="table-footer" id="tableFooter">
+                <div class="result-count" id="resultCount"></div>
+                <div class="page-controls">
+                    <span style="margin-right:6px">Rows:</span>
+                    <select class="rows-select" id="rowsPerPage" onchange="changePageSize()">
+                        <option value="25" selected>25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="0">All</option>
+                    </select>
+                    <button class="page-btn" id="pgFirst" onclick="goPage('first')" title="First page">⟨⟨</button>
+                    <button class="page-btn" id="pgPrev" onclick="goPage('prev')" title="Previous page">‹</button>
+                    <span class="page-info" id="pageInfo">Page 1 of 1</span>
+                    <button class="page-btn" id="pgNext" onclick="goPage('next')" title="Next page">›</button>
+                    <button class="page-btn" id="pgLast" onclick="goPage('last')" title="Last page">⟩⟩</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="footer" id="footer">
+        Data: City of Edmonton MLS · Includes Detached, Townhouse, Half Duplex, Apartment Condo only<br>
+        "Over List" = sold price exceeds list price at time of sale. CDOM = Cumulative Days on Market.
+    </p>
+</div>
+
+<div class="floating-bar" id="selectionActions">
+    <span style="font-size:12px;font-weight:600;color:#1d1d1f"><span id="selCount">0</span> selected</span>
+    <button class="sel-btn view" id="viewSelBtn" onclick="toggleViewSelected()">View Selected</button>
+    <button class="sel-btn reset" onclick="resetSelection()">Reset</button>
+    <button class="sel-btn save" id="saveRemovalsBtn" onclick="saveRemovals()" style="display:none">Save Changes (<span id="removalCount">0</span>)</button>
+</div>
+
+<script src="neighbourhood_data.js"></script>
+<script>
+// --- State ---
+let allData = null;
+let summary, topCount, topVol, topOL, DATA;
+let activeFilters = new Set(); // empty = all types
+let sortKey = 'totalSold';
+let sortDir = 'desc';
+let selectedNeighbourhoods = new Set();
+let highlightIdx = -1;
+let dropdownItems = [];
+let tableView = 'month'; // 'month', '3', '6', or '12'
+let summaryCache = {}; // keyed by month count
+let currentPage = 1;
+let rowsPerPage = 25;
+let viewingSelected = false;
+let lastFilteredCount = 0;
+let pendingRemovals = new Set();
+
+
+// --- Helpers ---
+function fmt(n){return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0})}
+function fmtM(n){
+    if(n>=1e6) return '$'+(n/1e6).toFixed(1)+'M';
+    if(n>=1e3) return '$'+(n/1e3).toFixed(0)+'K';
+    return '$'+n;
+}
+function cdomHtml(v){
+    if(!v&&v!==0) return '<span class="empty-cell">—</span>';
+    let cls=v<=40?'cdom-hot':v<=70?'cdom-warm':'cdom-cool';
+    return `<span class="${cls}">${v}</span>`;
+}
+function splpHtml(v){
+    if(v==null) return '<span class="empty-cell">—</span>';
+    let cls = v>100.05?'splp-over':v<99.95?'splp-under':'splp-even';
+    return `<span class="${cls}">${v.toFixed(1)}%</span>`;
+}
+function normalize(s){return s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()}
+function displayName(n){return n.replace(/\s*\(Edmonton\)\s*/g,'')}
+
+// Data is loaded at the bottom after all functions are defined
+
+
+function loadMonth(key){
+    const month = allData.months[key];
+    if(!month) return;
+
+    // Map JSON summary fields to what the rendering expects
+    summary = {};
+    for(const [pt, s] of Object.entries(month.summary)){
+        summary[pt] = {
+            count: s.count,
+            total: s.totalVol,
+            avg: s.avgSP,
+            avgCDOM: s.avgCDOM,
+            ol: s.olCount
+        };
+    }
+    topCount = month.topCount;
+    topVol = month.topVol;
+    topOL = month.topOL;
+    DATA = month.neighbourhoods;
+
+    // Update subtitle and month label (show current month, i.e. month after data month)
+    const [y, m] = key.split('-').map(Number);
+    const currentDate = new Date(y, m); // month is 0-indexed, so m (e.g. 3 for March) gives April
+    const currentLabel = currentDate.toLocaleString('en-US',{month:'long',year:'numeric'});
+    document.getElementById('monthLabel').textContent = currentLabel;
+    document.title = 'Neighbourhood Analytics — ' + currentLabel;
+
+    renderAll();
+}
+
+function setTableView(view, btn){
+    tableView = view;
+    document.querySelectorAll('#tableToggle button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    // Build summary cache on demand
+    if(view !== 'month' && !summaryCache[view]){
+        summaryCache[view] = computeSummaryTableData(parseInt(view));
+    }
+    currentPage = 1;
+    renderTable();
+}
+
+function computeSummaryTableData(numMonths){
+    const allMonthKeys = Object.keys(allData.months).sort();
+    const slicedKeys = numMonths ? allMonthKeys.slice(-numMonths) : allMonthKeys;
+    const months = slicedKeys.map(k => allData.months[k]);
+    const nMap = {};
+    months.forEach(m=>{
+        (m.neighbourhoods||[]).forEach(n=>{
+            if(!nMap[n.name]){
+                nMap[n.name] = { name:n.name, totalSold:0, totalVol:0, totalOL:0, weightedCDOM:0, splpWeighted:0, splpCount:0, types:{} };
+            }
+            const agg = nMap[n.name];
+            agg.totalSold += n.totalSold||0;
+            agg.totalVol += n.totalVol||0;
+            agg.totalOL += n.totalOL||0;
+            if(n.avgCDOM!=null) agg.weightedCDOM += (n.avgCDOM||0) * (n.totalSold||0);
+            if(n.avgSPLP!=null && n.totalSold>0){ agg.splpWeighted += n.avgSPLP * n.totalSold; agg.splpCount += n.totalSold; }
+            const pts = ["Detached","Townhouse","Half Duplex","Apartment Condo"];
+            pts.forEach(pt=>{
+                const t = n.types && n.types[pt];
+                if(!t || !t.sold) return;
+                if(!agg.types[pt]) agg.types[pt] = { sold:0, overList:0, totalVol:0, weightedCDOM:0, splpWeighted:0, splpCount:0 };
+                const at = agg.types[pt];
+                at.sold += t.sold;
+                at.overList += t.overList||0;
+                at.totalVol += t.totalVol||0;
+                at.weightedCDOM += (t.avgCDOM||0) * t.sold;
+                if(t.avgSPLP!=null){ at.splpWeighted += t.avgSPLP * t.sold; at.splpCount += t.sold; }
+            });
+        });
+    });
+    // Finalize averages
+    return Object.values(nMap).map(n=>{
+        n.avgCDOM = n.totalSold>0 ? +(n.weightedCDOM/n.totalSold).toFixed(1) : null;
+        n.avgSPLP = n.splpCount>0 ? +(n.splpWeighted/n.splpCount).toFixed(1) : null;
+        const pts = ["Detached","Townhouse","Half Duplex","Apartment Condo"];
+        const finalTypes = {};
+        pts.forEach(pt=>{
+            const at = n.types[pt];
+            if(!at || !at.sold) return;
+            finalTypes[pt] = {
+                sold: at.sold,
+                overList: at.overList,
+                avgSP: Math.round(at.totalVol/at.sold),
+                avgSPLP: at.splpCount>0 ? +(at.splpWeighted/at.splpCount).toFixed(1) : null,
+                avgCDOM: +(at.weightedCDOM/at.sold).toFixed(1),
+                totalVol: at.totalVol
+            };
+        });
+        n.types = finalTypes;
+        return n;
+    });
+}
+
+function renderAll(){
+    // Update summary toggle label with actual month count
+    const numMonths = Object.keys(allData.months).length;
+    document.getElementById('summaryToggleBtn').textContent = numMonths + 'M Summary';
+
+    // Top 5 cards
+    const top5Grid = document.getElementById('top5Grid');
+    function renderTop5(title,items,valFn){
+        let lis=items.map((it,i)=>`<li><span class="top5-rank">${i+1}</span><span class="top5-name">${displayName(it.name)}</span><span class="top5-val">${valFn(it)}</span></li>`).join('');
+        return `<div class="top5-card"><h3>${title}</h3><div style="font-size:11px;color:#6e6e73;margin:-8px 0 10px">For Last Month</div><ul class="top5-list">${lis}</ul></div>`;
+    }
+    top5Grid.innerHTML = renderTop5('Most Popular Neighbourhoods',topCount,it=>it.n+' sales')
+        + renderTop5('Most Sales Volume',topVol,it=>fmtM(it.v))
+        + renderTop5('Most Properties Sold Over List Price',topOL,it=>`${it.ol} of ${it.total} (${(it.ol/it.total*100).toFixed(1)}%)`);
+
+    renderTable();
+}
+
+// --- Searchable dropdown ---
+const searchEl = document.getElementById('search');
+const dropdownList = document.getElementById('dropdownList');
+let allMatches = []; // full sorted match list
+let ddLoadedCount = 0; // how many rendered so far
+const DD_BATCH = 30;
+
+function buildDropdown(query){
+    const normQ = normalize(query);
+    const ddSource = tableView === 'month' ? DATA : (summaryCache[tableView] || DATA);
+    allMatches = (ddSource||[]).filter(d=>{
+        if(!normQ) return true;
+        return normalize(d.name).includes(normQ);
+    }).sort((a,b)=>a.name.localeCompare(b.name));
+    ddLoadedCount = 0;
+    highlightIdx = -1;
+    if(!normQ && !allMatches.length){ dropdownList.classList.remove('open'); return; }
+    dropdownList.innerHTML = '';
+    loadMoreDropdown();
+    dropdownList.classList.add('open');
+}
+
+function loadMoreDropdown(){
+    const batch = allMatches.slice(ddLoadedCount, ddLoadedCount + DD_BATCH);
+    batch.forEach((d,i)=>{
+        const idx = ddLoadedCount + i;
+        const sel = selectedNeighbourhoods.has(d.name) ? ' selected' : '';
+        const check = selectedNeighbourhoods.has(d.name) ? '&#10003; ' : '';
+        const div = document.createElement('div');
+        div.className = 'dropdown-item' + sel;
+        div.setAttribute('data-idx', idx);
+        div.onclick = ()=> toggleNeighbourhood(idx);
+        div.innerHTML = check + displayName(d.name);
+        dropdownList.appendChild(div);
+    });
+    ddLoadedCount += batch.length;
+    dropdownItems = allMatches.slice(0, ddLoadedCount);
+}
+
+dropdownList.addEventListener('scroll', ()=>{
+    if(ddLoadedCount >= allMatches.length) return;
+    if(dropdownList.scrollTop + dropdownList.clientHeight >= dropdownList.scrollHeight - 10){
+        loadMoreDropdown();
+    }
+});
+
+function renderChips(){
+    const el = document.getElementById('selectedChips');
+    if(!selectedNeighbourhoods.size){ el.innerHTML=''; return; }
+    let html = '';
+    selectedNeighbourhoods.forEach(name=>{
+        html += `<span class="chip">${displayName(name)}<span class="chip-x" onclick="removeNeighbourhood('${name.replace(/'/g,"\\'")}')">&times;</span></span>`;
+    });
+    html += `<span class="chip-clear" onclick="clearSearch()">Clear all</span>`;
+    el.innerHTML = html;
+}
+
+searchEl.addEventListener('input', ()=>{ buildDropdown(searchEl.value); if(!selectedNeighbourhoods.size) renderTable(); });
+searchEl.addEventListener('focus', ()=>{ buildDropdown(searchEl.value); });
+document.addEventListener('click', e=>{ if(!document.getElementById('searchWrap').contains(e.target)) dropdownList.classList.remove('open'); });
+
+searchEl.addEventListener('keydown', e=>{
+    const items = dropdownList.querySelectorAll('.dropdown-item');
+    if(e.key==='ArrowDown'){ e.preventDefault(); highlightIdx=Math.min(highlightIdx+1,items.length-1); updateHighlight(items); }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); highlightIdx=Math.max(highlightIdx-1,0); updateHighlight(items); }
+    else if(e.key==='Enter'){ e.preventDefault(); if(highlightIdx>=0&&items[highlightIdx]){ items[highlightIdx].click(); } else if(items.length){ items[0].click(); } }
+    else if(e.key==='Escape'){ dropdownList.classList.remove('open'); searchEl.blur(); }
+});
+
+function updateHighlight(items){
+    items.forEach((el,i)=>{ el.classList.toggle('highlighted',i===highlightIdx); });
+    if(items[highlightIdx]) items[highlightIdx].scrollIntoView({block:'nearest'});
+}
+
+function toggleNeighbourhood(idx){
+    const d = allMatches[idx];
+    if(!d) return;
+    if(selectedNeighbourhoods.has(d.name)){ selectedNeighbourhoods.delete(d.name); }
+    else { selectedNeighbourhoods.add(d.name); }
+    updateSelectionUI();
+    // Refresh dropdown items in place (update checkmarks) without closing
+    refreshDropdownItems();
+    renderTable();
+}
+
+function refreshDropdownItems(){
+    const items = dropdownList.querySelectorAll('.dropdown-item');
+    items.forEach(el => {
+        const idx = parseInt(el.getAttribute('data-idx'));
+        const d = allMatches[idx];
+        if(!d) return;
+        const isSel = selectedNeighbourhoods.has(d.name);
+        el.classList.toggle('selected', isSel);
+        el.innerHTML = (isSel ? '&#10003; ' : '') + displayName(d.name);
+    });
+}
+
+function removeNeighbourhood(name){
+    selectedNeighbourhoods.delete(name);
+    updateSelectionUI();
+    renderTable();
+}
+
+function clearSearch(){
+    selectedNeighbourhoods.clear();
+    searchEl.value = '';
+    viewingSelected = false;
+    dropdownList.classList.remove('open');
+    updateSelectionUI();
+    renderTable();
+}
+
+// --- Row click handling (mobile: first click expands name, second click selects) ---
+let expandedName = null;
+const isMobile = () => window.innerWidth <= 768;
+
+function handleRowClick(event, name){
+    // Check if the name is truncated
+    const nameEl = event.currentTarget.querySelector('.nb-name');
+    if(isMobile() && nameEl && nameEl.scrollWidth > nameEl.clientWidth && expandedName !== name){
+        // First tap on truncated name: expand it
+        document.querySelectorAll('.nb-name.expanded').forEach(el=>el.classList.remove('expanded'));
+        nameEl.classList.add('expanded');
+        expandedName = name;
+        return;
+    }
+    // Desktop or second tap or name wasn't truncated: toggle selection
+    expandedName = null;
+    toggleRowSelect(name);
+}
+
+// --- Selection from table ---
+function toggleRowSelect(name){
+    if(viewingSelected){
+        // In view-selected mode: toggle pending removal
+        if(pendingRemovals.has(name)) pendingRemovals.delete(name);
+        else pendingRemovals.add(name);
+        updateSaveBtn();
+        renderTable();
+        return;
+    }
+    if(selectedNeighbourhoods.has(name)) selectedNeighbourhoods.delete(name);
+    else selectedNeighbourhoods.add(name);
+    updateSelectionUI();
+    renderTable();
+}
+
+function updateSaveBtn(){
+    const btn = document.getElementById('saveRemovalsBtn');
+    const countEl = document.getElementById('removalCount');
+    if(pendingRemovals.size > 0){
+        btn.style.display = '';
+        countEl.textContent = pendingRemovals.size;
+    } else {
+        btn.style.display = 'none';
+    }
+}
+
+function saveRemovals(){
+    pendingRemovals.forEach(name => selectedNeighbourhoods.delete(name));
+    pendingRemovals.clear();
+    updateSaveBtn();
+    updateSelectionUI();
+    if(selectedNeighbourhoods.size === 0) viewingSelected = false;
+    renderTable();
+}
+
+function updateSelectionUI(){
+    const count = selectedNeighbourhoods.size;
+    const actions = document.getElementById('selectionActions');
+    const countEl = document.getElementById('selCount');
+    if(count > 0){
+        actions.classList.add('visible');
+        countEl.textContent = count;
+    } else {
+        actions.classList.remove('visible');
+        viewingSelected = false;
+        document.getElementById('viewSelBtn').classList.remove('active');
+    }
+    renderChips();
+}
+
+function toggleViewSelected(){
+    viewingSelected = !viewingSelected;
+    document.getElementById('viewSelBtn').classList.toggle('active', viewingSelected);
+    if(!viewingSelected){
+        pendingRemovals.clear();
+        updateSaveBtn();
+    }
+    currentPage = 1;
+    renderTable();
+}
+
+function resetSelection(){
+    selectedNeighbourhoods.clear();
+    pendingRemovals.clear();
+    viewingSelected = false;
+    searchEl.value = '';
+    dropdownList.classList.remove('open');
+    updateSelectionUI();
+    updateSaveBtn();
+    currentPage = 1;
+    renderTable();
+}
+
+// --- Pagination ---
+function changePageSize(){
+    rowsPerPage = parseInt(document.getElementById('rowsPerPage').value);
+    currentPage = 1;
+    renderTable();
+}
+
+function goPage(action){
+    const totalPages = Math.max(1, Math.ceil(lastFilteredCount / (rowsPerPage||lastFilteredCount)));
+    if(action==='first') currentPage = 1;
+    else if(action==='prev') currentPage = Math.max(1, currentPage-1);
+    else if(action==='next') currentPage = Math.min(totalPages, currentPage+1);
+    else if(action==='last') currentPage = totalPages;
+    renderTable();
+}
+
+// --- Filter ---
+function setFilter(f, btn){
+    if(f === 'all'){
+        activeFilters.clear();
+    } else {
+        if(activeFilters.has(f)) activeFilters.delete(f);
+        else activeFilters.add(f);
+    }
+    // Update button states
+    document.querySelectorAll('.filter-btn').forEach(b=>{
+        const df = b.getAttribute('data-filter');
+        if(df === 'all') b.classList.toggle('active', activeFilters.size === 0);
+        else b.classList.toggle('active', activeFilters.has(df));
+    });
+    currentPage = 1;
+    renderTable();
+}
+
+// --- Sort ---
+function setSort(key){
+    if(sortKey===key){ sortDir = sortDir==='desc'?'asc':'desc'; }
+    else { sortKey=key; sortDir='desc'; }
+    currentPage = 1;
+    renderTable();
+}
+
+function getVisibleTypes(){
+    const allTypes = ["Detached","Townhouse","Half Duplex","Apartment Condo"];
+    if(activeFilters.size === 0) return allTypes;
+    return allTypes.filter(t=>activeFilters.has(t));
+}
+
+function buildThead(){
+    const pts = getVisibleTypes();
+    const subCols = ['sold','overList','avgSPLP','avgSP','avgCDOM'];
+    const subLabels = ['Sold','Over List','SP/LP','Avg SP','CDOM'];
+    const ptShort = {"Detached":"Det","Townhouse":"TH","Half Duplex":"HD","Apartment Condo":"AC"};
+
+    let arrow = (key)=>{
+        let dir = sortKey===key ? (sortDir==='asc'?'↑':'↓') : '↕';
+        return `<span class="sort-arrow">${dir}</span>`;
+    };
+
+    // Group header row (non-sortable labels)
+    let row1 = `<tr>`;
+    row1 += `<th style="background:#1a1a1a"></th>`;
+    row1 += `<th colspan="3" style="background:#1a1a1a"></th>`;
+    pts.forEach(pt=>{
+        row1 += `<th colspan="5" class="group-header" style="border-left:2px solid #444">${pt}</th>`;
+    });
+    row1 += `</tr>`;
+
+    // Sortable column headers
+    let row2 = `<tr>`;
+    row2 += `<th class="sortable${sortKey==='name'?' sort-active':''}" style="text-align:left" onclick="setSort('name')">Neighbourhood ${arrow('name')}</th>`;
+    row2 += `<th class="sortable${sortKey==='totalSold'?' sort-active':''}" onclick="setSort('totalSold')">Sales ${arrow('totalSold')}</th>`;
+    row2 += `<th class="sortable${sortKey==='avgSPAll'?' sort-active':''}" onclick="setSort('avgSPAll')">Avg SP ${arrow('avgSPAll')}</th>`;
+    row2 += `<th class="sortable${sortKey==='avgSPLPAll'?' sort-active':''}" onclick="setSort('avgSPLPAll')">SP/LP ${arrow('avgSPLPAll')}</th>`;
+    pts.forEach(pt=>{
+        subCols.forEach((col,ci)=>{
+            let sk = pt+'_'+col;
+            let border = ci===0 ? ' style="border-left:2px solid #444"' : '';
+            row2 += `<th class="sortable${sortKey===sk?' sort-active':''}"${border} onclick="setSort('${sk}')">${subLabels[ci]} ${arrow(sk)}</th>`;
+        });
+    });
+    row2 += `</tr>`;
+
+    document.getElementById('thead').innerHTML = row1 + row2;
+}
+
+function getSortVal(d, key){
+    if(key==='name') return d.name.toLowerCase();
+    if(key==='totalSold') return d.totalSold||0;
+    if(key==='avgSPAll') return d.totalSold ? Math.round(d.totalVol/d.totalSold) : 0;
+    if(key==='avgSPLPAll') return d.avgSPLP||0;
+    const parts = key.split('_');
+    const col = parts.pop();
+    const pt = parts.join('_');
+    const colMap = {sold:'sold',overList:'overList',avgSP:'avgSP',avgSPLP:'avgSPLP',avgCDOM:'avgCDOM'};
+    const t = d.types && d.types[pt];
+    if(!t || !t.sold) return col==='avgSP'?0:col==='avgSPLP'?0:col==='avgCDOM'?9999:0;
+    return t[colMap[col]]||0;
+}
+
+function renderTable(){
+    if(!DATA) return;
+    buildThead();
+    const q = normalize(searchEl.value.trim());
+
+    const source = tableView === 'month' ? DATA : summaryCache[tableView];
+    if(!source) return;
+
+    let filtered = source.filter(d=>{
+        if(viewingSelected && selectedNeighbourhoods.size) return selectedNeighbourhoods.has(d.name);
+        if(q && !normalize(d.name).includes(q)) return false;
+        if(activeFilters.size > 0){
+            return d.types && [...activeFilters].some(f => d.types[f] && d.types[f].sold > 0);
+        }
+        return true;
+    });
+
+    filtered.sort((a,b)=>{
+        let va = getSortVal(a, sortKey);
+        let vb = getSortVal(b, sortKey);
+        if(sortKey==='name') return sortDir==='asc'?va.localeCompare(vb):vb.localeCompare(va);
+        return sortDir==='desc'?vb-va:va-vb;
+    });
+
+    lastFilteredCount = filtered.length;
+
+    // Pagination
+    const usePagination = rowsPerPage > 0 && !viewingSelected;
+    const totalPages = usePagination ? Math.max(1, Math.ceil(filtered.length / rowsPerPage)) : 1;
+    if(currentPage > totalPages) currentPage = totalPages;
+    const startIdx = usePagination ? (currentPage - 1) * rowsPerPage : 0;
+    const endIdx = usePagination ? Math.min(startIdx + rowsPerPage, filtered.length) : filtered.length;
+    const pageData = filtered.slice(startIdx, endIdx);
+
+    // Result count
+    if(usePagination && filtered.length > rowsPerPage){
+        document.getElementById('resultCount').textContent = `Showing ${startIdx+1}–${endIdx} of ${filtered.length} neighbourhoods`;
+    } else {
+        document.getElementById('resultCount').textContent = `Showing ${filtered.length} of ${source.length} neighbourhoods`;
+    }
+
+    // Page controls
+    document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
+    document.getElementById('pgFirst').disabled = currentPage <= 1;
+    document.getElementById('pgPrev').disabled = currentPage <= 1;
+    document.getElementById('pgNext').disabled = currentPage >= totalPages;
+    document.getElementById('pgLast').disabled = currentPage >= totalPages;
+
+    const pts = getVisibleTypes();
+    let html='';
+    pageData.forEach(d=>{
+        const isSelected = selectedNeighbourhoods.has(d.name);
+        const isPending = pendingRemovals.has(d.name);
+        const escapedName = d.name.replace(/'/g,"\\'");
+        const avgSPAll = d.totalSold ? fmt(Math.round(d.totalVol/d.totalSold)) : '<span class="empty-cell">—</span>';
+        let trClass = isPending ? ' class="pending-remove"' : '';
+        let trStyle = isSelected && !isPending ? ' style="cursor:pointer;background:#e8f0fe"' : ' style="cursor:pointer"';
+        html+=`<tr${trClass}${trStyle} onclick="handleRowClick(event,'${escapedName}')">`;
+        const dn = displayName(d.name);
+        const checkmark = isPending ? '<span class="nb-check" style="color:#b94a2c">✗</span>' : (isSelected ? '<span class="nb-check">✓</span>' : '');
+        html+=`<td><div class="nb-cell">${checkmark}<span class="nb-name" title="${dn}">${dn}</span></div></td><td><strong>${d.totalSold}</strong></td><td>${avgSPAll}</td><td>${splpHtml(d.avgSPLP)}</td>`;
+        pts.forEach(pt=>{
+            const t=d.types&&d.types[pt];
+            if(t&&t.sold>0){
+                const olPct = (t.overList/t.sold*100).toFixed(1);
+                html+=`<td style="border-left:2px solid #f0f0f0">${t.sold}</td>`;
+                html+=`<td>${t.overList} (${olPct}%)</td>`;
+                html+=`<td>${splpHtml(t.avgSPLP)}</td>`;
+                html+=`<td>${fmt(t.avgSP)}</td>`;
+                html+=`<td>${cdomHtml(t.avgCDOM)}</td>`;
+            } else {
+                html+=`<td style="border-left:2px solid #f0f0f0" class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td>`;
+            }
+        });
+        html+=`</tr>`;
+    });
+
+    // Summary totals row when neighbourhoods are selected
+    if(selectedNeighbourhoods.size > 1 && viewingSelected){
+        // Aggregate across displayed rows
+        let tSold=0, tVol=0, tOL=0, wCDOM=0, wSPLP=0, splpN=0;
+        const ptAgg = {};
+        pts.forEach(pt=>{ ptAgg[pt] = {sold:0, ol:0, vol:0, wCDOM:0, wSPLP:0, splpN:0}; });
+
+        pageData.forEach(d=>{
+            tSold += d.totalSold||0;
+            tVol += d.totalVol||0;
+            tOL += d.totalOL||0;
+            if(d.avgCDOM!=null) wCDOM += (d.avgCDOM||0) * (d.totalSold||0);
+            if(d.avgSPLP!=null && d.totalSold>0){ wSPLP += d.avgSPLP * d.totalSold; splpN += d.totalSold; }
+            pts.forEach(pt=>{
+                const t = d.types && d.types[pt];
+                if(!t || !t.sold) return;
+                const a = ptAgg[pt];
+                a.sold += t.sold;
+                a.ol += t.overList||0;
+                a.vol += t.totalVol || (t.avgSP * t.sold);
+                a.wCDOM += (t.avgCDOM||0) * t.sold;
+                if(t.avgSPLP!=null){ a.wSPLP += t.avgSPLP * t.sold; a.splpN += t.sold; }
+            });
+        });
+
+        const avgSPTotal = tSold > 0 ? fmt(Math.round(tVol/tSold)) : '—';
+        const avgSPLPTotal = splpN > 0 ? splpHtml(+(wSPLP/splpN).toFixed(1)) : '—';
+
+        html += `<tr class="totals-row">`;
+        html += `<td>Total / Average (${pageData.length} areas)</td>`;
+        html += `<td>${tSold}</td><td>${avgSPTotal}</td><td>${avgSPLPTotal}</td>`;
+        pts.forEach(pt=>{
+            const a = ptAgg[pt];
+            if(a.sold > 0){
+                const olPct = (a.ol/a.sold*100).toFixed(1);
+                const avgSP = fmt(Math.round(a.vol/a.sold));
+                const avgSPLP = a.splpN>0 ? splpHtml(+(a.wSPLP/a.splpN).toFixed(1)) : '—';
+                const avgCDOM = cdomHtml(+(a.wCDOM/a.sold).toFixed(1));
+                html += `<td style="border-left:2px solid #d0d8e8">${a.sold}</td>`;
+                html += `<td>${a.ol} (${olPct}%)</td>`;
+                html += `<td>${avgSPLP}</td>`;
+                html += `<td>${avgSP}</td>`;
+                html += `<td>${avgCDOM}</td>`;
+            } else {
+                html += `<td style="border-left:2px solid #d0d8e8" class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td><td class="empty-cell">—</td>`;
+            }
+        });
+        html += `</tr>`;
+    }
+
+    document.getElementById('tbody').innerHTML=html;
+}
+
+// --- Initialize: load data and render ---
+allData = NEIGHBOURHOOD_DATA;
+{
+    // Always show most recent month
+    loadMonth(allData.lastUpdated);
+}
+</script>
+</body>
+</html>
