@@ -262,6 +262,19 @@ let lastFilteredCount = 0;
 let pendingRemovals = new Set();
 let visibleColumns = new Set(['sold','overList','avgSPLP','avgSP','avgCDOM']);
 
+// --- Neighbourhoods to hide from the dashboard ---------------------
+// MLS "Community" values that aren't true residential neighbourhoods
+// (industrial parks / area catch-alls). Add a name here to drop it
+// from the table, the search dropdown and the multi-month summaries.
+// Names must match the spelling in neighbourhood_data.js exactly.
+const EXCLUDED_NEIGHBOURHOODS = new Set([
+    'Edmonton South Central',
+    'Edmonton South Central East',
+    'Edmonton South East',
+    'Edmonton Energy And Technology Park',
+]);
+function isExcluded(n){ return EXCLUDED_NEIGHBOURHOODS.has(n && n.name); }
+
 
 // --- Helpers ---
 function fmt(n){return '$'+n.toLocaleString('en-US',{maximumFractionDigits:0})}
@@ -304,7 +317,7 @@ function loadMonth(key){
     topCount = month.topCount;
     topVol = month.topVol;
     topOL = month.topOL;
-    DATA = month.neighbourhoods;
+    DATA = month.neighbourhoods.filter(n => !isExcluded(n));
 
     // Update subtitle and month label (show current month, i.e. month after data month)
     const [y, m] = key.split('-').map(Number);
@@ -334,7 +347,7 @@ function computeSummaryTableData(numMonths){
     const months = slicedKeys.map(k => allData.months[k]);
     const nMap = {};
     months.forEach(m=>{
-        (m.neighbourhoods||[]).forEach(n=>{
+        (m.neighbourhoods||[]).filter(n=>!isExcluded(n)).forEach(n=>{
             if(!nMap[n.name]){
                 nMap[n.name] = { name:n.name, totalSold:0, totalVol:0, totalOL:0, weightedCDOM:0, splpWeighted:0, splpCount:0, types:{} };
             }
