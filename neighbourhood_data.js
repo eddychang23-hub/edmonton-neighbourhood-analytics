@@ -1,6 +1,6 @@
 // Auto-generated — do not edit by hand
 const NEIGHBOURHOOD_DATA = {
-  "lastUpdated": "2026-03",
+  "lastUpdated": "2026-04",
   "months": {
     "2025-04": {
       "label": "April 2025",
@@ -80397,6 +80397,7014 @@ const NEIGHBOURHOOD_DATA = {
               "avgSPLP": 96.3,
               "avgCDOM": 17.0,
               "totalVol": 770000
+            }
+          }
+        }
+      ]
+    },
+    "2026-04": {
+      "label": "April 2026",
+      "summary": {
+        "Detached": {
+          "count": 899,
+          "totalVol": 526020309,
+          "avgSP": 585117,
+          "avgSPLP": 98.9,
+          "avgCDOM": 57.0,
+          "olCount": 237,
+          "olPct": 26.4
+        },
+        "Townhouse": {
+          "count": 280,
+          "totalVol": 87281564,
+          "avgSP": 311720,
+          "avgSPLP": 98.4,
+          "avgCDOM": 59.6,
+          "olCount": 43,
+          "olPct": 15.4
+        },
+        "Half Duplex": {
+          "count": 183,
+          "totalVol": 78017968,
+          "avgSP": 426328,
+          "avgSPLP": 98.1,
+          "avgCDOM": 55.9,
+          "olCount": 27,
+          "olPct": 14.8
+        },
+        "Apartment Condo": {
+          "count": 316,
+          "totalVol": 70290613,
+          "avgSP": 222439,
+          "avgSPLP": 96.1,
+          "avgCDOM": 76.7,
+          "olCount": 16,
+          "olPct": 5.1
+        }
+      },
+      "topCount": [
+        {
+          "name": "Wîhkwêntôwin",
+          "n": 35
+        },
+        {
+          "name": "Chappelle Area",
+          "n": 32
+        },
+        {
+          "name": "Keswick",
+          "n": 29
+        },
+        {
+          "name": "McConachie Area",
+          "n": 28
+        },
+        {
+          "name": "Edgemont (Edmonton)",
+          "n": 26
+        }
+      ],
+      "topVol": [
+        {
+          "name": "Windermere",
+          "v": 22034090
+        },
+        {
+          "name": "Keswick",
+          "v": 17189068
+        },
+        {
+          "name": "Chappelle Area",
+          "v": 16995585
+        },
+        {
+          "name": "Edgemont (Edmonton)",
+          "v": 13565929
+        },
+        {
+          "name": "Secord",
+          "v": 12042823
+        }
+      ],
+      "topOL": [
+        {
+          "name": "Klarvatten",
+          "ol": 6,
+          "total": 21
+        },
+        {
+          "name": "Keswick",
+          "ol": 5,
+          "total": 29
+        },
+        {
+          "name": "Edgemont (Edmonton)",
+          "ol": 5,
+          "total": 26
+        },
+        {
+          "name": "Strathcona",
+          "ol": 5,
+          "total": 18
+        },
+        {
+          "name": "Rosenthal (Edmonton)",
+          "ol": 5,
+          "total": 15
+        }
+      ],
+      "neighbourhoods": [
+        {
+          "name": "Wîhkwêntôwin",
+          "totalSold": 35,
+          "totalVol": 8149988,
+          "totalOL": 2,
+          "avgCDOM": 115.2,
+          "avgSPLP": 95.1,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 412550,
+              "avgSPLP": 96.0,
+              "avgCDOM": 46.5,
+              "totalVol": 825100
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 452500,
+              "avgSPLP": 96.5,
+              "avgCDOM": 314.0,
+              "totalVol": 452500
+            },
+            "Apartment Condo": {
+              "sold": 32,
+              "overList": 1,
+              "avgSP": 214762,
+              "avgSPLP": 95.0,
+              "avgCDOM": 113.3,
+              "totalVol": 6872388
+            }
+          }
+        },
+        {
+          "name": "Chappelle Area",
+          "totalSold": 32,
+          "totalVol": 16995585,
+          "totalOL": 3,
+          "avgCDOM": 68.2,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 20,
+              "overList": 3,
+              "avgSP": 615109,
+              "avgSPLP": 99.0,
+              "avgCDOM": 96.6,
+              "totalVol": 12302185
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 364375,
+              "avgSPLP": 97.9,
+              "avgCDOM": 34.5,
+              "totalVol": 1457500
+            },
+            "Half Duplex": {
+              "sold": 7,
+              "overList": 0,
+              "avgSP": 433486,
+              "avgSPLP": 98.6,
+              "avgCDOM": 12.4,
+              "totalVol": 3034400
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 201500,
+              "avgSPLP": 93.8,
+              "avgCDOM": 24.0,
+              "totalVol": 201500
+            }
+          }
+        },
+        {
+          "name": "Keswick",
+          "totalSold": 29,
+          "totalVol": 17189068,
+          "totalOL": 5,
+          "avgCDOM": 90.4,
+          "avgSPLP": 98.7,
+          "types": {
+            "Detached": {
+              "sold": 17,
+              "overList": 3,
+              "avgSP": 710282,
+              "avgSPLP": 98.6,
+              "avgCDOM": 119.3,
+              "totalVol": 12074790
+            },
+            "Townhouse": {
+              "sold": 7,
+              "overList": 1,
+              "avgSP": 400397,
+              "avgSPLP": 98.7,
+              "avgCDOM": 48.9,
+              "totalVol": 2802778
+            },
+            "Half Duplex": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 462300,
+              "avgSPLP": 99.0,
+              "avgCDOM": 50.6,
+              "totalVol": 2311500
+            }
+          }
+        },
+        {
+          "name": "McConachie Area",
+          "totalSold": 28,
+          "totalVol": 11626408,
+          "totalOL": 2,
+          "avgCDOM": 47.8,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 15,
+              "overList": 1,
+              "avgSP": 562147,
+              "avgSPLP": 98.6,
+              "avgCDOM": 47.9,
+              "totalVol": 8432200
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 390000,
+              "avgSPLP": 98.1,
+              "avgCDOM": 50.0,
+              "totalVol": 390000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 433000,
+              "avgSPLP": 98.7,
+              "avgCDOM": 45.7,
+              "totalVol": 1299000
+            },
+            "Apartment Condo": {
+              "sold": 9,
+              "overList": 0,
+              "avgSP": 167245,
+              "avgSPLP": 97.2,
+              "avgCDOM": 48.0,
+              "totalVol": 1505208
+            }
+          }
+        },
+        {
+          "name": "Edgemont (Edmonton)",
+          "totalSold": 26,
+          "totalVol": 13565929,
+          "totalOL": 5,
+          "avgCDOM": 76.4,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 16,
+              "overList": 3,
+              "avgSP": 588827,
+              "avgSPLP": 98.4,
+              "avgCDOM": 66.7,
+              "totalVol": 9421229
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 390504,
+              "avgSPLP": 100.5,
+              "avgCDOM": 129.2,
+              "totalVol": 1562014
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 448172,
+              "avgSPLP": 98.1,
+              "avgCDOM": 48.8,
+              "totalVol": 1792686
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 395000,
+              "avgSPLP": 97.0,
+              "avgCDOM": 103.5,
+              "totalVol": 790000
+            }
+          }
+        },
+        {
+          "name": "Secord",
+          "totalSold": 25,
+          "totalVol": 12042823,
+          "totalOL": 4,
+          "avgCDOM": 68.3,
+          "avgSPLP": 98.9,
+          "types": {
+            "Detached": {
+              "sold": 19,
+              "overList": 2,
+              "avgSP": 544674,
+              "avgSPLP": 98.6,
+              "avgCDOM": 66.1,
+              "totalVol": 10348804
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 391706,
+              "avgSPLP": 101.8,
+              "avgCDOM": 114.7,
+              "totalVol": 1175119
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 172967,
+              "avgSPLP": 98.1,
+              "avgCDOM": 36.0,
+              "totalVol": 518900
+            }
+          }
+        },
+        {
+          "name": "Summerside",
+          "totalSold": 25,
+          "totalVol": 11307710,
+          "totalOL": 2,
+          "avgCDOM": 39.8,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 15,
+              "overList": 2,
+              "avgSP": 545847,
+              "avgSPLP": 99.3,
+              "avgCDOM": 36.1,
+              "totalVol": 8187710
+            },
+            "Townhouse": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 298900,
+              "avgSPLP": 97.1,
+              "avgCDOM": 73.2,
+              "totalVol": 1494500
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 376667,
+              "avgSPLP": 98.7,
+              "avgCDOM": 16.7,
+              "totalVol": 1130000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 247750,
+              "avgSPLP": 96.4,
+              "avgCDOM": 18.5,
+              "totalVol": 495500
+            }
+          }
+        },
+        {
+          "name": "Walker",
+          "totalSold": 25,
+          "totalVol": 10217500,
+          "totalOL": 0,
+          "avgCDOM": 71.1,
+          "avgSPLP": 97.8,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 617200,
+              "avgSPLP": 98.2,
+              "avgCDOM": 75.0,
+              "totalVol": 3086000
+            },
+            "Townhouse": {
+              "sold": 10,
+              "overList": 0,
+              "avgSP": 349400,
+              "avgSPLP": 98.1,
+              "avgCDOM": 66.8,
+              "totalVol": 3494000
+            },
+            "Half Duplex": {
+              "sold": 8,
+              "overList": 0,
+              "avgSP": 406875,
+              "avgSPLP": 97.4,
+              "avgCDOM": 43.2,
+              "totalVol": 3255000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 191250,
+              "avgSPLP": 96.7,
+              "avgCDOM": 194.0,
+              "totalVol": 382500
+            }
+          }
+        },
+        {
+          "name": "Downtown (Edmonton)",
+          "totalSold": 24,
+          "totalVol": 5505900,
+          "totalOL": 2,
+          "avgCDOM": 94.5,
+          "avgSPLP": 95.6,
+          "types": {
+            "Apartment Condo": {
+              "sold": 24,
+              "overList": 2,
+              "avgSP": 229412,
+              "avgSPLP": 95.6,
+              "avgCDOM": 94.5,
+              "totalVol": 5505900
+            }
+          }
+        },
+        {
+          "name": "Windermere",
+          "totalSold": 24,
+          "totalVol": 22034090,
+          "totalOL": 0,
+          "avgCDOM": 72.6,
+          "avgSPLP": 97.0,
+          "types": {
+            "Detached": {
+              "sold": 11,
+              "overList": 0,
+              "avgSP": 1655909,
+              "avgSPLP": 96.2,
+              "avgCDOM": 75.0,
+              "totalVol": 18215000
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 342000,
+              "avgSPLP": 97.5,
+              "avgCDOM": 119.5,
+              "totalVol": 684000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 438000,
+              "avgSPLP": 99.6,
+              "avgCDOM": 57.7,
+              "totalVol": 1314000
+            },
+            "Apartment Condo": {
+              "sold": 8,
+              "overList": 0,
+              "avgSP": 227636,
+              "avgSPLP": 96.8,
+              "avgCDOM": 63.2,
+              "totalVol": 1821090
+            }
+          }
+        },
+        {
+          "name": "Rutherford (Edmonton)",
+          "totalSold": 22,
+          "totalVol": 7923049,
+          "totalOL": 2,
+          "avgCDOM": 63.3,
+          "avgSPLP": 98.0,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 577375,
+              "avgSPLP": 99.0,
+              "avgCDOM": 36.0,
+              "totalVol": 2309500
+            },
+            "Townhouse": {
+              "sold": 7,
+              "overList": 1,
+              "avgSP": 345321,
+              "avgSPLP": 98.0,
+              "avgCDOM": 95.4,
+              "totalVol": 2417250
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 384750,
+              "avgSPLP": 97.5,
+              "avgCDOM": 43.2,
+              "totalVol": 1539000
+            },
+            "Apartment Condo": {
+              "sold": 7,
+              "overList": 0,
+              "avgSP": 236757,
+              "avgSPLP": 97.7,
+              "avgCDOM": 58.3,
+              "totalVol": 1657299
+            }
+          }
+        },
+        {
+          "name": "Klarvatten",
+          "totalSold": 21,
+          "totalVol": 10638125,
+          "totalOL": 6,
+          "avgCDOM": 75.5,
+          "avgSPLP": 99.4,
+          "types": {
+            "Detached": {
+              "sold": 18,
+              "overList": 6,
+              "avgSP": 543007,
+              "avgSPLP": 99.6,
+              "avgCDOM": 85.2,
+              "totalVol": 9774125
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 288000,
+              "avgSPLP": 98.1,
+              "avgCDOM": 17.3,
+              "totalVol": 864000
+            }
+          }
+        },
+        {
+          "name": "The Orchards At Ellerslie",
+          "totalSold": 21,
+          "totalVol": 8880161,
+          "totalOL": 0,
+          "avgCDOM": 52.2,
+          "avgSPLP": 97.5,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 559200,
+              "avgSPLP": 97.5,
+              "avgCDOM": 69.0,
+              "totalVol": 2796000
+            },
+            "Townhouse": {
+              "sold": 9,
+              "overList": 0,
+              "avgSP": 296667,
+              "avgSPLP": 97.3,
+              "avgCDOM": 47.4,
+              "totalVol": 2670000
+            },
+            "Half Duplex": {
+              "sold": 7,
+              "overList": 0,
+              "avgSP": 487737,
+              "avgSPLP": 97.8,
+              "avgCDOM": 46.4,
+              "totalVol": 3414161
+            }
+          }
+        },
+        {
+          "name": "Laurel",
+          "totalSold": 19,
+          "totalVol": 9777300,
+          "totalOL": 1,
+          "avgCDOM": 66.0,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 10,
+              "overList": 0,
+              "avgSP": 624150,
+              "avgSPLP": 98.2,
+              "avgCDOM": 33.7,
+              "totalVol": 6241500
+            },
+            "Townhouse": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 354400,
+              "avgSPLP": 97.8,
+              "avgCDOM": 149.4,
+              "totalVol": 1772000
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 440950,
+              "avgSPLP": 98.4,
+              "avgCDOM": 42.5,
+              "totalVol": 1763800
+            }
+          }
+        },
+        {
+          "name": "The Hamptons",
+          "totalSold": 19,
+          "totalVol": 8428100,
+          "totalOL": 4,
+          "avgCDOM": 46.4,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 8,
+              "overList": 2,
+              "avgSP": 575275,
+              "avgSPLP": 99.7,
+              "avgCDOM": 49.1,
+              "totalVol": 4602200
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 344862,
+              "avgSPLP": 99.3,
+              "avgCDOM": 34.8,
+              "totalVol": 1379450
+            },
+            "Half Duplex": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 393090,
+              "avgSPLP": 98.6,
+              "avgCDOM": 52.2,
+              "totalVol": 1965450
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 240500,
+              "avgSPLP": 97.2,
+              "avgCDOM": 44.5,
+              "totalVol": 481000
+            }
+          }
+        },
+        {
+          "name": "Westmount",
+          "totalSold": 19,
+          "totalVol": 7484025,
+          "totalOL": 3,
+          "avgCDOM": 41.8,
+          "avgSPLP": 96.8,
+          "types": {
+            "Detached": {
+              "sold": 8,
+              "overList": 3,
+              "avgSP": 656341,
+              "avgSPLP": 99.9,
+              "avgCDOM": 9.4,
+              "totalVol": 5250725
+            },
+            "Apartment Condo": {
+              "sold": 11,
+              "overList": 0,
+              "avgSP": 203027,
+              "avgSPLP": 94.6,
+              "avgCDOM": 65.4,
+              "totalVol": 2233300
+            }
+          }
+        },
+        {
+          "name": "Allard",
+          "totalSold": 18,
+          "totalVol": 8262105,
+          "totalOL": 2,
+          "avgCDOM": 126.7,
+          "avgSPLP": 97.2,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 0,
+              "avgSP": 650083,
+              "avgSPLP": 97.4,
+              "avgCDOM": 167.5,
+              "totalVol": 3900500
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 323288,
+              "avgSPLP": 99.2,
+              "avgCDOM": 151.5,
+              "totalVol": 646575
+            },
+            "Half Duplex": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 534776,
+              "avgSPLP": 98.4,
+              "avgCDOM": 35.0,
+              "totalVol": 2673880
+            },
+            "Apartment Condo": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 208230,
+              "avgSPLP": 95.0,
+              "avgCDOM": 159.6,
+              "totalVol": 1041150
+            }
+          }
+        },
+        {
+          "name": "Strathcona",
+          "totalSold": 18,
+          "totalVol": 11809225,
+          "totalOL": 5,
+          "avgCDOM": 124.2,
+          "avgSPLP": 96.9,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 3,
+              "avgSP": 1068571,
+              "avgSPLP": 99.8,
+              "avgCDOM": 154.2,
+              "totalVol": 6411425
+            },
+            "Apartment Condo": {
+              "sold": 12,
+              "overList": 2,
+              "avgSP": 449817,
+              "avgSPLP": 95.4,
+              "avgCDOM": 109.2,
+              "totalVol": 5397800
+            }
+          }
+        },
+        {
+          "name": "Bonnie Doon",
+          "totalSold": 17,
+          "totalVol": 8562450,
+          "totalOL": 4,
+          "avgCDOM": 38.6,
+          "avgSPLP": 98.9,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 2,
+              "avgSP": 698842,
+              "avgSPLP": 99.3,
+              "avgCDOM": 27.2,
+              "totalVol": 4193050
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 525450,
+              "avgSPLP": 98.2,
+              "avgCDOM": 49.0,
+              "totalVol": 1050900
+            },
+            "Half Duplex": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 452400,
+              "avgSPLP": 98.7,
+              "avgCDOM": 59.0,
+              "totalVol": 2262000
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 264125,
+              "avgSPLP": 99.0,
+              "avgCDOM": 25.0,
+              "totalVol": 1056500
+            }
+          }
+        },
+        {
+          "name": "Silver Berry",
+          "totalSold": 17,
+          "totalVol": 6400150,
+          "totalOL": 3,
+          "avgCDOM": 63.9,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 10,
+              "overList": 3,
+              "avgSP": 470425,
+              "avgSPLP": 99.0,
+              "avgCDOM": 78.4,
+              "totalVol": 4704250
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 294500,
+              "avgSPLP": 97.6,
+              "avgCDOM": 37.5,
+              "totalVol": 589000
+            },
+            "Apartment Condo": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 221380,
+              "avgSPLP": 97.9,
+              "avgCDOM": 45.4,
+              "totalVol": 1106900
+            }
+          }
+        },
+        {
+          "name": "Aster",
+          "totalSold": 15,
+          "totalVol": 7393241,
+          "totalOL": 3,
+          "avgCDOM": 118.7,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 10,
+              "overList": 2,
+              "avgSP": 494693,
+              "avgSPLP": 98.2,
+              "avgCDOM": 92.7,
+              "totalVol": 4946932
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 402216,
+              "avgSPLP": 100.6,
+              "avgCDOM": 275.0,
+              "totalVol": 402216
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 511023,
+              "avgSPLP": 98.5,
+              "avgCDOM": 144.5,
+              "totalVol": 2044093
+            }
+          }
+        },
+        {
+          "name": "Kinglet Gardens",
+          "totalSold": 15,
+          "totalVol": 7986831,
+          "totalOL": 3,
+          "avgCDOM": 99.9,
+          "avgSPLP": 99.0,
+          "types": {
+            "Detached": {
+              "sold": 10,
+              "overList": 2,
+              "avgSP": 562681,
+              "avgSPLP": 99.7,
+              "avgCDOM": 92.7,
+              "totalVol": 5626807
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 427608,
+              "avgSPLP": 103.0,
+              "avgCDOM": 18.0,
+              "totalVol": 427608
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 483104,
+              "avgSPLP": 96.1,
+              "avgCDOM": 138.2,
+              "totalVol": 1932416
+            }
+          }
+        },
+        {
+          "name": "Rosenthal (Edmonton)",
+          "totalSold": 15,
+          "totalVol": 7249515,
+          "totalOL": 5,
+          "avgCDOM": 116.3,
+          "avgSPLP": 99.4,
+          "types": {
+            "Detached": {
+              "sold": 9,
+              "overList": 4,
+              "avgSP": 563613,
+              "avgSPLP": 99.8,
+              "avgCDOM": 135.9,
+              "totalVol": 5072515
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 406000,
+              "avgSPLP": 97.4,
+              "avgCDOM": 29.0,
+              "totalVol": 812000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 437550,
+              "avgSPLP": 102.3,
+              "avgCDOM": 103.0,
+              "totalVol": 875100
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 244950,
+              "avgSPLP": 96.7,
+              "avgCDOM": 129.0,
+              "totalVol": 489900
+            }
+          }
+        },
+        {
+          "name": "South Terwillegar",
+          "totalSold": 15,
+          "totalVol": 5222550,
+          "totalOL": 4,
+          "avgCDOM": 35.5,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 3,
+              "avgSP": 535180,
+              "avgSPLP": 101.7,
+              "avgCDOM": 11.2,
+              "totalVol": 2675900
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 311500,
+              "avgSPLP": 97.2,
+              "avgCDOM": 47.5,
+              "totalVol": 623000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 540000,
+              "avgSPLP": 99.1,
+              "avgCDOM": 25.0,
+              "totalVol": 540000
+            },
+            "Apartment Condo": {
+              "sold": 7,
+              "overList": 0,
+              "avgSP": 197664,
+              "avgSPLP": 96.6,
+              "avgCDOM": 50.9,
+              "totalVol": 1383650
+            }
+          }
+        },
+        {
+          "name": "Griesbach",
+          "totalSold": 14,
+          "totalVol": 6809400,
+          "totalOL": 4,
+          "avgCDOM": 55.4,
+          "avgSPLP": 98.9,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 2,
+              "avgSP": 678980,
+              "avgSPLP": 100.2,
+              "avgCDOM": 36.6,
+              "totalVol": 3394900
+            },
+            "Townhouse": {
+              "sold": 6,
+              "overList": 2,
+              "avgSP": 394333,
+              "avgSPLP": 99.5,
+              "avgCDOM": 24.3,
+              "totalVol": 2366000
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 349500,
+              "avgSPLP": 95.6,
+              "avgCDOM": 148.7,
+              "totalVol": 1048500
+            }
+          }
+        },
+        {
+          "name": "King Edward Park",
+          "totalSold": 14,
+          "totalVol": 6952000,
+          "totalOL": 2,
+          "avgCDOM": 40.4,
+          "avgSPLP": 98.3,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 2,
+              "avgSP": 566714,
+              "avgSPLP": 98.8,
+              "avgCDOM": 19.7,
+              "totalVol": 3967000
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 376000,
+              "avgSPLP": 98.4,
+              "avgCDOM": 33.0,
+              "totalVol": 752000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 620333,
+              "avgSPLP": 98.3,
+              "avgCDOM": 57.3,
+              "totalVol": 1861000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 186000,
+              "avgSPLP": 96.7,
+              "avgCDOM": 94.5,
+              "totalVol": 372000
+            }
+          }
+        },
+        {
+          "name": "The Uplands",
+          "totalSold": 14,
+          "totalVol": 7099672,
+          "totalOL": 3,
+          "avgCDOM": 88.4,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 11,
+              "overList": 3,
+              "avgSP": 544061,
+              "avgSPLP": 99.8,
+              "avgCDOM": 101.4,
+              "totalVol": 5984672
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 347500,
+              "avgSPLP": 99.3,
+              "avgCDOM": 29.5,
+              "totalVol": 695000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 420000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 63.0,
+              "totalVol": 420000
+            }
+          }
+        },
+        {
+          "name": "Stillwater",
+          "totalSold": 13,
+          "totalVol": 6492650,
+          "totalOL": 4,
+          "avgCDOM": 210.8,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 12,
+              "overList": 4,
+              "avgSP": 508554,
+              "avgSPLP": 98.7,
+              "avgCDOM": 222.6,
+              "totalVol": 6102650
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 390000,
+              "avgSPLP": 97.5,
+              "avgCDOM": 70.0,
+              "totalVol": 390000
+            }
+          }
+        },
+        {
+          "name": "Ambleside",
+          "totalSold": 12,
+          "totalVol": 5161500,
+          "totalOL": 1,
+          "avgCDOM": 46.9,
+          "avgSPLP": 98.2,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 642167,
+              "avgSPLP": 99.3,
+              "avgCDOM": 22.5,
+              "totalVol": 3853000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 330000,
+              "avgSPLP": 97.1,
+              "avgCDOM": 85.0,
+              "totalVol": 330000
+            },
+            "Apartment Condo": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 195700,
+              "avgSPLP": 97.2,
+              "avgCDOM": 68.6,
+              "totalVol": 978500
+            }
+          }
+        },
+        {
+          "name": "Caernarvon",
+          "totalSold": 12,
+          "totalVol": 3780197,
+          "totalOL": 1,
+          "avgCDOM": 25.7,
+          "avgSPLP": 96.4,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 1,
+              "avgSP": 382628,
+              "avgSPLP": 97.5,
+              "avgCDOM": 32.9,
+              "totalVol": 2678397
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 248000,
+              "avgSPLP": 94.0,
+              "avgCDOM": 19.3,
+              "totalVol": 744000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 178900,
+              "avgSPLP": 96.2,
+              "avgCDOM": 10.0,
+              "totalVol": 357800
+            }
+          }
+        },
+        {
+          "name": "Crystallina Nera East",
+          "totalSold": 12,
+          "totalVol": 5944645,
+          "totalOL": 5,
+          "avgCDOM": 129.0,
+          "avgSPLP": 99.9,
+          "types": {
+            "Detached": {
+              "sold": 9,
+              "overList": 5,
+              "avgSP": 514738,
+              "avgSPLP": 100.2,
+              "avgCDOM": 75.3,
+              "totalVol": 4632645
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 437333,
+              "avgSPLP": 99.0,
+              "avgCDOM": 290.0,
+              "totalVol": 1312000
+            }
+          }
+        },
+        {
+          "name": "Crystallina Nera West",
+          "totalSold": 12,
+          "totalVol": 5438127,
+          "totalOL": 0,
+          "avgCDOM": 87.2,
+          "avgSPLP": 97.9,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 553400,
+              "avgSPLP": 98.0,
+              "avgCDOM": 47.2,
+              "totalVol": 2767000
+            },
+            "Townhouse": {
+              "sold": 6,
+              "overList": 0,
+              "avgSP": 417854,
+              "avgSPLP": 97.6,
+              "avgCDOM": 131.8,
+              "totalVol": 2507127
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 164000,
+              "avgSPLP": 99.5,
+              "avgCDOM": 19.0,
+              "totalVol": 164000
+            }
+          }
+        },
+        {
+          "name": "Ellerslie",
+          "totalSold": 12,
+          "totalVol": 4128900,
+          "totalOL": 1,
+          "avgCDOM": 83.6,
+          "avgSPLP": 96.8,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 498980,
+              "avgSPLP": 98.3,
+              "avgCDOM": 86.0,
+              "totalVol": 2494900
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 280500,
+              "avgSPLP": 97.8,
+              "avgCDOM": 38.2,
+              "totalVol": 1122000
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 170667,
+              "avgSPLP": 93.1,
+              "avgCDOM": 140.0,
+              "totalVol": 512000
+            }
+          }
+        },
+        {
+          "name": "Garneau",
+          "totalSold": 12,
+          "totalVol": 2740000,
+          "totalOL": 0,
+          "avgCDOM": 49.0,
+          "avgSPLP": 95.0,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 378000,
+              "avgSPLP": 98.2,
+              "avgCDOM": 36.0,
+              "totalVol": 378000
+            },
+            "Apartment Condo": {
+              "sold": 11,
+              "overList": 0,
+              "avgSP": 214727,
+              "avgSPLP": 94.7,
+              "avgCDOM": 50.2,
+              "totalVol": 2362000
+            }
+          }
+        },
+        {
+          "name": "Glenridding Heights",
+          "totalSold": 12,
+          "totalVol": 5782200,
+          "totalOL": 1,
+          "avgCDOM": 28.3,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 643240,
+              "avgSPLP": 98.7,
+              "avgCDOM": 22.0,
+              "totalVol": 3216200
+            },
+            "Townhouse": {
+              "sold": 6,
+              "overList": 0,
+              "avgSP": 354500,
+              "avgSPLP": 98.3,
+              "avgCDOM": 34.7,
+              "totalVol": 2127000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 439000,
+              "avgSPLP": 99.8,
+              "avgCDOM": 22.0,
+              "totalVol": 439000
+            }
+          }
+        },
+        {
+          "name": "Alberta Avenue",
+          "totalSold": 11,
+          "totalVol": 3885388,
+          "totalOL": 4,
+          "avgCDOM": 51.3,
+          "avgSPLP": 98.7,
+          "types": {
+            "Detached": {
+              "sold": 10,
+              "overList": 4,
+              "avgSP": 351689,
+              "avgSPLP": 98.7,
+              "avgCDOM": 52.1,
+              "totalVol": 3516888
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 368500,
+              "avgSPLP": 98.5,
+              "avgCDOM": 43.0,
+              "totalVol": 368500
+            }
+          }
+        },
+        {
+          "name": "Belmont",
+          "totalSold": 11,
+          "totalVol": 2708400,
+          "totalOL": 5,
+          "avgCDOM": 20.9,
+          "avgSPLP": 100.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 349000,
+              "avgSPLP": 96.9,
+              "avgCDOM": 13.0,
+              "totalVol": 349000
+            },
+            "Townhouse": {
+              "sold": 6,
+              "overList": 5,
+              "avgSP": 269900,
+              "avgSPLP": 102.6,
+              "avgCDOM": 11.8,
+              "totalVol": 1619400
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 252000,
+              "avgSPLP": 95.1,
+              "avgCDOM": 42.0,
+              "totalVol": 252000
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 162667,
+              "avgSPLP": 97.7,
+              "avgCDOM": 34.7,
+              "totalVol": 488000
+            }
+          }
+        },
+        {
+          "name": "Glenora",
+          "totalSold": 11,
+          "totalVol": 10734500,
+          "totalOL": 1,
+          "avgCDOM": 101.6,
+          "avgSPLP": 97.9,
+          "types": {
+            "Detached": {
+              "sold": 8,
+              "overList": 1,
+              "avgSP": 1127562,
+              "avgSPLP": 99.3,
+              "avgCDOM": 101.1,
+              "totalVol": 9020500
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 571333,
+              "avgSPLP": 94.2,
+              "avgCDOM": 103.0,
+              "totalVol": 1714000
+            }
+          }
+        },
+        {
+          "name": "Hollick-Kenyon",
+          "totalSold": 11,
+          "totalVol": 4965888,
+          "totalOL": 1,
+          "avgCDOM": 35.5,
+          "avgSPLP": 98.8,
+          "types": {
+            "Detached": {
+              "sold": 8,
+              "overList": 0,
+              "avgSP": 476875,
+              "avgSPLP": 98.4,
+              "avgCDOM": 19.2,
+              "totalVol": 3815000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 383629,
+              "avgSPLP": 100.1,
+              "avgCDOM": 78.7,
+              "totalVol": 1150888
+            }
+          }
+        },
+        {
+          "name": "La Perle",
+          "totalSold": 11,
+          "totalVol": 3657000,
+          "totalOL": 3,
+          "avgCDOM": 26.9,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 463250,
+              "avgSPLP": 98.8,
+              "avgCDOM": 24.5,
+              "totalVol": 1853000
+            },
+            "Townhouse": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 248167,
+              "avgSPLP": 98.6,
+              "avgCDOM": 31.0,
+              "totalVol": 1489000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 315000,
+              "avgSPLP": 108.7,
+              "avgCDOM": 12.0,
+              "totalVol": 315000
+            }
+          }
+        },
+        {
+          "name": "Larkspur",
+          "totalSold": 11,
+          "totalVol": 4101000,
+          "totalOL": 3,
+          "avgCDOM": 26.4,
+          "avgSPLP": 99.4,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 3,
+              "avgSP": 476571,
+              "avgSPLP": 100.1,
+              "avgCDOM": 19.3,
+              "totalVol": 3336000
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 191250,
+              "avgSPLP": 98.1,
+              "avgCDOM": 38.8,
+              "totalVol": 765000
+            }
+          }
+        },
+        {
+          "name": "Marquis",
+          "totalSold": 11,
+          "totalVol": 4870346,
+          "totalOL": 4,
+          "avgCDOM": 138.9,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 502180,
+              "avgSPLP": 99.4,
+              "avgCDOM": 167.6,
+              "totalVol": 2510901
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 302361,
+              "avgSPLP": 100.8,
+              "avgCDOM": 219.0,
+              "totalVol": 604722
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 438681,
+              "avgSPLP": 98.0,
+              "avgCDOM": 63.0,
+              "totalVol": 1754723
+            }
+          }
+        },
+        {
+          "name": "Ritchie",
+          "totalSold": 11,
+          "totalVol": 4599150,
+          "totalOL": 4,
+          "avgCDOM": 36.7,
+          "avgSPLP": 99.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 610667,
+              "avgSPLP": 102.9,
+              "avgCDOM": 30.7,
+              "totalVol": 1832000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 595125,
+              "avgSPLP": 100.3,
+              "avgCDOM": 10.0,
+              "totalVol": 1190250
+            },
+            "Apartment Condo": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 262817,
+              "avgSPLP": 98.1,
+              "avgCDOM": 48.7,
+              "totalVol": 1576900
+            }
+          }
+        },
+        {
+          "name": "Trumpeter Area",
+          "totalSold": 11,
+          "totalVol": 5689960,
+          "totalOL": 0,
+          "avgCDOM": 54.0,
+          "avgSPLP": 98.7,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 0,
+              "avgSP": 623071,
+              "avgSPLP": 98.9,
+              "avgCDOM": 57.0,
+              "totalVol": 4361500
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 332115,
+              "avgSPLP": 98.4,
+              "avgCDOM": 48.8,
+              "totalVol": 1328460
+            }
+          }
+        },
+        {
+          "name": "Schonsee",
+          "totalSold": 10,
+          "totalVol": 4478500,
+          "totalOL": 3,
+          "avgCDOM": 30.1,
+          "avgSPLP": 100.1,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 575125,
+              "avgSPLP": 99.4,
+              "avgCDOM": 14.2,
+              "totalVol": 2300500
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 375167,
+              "avgSPLP": 100.0,
+              "avgCDOM": 32.0,
+              "totalVol": 1125500
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 440000,
+              "avgSPLP": 103.6,
+              "avgCDOM": 33.5,
+              "totalVol": 880000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 172500,
+              "avgSPLP": 96.4,
+              "avgCDOM": 81.0,
+              "totalVol": 172500
+            }
+          }
+        },
+        {
+          "name": "Terra Losa",
+          "totalSold": 10,
+          "totalVol": 2245950,
+          "totalOL": 1,
+          "avgCDOM": 71.3,
+          "avgSPLP": 97.5,
+          "types": {
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 361500,
+              "avgSPLP": 99.0,
+              "avgCDOM": 128.5,
+              "totalVol": 723000
+            },
+            "Apartment Condo": {
+              "sold": 8,
+              "overList": 1,
+              "avgSP": 190369,
+              "avgSPLP": 97.1,
+              "avgCDOM": 57.0,
+              "totalVol": 1522950
+            }
+          }
+        },
+        {
+          "name": "Twin Brooks",
+          "totalSold": 10,
+          "totalVol": 5985500,
+          "totalOL": 4,
+          "avgCDOM": 21.9,
+          "avgSPLP": 99.7,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 3,
+              "avgSP": 684714,
+              "avgSPLP": 100.1,
+              "avgCDOM": 21.3,
+              "totalVol": 4793000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 335000,
+              "avgSPLP": 95.7,
+              "avgCDOM": 27.0,
+              "totalVol": 335000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 428750,
+              "avgSPLP": 100.0,
+              "avgCDOM": 21.5,
+              "totalVol": 857500
+            }
+          }
+        },
+        {
+          "name": "Callaghan",
+          "totalSold": 9,
+          "totalVol": 3884800,
+          "totalOL": 1,
+          "avgCDOM": 38.4,
+          "avgSPLP": 98.8,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 830000,
+              "avgSPLP": 97.9,
+              "avgCDOM": 70.0,
+              "totalVol": 830000
+            },
+            "Townhouse": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 345360,
+              "avgSPLP": 99.3,
+              "avgCDOM": 30.6,
+              "totalVol": 1726800
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 442667,
+              "avgSPLP": 98.4,
+              "avgCDOM": 41.0,
+              "totalVol": 1328000
+            }
+          }
+        },
+        {
+          "name": "Ermineskin",
+          "totalSold": 9,
+          "totalVol": 2274400,
+          "totalOL": 1,
+          "avgCDOM": 55.2,
+          "avgSPLP": 97.8,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 220000,
+              "avgSPLP": 95.7,
+              "avgCDOM": 25.0,
+              "totalVol": 220000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 255000,
+              "avgSPLP": 98.1,
+              "avgCDOM": 22.0,
+              "totalVol": 255000
+            },
+            "Apartment Condo": {
+              "sold": 7,
+              "overList": 1,
+              "avgSP": 257057,
+              "avgSPLP": 98.1,
+              "avgCDOM": 64.3,
+              "totalVol": 1799400
+            }
+          }
+        },
+        {
+          "name": "Kilkenny",
+          "totalSold": 9,
+          "totalVol": 2836700,
+          "totalOL": 2,
+          "avgCDOM": 58.9,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 445050,
+              "avgSPLP": 100.7,
+              "avgCDOM": 78.0,
+              "totalVol": 1780200
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 187875,
+              "avgSPLP": 97.2,
+              "avgCDOM": 48.8,
+              "totalVol": 751500
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 305000,
+              "avgSPLP": 95.3,
+              "avgCDOM": 23.0,
+              "totalVol": 305000
+            }
+          }
+        },
+        {
+          "name": "Magrath Heights",
+          "totalSold": 9,
+          "totalVol": 6156700,
+          "totalOL": 1,
+          "avgCDOM": 65.2,
+          "avgSPLP": 97.1,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 1066600,
+              "avgSPLP": 94.1,
+              "avgCDOM": 143.3,
+              "totalVol": 3199800
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 399900,
+              "avgSPLP": 100.0,
+              "avgCDOM": 10.0,
+              "totalVol": 399900
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 781000,
+              "avgSPLP": 100.1,
+              "avgCDOM": 19.0,
+              "totalVol": 781000
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 444000,
+              "avgSPLP": 97.8,
+              "avgCDOM": 32.0,
+              "totalVol": 1776000
+            }
+          }
+        },
+        {
+          "name": "Maple Crest",
+          "totalSold": 9,
+          "totalVol": 5231000,
+          "totalOL": 1,
+          "avgCDOM": 63.1,
+          "avgSPLP": 97.2,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 0,
+              "avgSP": 647833,
+              "avgSPLP": 96.2,
+              "avgCDOM": 50.5,
+              "totalVol": 3887000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 448000,
+              "avgSPLP": 99.1,
+              "avgCDOM": 88.3,
+              "totalVol": 1344000
+            }
+          }
+        },
+        {
+          "name": "River's Edge",
+          "totalSold": 9,
+          "totalVol": 4847150,
+          "totalOL": 4,
+          "avgCDOM": 213.0,
+          "avgSPLP": 99.9,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 2,
+              "avgSP": 588268,
+              "avgSPLP": 99.5,
+              "avgCDOM": 214.9,
+              "totalVol": 4117876
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 335753,
+              "avgSPLP": 101.7,
+              "avgCDOM": 140.0,
+              "totalVol": 335753
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 393521,
+              "avgSPLP": 100.3,
+              "avgCDOM": 273.0,
+              "totalVol": 393521
+            }
+          }
+        },
+        {
+          "name": "Royal Gardens (Edmonton)",
+          "totalSold": 9,
+          "totalVol": 2038650,
+          "totalOL": 1,
+          "avgCDOM": 86.9,
+          "avgSPLP": 95.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 451250,
+              "avgSPLP": 95.7,
+              "avgCDOM": 42.3,
+              "totalVol": 1353750
+            },
+            "Apartment Condo": {
+              "sold": 6,
+              "overList": 0,
+              "avgSP": 114150,
+              "avgSPLP": 95.6,
+              "avgCDOM": 109.2,
+              "totalVol": 684900
+            }
+          }
+        },
+        {
+          "name": "Terwillegar Towne",
+          "totalSold": 9,
+          "totalVol": 4311704,
+          "totalOL": 3,
+          "avgCDOM": 43.9,
+          "avgSPLP": 98.2,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 3,
+              "avgSP": 584833,
+              "avgSPLP": 98.8,
+              "avgCDOM": 40.3,
+              "totalVol": 3509000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 319000,
+              "avgSPLP": 99.7,
+              "avgCDOM": 16.0,
+              "totalVol": 319000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 241852,
+              "avgSPLP": 95.9,
+              "avgCDOM": 68.5,
+              "totalVol": 483704
+            }
+          }
+        },
+        {
+          "name": "Avonmore",
+          "totalSold": 8,
+          "totalVol": 3714750,
+          "totalOL": 4,
+          "avgCDOM": 28.8,
+          "avgSPLP": 100.1,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 4,
+              "avgSP": 500143,
+              "avgSPLP": 101.6,
+              "avgCDOM": 30.4,
+              "totalVol": 3501000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 213750,
+              "avgSPLP": 89.1,
+              "avgCDOM": 17.0,
+              "totalVol": 213750
+            }
+          }
+        },
+        {
+          "name": "Belvedere",
+          "totalSold": 8,
+          "totalVol": 2185500,
+          "totalOL": 3,
+          "avgCDOM": 21.1,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 2,
+              "avgSP": 370300,
+              "avgSPLP": 99.1,
+              "avgCDOM": 15.2,
+              "totalVol": 1851500
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 111333,
+              "avgSPLP": 97.8,
+              "avgCDOM": 31.0,
+              "totalVol": 334000
+            }
+          }
+        },
+        {
+          "name": "Clareview Town Centre",
+          "totalSold": 8,
+          "totalVol": 2083000,
+          "totalOL": 1,
+          "avgCDOM": 51.0,
+          "avgSPLP": 95.9,
+          "types": {
+            "Townhouse": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 313500,
+              "avgSPLP": 101.2,
+              "avgCDOM": 34.0,
+              "totalVol": 627000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 331667,
+              "avgSPLP": 95.3,
+              "avgCDOM": 49.7,
+              "totalVol": 995000
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 153667,
+              "avgSPLP": 92.9,
+              "avgCDOM": 63.7,
+              "totalVol": 461000
+            }
+          }
+        },
+        {
+          "name": "Desrochers Area",
+          "totalSold": 8,
+          "totalVol": 3583973,
+          "totalOL": 1,
+          "avgCDOM": 57.8,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 622650,
+              "avgSPLP": 98.7,
+              "avgCDOM": 90.0,
+              "totalVol": 1867950
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 319056,
+              "avgSPLP": 98.6,
+              "avgCDOM": 26.8,
+              "totalVol": 1276223
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 439800,
+              "avgSPLP": 97.8,
+              "avgCDOM": 85.0,
+              "totalVol": 439800
+            }
+          }
+        },
+        {
+          "name": "Fraser",
+          "totalSold": 8,
+          "totalVol": 3141000,
+          "totalOL": 3,
+          "avgCDOM": 26.9,
+          "avgSPLP": 99.5,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 3,
+              "avgSP": 523980,
+              "avgSPLP": 102.3,
+              "avgCDOM": 29.0,
+              "totalVol": 2619900
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 185000,
+              "avgSPLP": 95.9,
+              "avgCDOM": 0.0,
+              "totalVol": 185000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 264100,
+              "avgSPLP": 98.6,
+              "avgCDOM": 13.0,
+              "totalVol": 264100
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 72000,
+              "avgSPLP": 90.0,
+              "avgCDOM": 57.0,
+              "totalVol": 72000
+            }
+          }
+        },
+        {
+          "name": "Glenridding Ravine",
+          "totalSold": 8,
+          "totalVol": 4446325,
+          "totalOL": 1,
+          "avgCDOM": 94.6,
+          "avgSPLP": 98.4,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 634000,
+              "avgSPLP": 98.8,
+              "avgCDOM": 104.0,
+              "totalVol": 3804000
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 321162,
+              "avgSPLP": 97.4,
+              "avgCDOM": 66.5,
+              "totalVol": 642325
+            }
+          }
+        },
+        {
+          "name": "Pleasantview (Edmonton)",
+          "totalSold": 8,
+          "totalVol": 6273000,
+          "totalOL": 1,
+          "avgCDOM": 46.6,
+          "avgSPLP": 98.7,
+          "types": {
+            "Detached": {
+              "sold": 8,
+              "overList": 1,
+              "avgSP": 784125,
+              "avgSPLP": 98.7,
+              "avgCDOM": 46.6,
+              "totalVol": 6273000
+            }
+          }
+        },
+        {
+          "name": "Weinlos",
+          "totalSold": 8,
+          "totalVol": 1840800,
+          "totalOL": 4,
+          "avgCDOM": 57.8,
+          "avgSPLP": 101.0,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 3,
+              "avgSP": 367500,
+              "avgSPLP": 102.4,
+              "avgCDOM": 22.8,
+              "totalVol": 1470000
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 92700,
+              "avgSPLP": 99.5,
+              "avgCDOM": 92.8,
+              "totalVol": 370800
+            }
+          }
+        },
+        {
+          "name": "Beverly Heights",
+          "totalSold": 7,
+          "totalVol": 2602500,
+          "totalOL": 2,
+          "avgCDOM": 16.6,
+          "avgSPLP": 99.5,
+          "types": {
+            "Detached": {
+              "sold": 7,
+              "overList": 2,
+              "avgSP": 371786,
+              "avgSPLP": 99.5,
+              "avgCDOM": 16.6,
+              "totalVol": 2602500
+            }
+          }
+        },
+        {
+          "name": "Canon Ridge",
+          "totalSold": 7,
+          "totalVol": 1515175,
+          "totalOL": 2,
+          "avgCDOM": 35.4,
+          "avgSPLP": 98.0,
+          "types": {
+            "Townhouse": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 258500,
+              "avgSPLP": 98.8,
+              "avgCDOM": 34.3,
+              "totalVol": 775500
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 184919,
+              "avgSPLP": 97.4,
+              "avgCDOM": 36.2,
+              "totalVol": 739675
+            }
+          }
+        },
+        {
+          "name": "Cy Becker",
+          "totalSold": 7,
+          "totalVol": 3565982,
+          "totalOL": 2,
+          "avgCDOM": 129.6,
+          "avgSPLP": 98.3,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 544455,
+              "avgSPLP": 97.8,
+              "avgCDOM": 118.7,
+              "totalVol": 3266732
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 299250,
+              "avgSPLP": 101.4,
+              "avgCDOM": 195.0,
+              "totalVol": 299250
+            }
+          }
+        },
+        {
+          "name": "Glastonbury",
+          "totalSold": 7,
+          "totalVol": 3367400,
+          "totalOL": 1,
+          "avgCDOM": 28.6,
+          "avgSPLP": 98.2,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 553480,
+              "avgSPLP": 98.6,
+              "avgCDOM": 23.8,
+              "totalVol": 2767400
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 340000,
+              "avgSPLP": 97.2,
+              "avgCDOM": 56.0,
+              "totalVol": 340000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 260000,
+              "avgSPLP": 97.4,
+              "avgCDOM": 25.0,
+              "totalVol": 260000
+            }
+          }
+        },
+        {
+          "name": "Glenwood (Edmonton)",
+          "totalSold": 7,
+          "totalVol": 2144000,
+          "totalOL": 0,
+          "avgCDOM": 69.6,
+          "avgSPLP": 96.3,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 394250,
+              "avgSPLP": 97.1,
+              "avgCDOM": 82.5,
+              "totalVol": 1577000
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 189000,
+              "avgSPLP": 95.2,
+              "avgCDOM": 52.3,
+              "totalVol": 567000
+            }
+          }
+        },
+        {
+          "name": "Kernohan",
+          "totalSold": 7,
+          "totalVol": 2513900,
+          "totalOL": 2,
+          "avgCDOM": 14.7,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 2,
+              "avgSP": 390567,
+              "avgSPLP": 100.4,
+              "avgCDOM": 16.5,
+              "totalVol": 2343400
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 170500,
+              "avgSPLP": 94.8,
+              "avgCDOM": 4.0,
+              "totalVol": 170500
+            }
+          }
+        },
+        {
+          "name": "Kirkness",
+          "totalSold": 7,
+          "totalVol": 2664398,
+          "totalOL": 1,
+          "avgCDOM": 42.7,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 444400,
+              "avgSPLP": 99.2,
+              "avgCDOM": 52.8,
+              "totalVol": 2221998
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 322500,
+              "avgSPLP": 97.7,
+              "avgCDOM": 23.0,
+              "totalVol": 322500
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 119900,
+              "avgSPLP": 100.0,
+              "avgCDOM": 12.0,
+              "totalVol": 119900
+            }
+          }
+        },
+        {
+          "name": "Paisley",
+          "totalSold": 7,
+          "totalVol": 3630971,
+          "totalOL": 1,
+          "avgCDOM": 19.1,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 566490,
+              "avgSPLP": 98.5,
+              "avgCDOM": 23.3,
+              "totalVol": 1699471
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 482875,
+              "avgSPLP": 98.7,
+              "avgCDOM": 16.0,
+              "totalVol": 1931500
+            }
+          }
+        },
+        {
+          "name": "Tamarack",
+          "totalSold": 7,
+          "totalVol": 2904800,
+          "totalOL": 0,
+          "avgCDOM": 109.6,
+          "avgSPLP": 96.3,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 487500,
+              "avgSPLP": 97.0,
+              "avgCDOM": 132.0,
+              "totalVol": 975000
+            },
+            "Half Duplex": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 385960,
+              "avgSPLP": 96.1,
+              "avgCDOM": 100.6,
+              "totalVol": 1929800
+            }
+          }
+        },
+        {
+          "name": "Wild Rose",
+          "totalSold": 7,
+          "totalVol": 3541400,
+          "totalOL": 1,
+          "avgCDOM": 84.4,
+          "avgSPLP": 97.1,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 538733,
+              "avgSPLP": 97.9,
+              "avgCDOM": 94.7,
+              "totalVol": 3232400
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 309000,
+              "avgSPLP": 92.2,
+              "avgCDOM": 23.0,
+              "totalVol": 309000
+            }
+          }
+        },
+        {
+          "name": "Baranow",
+          "totalSold": 6,
+          "totalVol": 1361000,
+          "totalOL": 0,
+          "avgCDOM": 50.7,
+          "avgSPLP": 97.4,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 344000,
+              "avgSPLP": 98.3,
+              "avgCDOM": 28.0,
+              "totalVol": 344000
+            },
+            "Apartment Condo": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 203400,
+              "avgSPLP": 97.2,
+              "avgCDOM": 55.2,
+              "totalVol": 1017000
+            }
+          }
+        },
+        {
+          "name": "Belgravia",
+          "totalSold": 6,
+          "totalVol": 4464750,
+          "totalOL": 0,
+          "avgCDOM": 114.2,
+          "avgSPLP": 95.3,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 911250,
+              "avgSPLP": 96.1,
+              "avgCDOM": 11.0,
+              "totalVol": 3645000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 409875,
+              "avgSPLP": 93.9,
+              "avgCDOM": 320.5,
+              "totalVol": 819750
+            }
+          }
+        },
+        {
+          "name": "Carlton",
+          "totalSold": 6,
+          "totalVol": 3044000,
+          "totalOL": 0,
+          "avgCDOM": 89.2,
+          "avgSPLP": 96.7,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 566000,
+              "avgSPLP": 96.6,
+              "avgCDOM": 98.0,
+              "totalVol": 2830000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 214000,
+              "avgSPLP": 97.3,
+              "avgCDOM": 45.0,
+              "totalVol": 214000
+            }
+          }
+        },
+        {
+          "name": "Charlesworth",
+          "totalSold": 6,
+          "totalVol": 2136600,
+          "totalOL": 1,
+          "avgCDOM": 17.0,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 516333,
+              "avgSPLP": 98.2,
+              "avgCDOM": 13.7,
+              "totalVol": 1549000
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 195867,
+              "avgSPLP": 98.7,
+              "avgCDOM": 20.3,
+              "totalVol": 587600
+            }
+          }
+        },
+        {
+          "name": "Cumberland",
+          "totalSold": 6,
+          "totalVol": 2084500,
+          "totalOL": 3,
+          "avgCDOM": 30.0,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 419625,
+              "avgSPLP": 100.0,
+              "avgCDOM": 25.0,
+              "totalVol": 1678500
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 203000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 40.0,
+              "totalVol": 406000
+            }
+          }
+        },
+        {
+          "name": "Eaux Claires",
+          "totalSold": 6,
+          "totalVol": 1635500,
+          "totalOL": 1,
+          "avgCDOM": 70.8,
+          "avgSPLP": 96.7,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 405000,
+              "avgSPLP": 101.5,
+              "avgCDOM": 3.0,
+              "totalVol": 405000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 325000,
+              "avgSPLP": 93.1,
+              "avgCDOM": 85.0,
+              "totalVol": 325000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 333500,
+              "avgSPLP": 95.3,
+              "avgCDOM": 13.0,
+              "totalVol": 333500
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 190667,
+              "avgSPLP": 96.7,
+              "avgCDOM": 108.0,
+              "totalVol": 572000
+            }
+          }
+        },
+        {
+          "name": "Glengarry",
+          "totalSold": 6,
+          "totalVol": 1659110,
+          "totalOL": 2,
+          "avgCDOM": 15.8,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 372000,
+              "avgSPLP": 97.6,
+              "avgCDOM": 25.0,
+              "totalVol": 744000
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 228778,
+              "avgSPLP": 100.6,
+              "avgCDOM": 11.2,
+              "totalVol": 915110
+            }
+          }
+        },
+        {
+          "name": "Hairsine",
+          "totalSold": 6,
+          "totalVol": 1606950,
+          "totalOL": 0,
+          "avgCDOM": 52.0,
+          "avgSPLP": 96.0,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 404475,
+              "avgSPLP": 99.1,
+              "avgCDOM": 16.0,
+              "totalVol": 808950
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 199500,
+              "avgSPLP": 94.4,
+              "avgCDOM": 70.0,
+              "totalVol": 798000
+            }
+          }
+        },
+        {
+          "name": "Holyrood",
+          "totalSold": 6,
+          "totalVol": 3331000,
+          "totalOL": 2,
+          "avgCDOM": 81.0,
+          "avgSPLP": 99.8,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 2,
+              "avgSP": 555167,
+              "avgSPLP": 99.8,
+              "avgCDOM": 81.0,
+              "totalVol": 3331000
+            }
+          }
+        },
+        {
+          "name": "Inglewood (Edmonton)",
+          "totalSold": 6,
+          "totalVol": 2176055,
+          "totalOL": 0,
+          "avgCDOM": 60.2,
+          "avgSPLP": 95.6,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 505000,
+              "avgSPLP": 94.1,
+              "avgCDOM": 49.0,
+              "totalVol": 1010000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 416000,
+              "avgSPLP": 97.9,
+              "avgCDOM": 23.0,
+              "totalVol": 416000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 495555,
+              "avgSPLP": 99.2,
+              "avgCDOM": 183.0,
+              "totalVol": 495555
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 127250,
+              "avgSPLP": 94.1,
+              "avgCDOM": 28.5,
+              "totalVol": 254500
+            }
+          }
+        },
+        {
+          "name": "Keheewin",
+          "totalSold": 6,
+          "totalVol": 1369000,
+          "totalOL": 1,
+          "avgCDOM": 47.2,
+          "avgSPLP": 97.5,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 430000,
+              "avgSPLP": 107.5,
+              "avgCDOM": 8.0,
+              "totalVol": 430000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 296000,
+              "avgSPLP": 98.7,
+              "avgCDOM": 19.0,
+              "totalVol": 296000
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 160750,
+              "avgSPLP": 94.7,
+              "avgCDOM": 64.0,
+              "totalVol": 643000
+            }
+          }
+        },
+        {
+          "name": "Kiniski Gardens",
+          "totalSold": 6,
+          "totalVol": 2243500,
+          "totalOL": 3,
+          "avgCDOM": 16.8,
+          "avgSPLP": 100.3,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 3,
+              "avgSP": 373917,
+              "avgSPLP": 100.3,
+              "avgCDOM": 16.8,
+              "totalVol": 2243500
+            }
+          }
+        },
+        {
+          "name": "Lee Ridge",
+          "totalSold": 6,
+          "totalVol": 1481000,
+          "totalOL": 1,
+          "avgCDOM": 41.5,
+          "avgSPLP": 98.3,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 510000,
+              "avgSPLP": 107.4,
+              "avgCDOM": 12.0,
+              "totalVol": 510000
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 227333,
+              "avgSPLP": 97.8,
+              "avgCDOM": 39.7,
+              "totalVol": 682000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 144500,
+              "avgSPLP": 94.7,
+              "avgCDOM": 59.0,
+              "totalVol": 289000
+            }
+          }
+        },
+        {
+          "name": "Lorelei",
+          "totalSold": 6,
+          "totalVol": 2507300,
+          "totalOL": 2,
+          "avgCDOM": 11.5,
+          "avgSPLP": 100.1,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 2,
+              "avgSP": 445060,
+              "avgSPLP": 100.4,
+              "avgCDOM": 9.6,
+              "totalVol": 2225300
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 282000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 21.0,
+              "totalVol": 282000
+            }
+          }
+        },
+        {
+          "name": "MacTaggart",
+          "totalSold": 6,
+          "totalVol": 4348300,
+          "totalOL": 1,
+          "avgCDOM": 124.0,
+          "avgSPLP": 96.4,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 1184267,
+              "avgSPLP": 97.1,
+              "avgCDOM": 153.0,
+              "totalVol": 3552800
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 265167,
+              "avgSPLP": 95.8,
+              "avgCDOM": 95.0,
+              "totalVol": 795500
+            }
+          }
+        },
+        {
+          "name": "Matt Berry",
+          "totalSold": 6,
+          "totalVol": 2871000,
+          "totalOL": 2,
+          "avgCDOM": 43.0,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 2,
+              "avgSP": 504200,
+              "avgSPLP": 99.8,
+              "avgCDOM": 16.2,
+              "totalVol": 2521000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 350000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 177.0,
+              "totalVol": 350000
+            }
+          }
+        },
+        {
+          "name": "Mayfield",
+          "totalSold": 6,
+          "totalVol": 2265000,
+          "totalOL": 1,
+          "avgCDOM": 16.5,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 377500,
+              "avgSPLP": 99.6,
+              "avgCDOM": 16.5,
+              "totalVol": 2265000
+            }
+          }
+        },
+        {
+          "name": "Miller",
+          "totalSold": 6,
+          "totalVol": 2654000,
+          "totalOL": 2,
+          "avgCDOM": 83.8,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 2,
+              "avgSP": 442333,
+              "avgSPLP": 99.2,
+              "avgCDOM": 83.8,
+              "totalVol": 2654000
+            }
+          }
+        },
+        {
+          "name": "Montrose (Edmonton)",
+          "totalSold": 6,
+          "totalVol": 2154500,
+          "totalOL": 1,
+          "avgCDOM": 69.0,
+          "avgSPLP": 99.7,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 1,
+              "avgSP": 359083,
+              "avgSPLP": 99.7,
+              "avgCDOM": 69.0,
+              "totalVol": 2154500
+            }
+          }
+        },
+        {
+          "name": "Ormsby Place",
+          "totalSold": 6,
+          "totalVol": 2407500,
+          "totalOL": 1,
+          "avgCDOM": 44.2,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 512875,
+              "avgSPLP": 99.6,
+              "avgCDOM": 15.5,
+              "totalVol": 2051500
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 236000,
+              "avgSPLP": 98.4,
+              "avgCDOM": 152.0,
+              "totalVol": 236000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 120000,
+              "avgSPLP": 97.6,
+              "avgCDOM": 51.0,
+              "totalVol": 120000
+            }
+          }
+        },
+        {
+          "name": "Ottewell",
+          "totalSold": 6,
+          "totalVol": 3412623,
+          "totalOL": 2,
+          "avgCDOM": 79.7,
+          "avgSPLP": 98.3,
+          "types": {
+            "Detached": {
+              "sold": 6,
+              "overList": 2,
+              "avgSP": 568770,
+              "avgSPLP": 98.3,
+              "avgCDOM": 79.7,
+              "totalVol": 3412623
+            }
+          }
+        },
+        {
+          "name": "Oxford",
+          "totalSold": 6,
+          "totalVol": 2717500,
+          "totalOL": 1,
+          "avgCDOM": 36.7,
+          "avgSPLP": 98.4,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 600000,
+              "avgSPLP": 98.8,
+              "avgCDOM": 34.3,
+              "totalVol": 1800000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 355000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 42.0,
+              "totalVol": 355000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 380000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 12.0,
+              "totalVol": 380000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 182500,
+              "avgSPLP": 95.1,
+              "avgCDOM": 63.0,
+              "totalVol": 182500
+            }
+          }
+        },
+        {
+          "name": "Pollard Meadows",
+          "totalSold": 6,
+          "totalVol": 1678000,
+          "totalOL": 0,
+          "avgCDOM": 46.8,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 480000,
+              "avgSPLP": 99.0,
+              "avgCDOM": 27.0,
+              "totalVol": 480000
+            },
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 234500,
+              "avgSPLP": 98.8,
+              "avgCDOM": 36.0,
+              "totalVol": 938000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 260000,
+              "avgSPLP": 96.7,
+              "avgCDOM": 110.0,
+              "totalVol": 260000
+            }
+          }
+        },
+        {
+          "name": "Queen Alexandra",
+          "totalSold": 6,
+          "totalVol": 2099000,
+          "totalOL": 0,
+          "avgCDOM": 45.2,
+          "avgSPLP": 97.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 875000,
+              "avgSPLP": 94.6,
+              "avgCDOM": 40.0,
+              "totalVol": 875000
+            },
+            "Apartment Condo": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 244800,
+              "avgSPLP": 97.6,
+              "avgCDOM": 46.2,
+              "totalVol": 1224000
+            }
+          }
+        },
+        {
+          "name": "Queen Mary Park",
+          "totalSold": 6,
+          "totalVol": 1379000,
+          "totalOL": 0,
+          "avgCDOM": 51.7,
+          "avgSPLP": 92.8,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 490000,
+              "avgSPLP": 97.6,
+              "avgCDOM": 28.0,
+              "totalVol": 980000
+            },
+            "Apartment Condo": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 99750,
+              "avgSPLP": 90.4,
+              "avgCDOM": 63.5,
+              "totalVol": 399000
+            }
+          }
+        },
+        {
+          "name": "Sakaw",
+          "totalSold": 6,
+          "totalVol": 2114000,
+          "totalOL": 0,
+          "avgCDOM": 108.8,
+          "avgSPLP": 93.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 431333,
+              "avgSPLP": 98.4,
+              "avgCDOM": 25.0,
+              "totalVol": 1294000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 235000,
+              "avgSPLP": 97.9,
+              "avgCDOM": 20.0,
+              "totalVol": 235000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 292500,
+              "avgSPLP": 85.0,
+              "avgCDOM": 279.0,
+              "totalVol": 585000
+            }
+          }
+        },
+        {
+          "name": "Satoo",
+          "totalSold": 6,
+          "totalVol": 2471400,
+          "totalOL": 2,
+          "avgCDOM": 15.2,
+          "avgSPLP": 99.0,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 463125,
+              "avgSPLP": 99.2,
+              "avgCDOM": 15.2,
+              "totalVol": 1852500
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 309450,
+              "avgSPLP": 98.5,
+              "avgCDOM": 15.0,
+              "totalVol": 618900
+            }
+          }
+        },
+        {
+          "name": "Starling",
+          "totalSold": 6,
+          "totalVol": 3451500,
+          "totalOL": 2,
+          "avgCDOM": 71.0,
+          "avgSPLP": 100.5,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 680375,
+              "avgSPLP": 101.3,
+              "avgCDOM": 93.2,
+              "totalVol": 2721500
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 326000,
+              "avgSPLP": 99.5,
+              "avgCDOM": 20.0,
+              "totalVol": 326000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 404000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 33.0,
+              "totalVol": 404000
+            }
+          }
+        },
+        {
+          "name": "West Meadowlark Park",
+          "totalSold": 6,
+          "totalVol": 2069900,
+          "totalOL": 3,
+          "avgCDOM": 15.2,
+          "avgSPLP": 100.1,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 3,
+              "avgSP": 438000,
+              "avgSPLP": 102.1,
+              "avgCDOM": 8.8,
+              "totalVol": 1752000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 199900,
+              "avgSPLP": 100.0,
+              "avgCDOM": 14.0,
+              "totalVol": 199900
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 118000,
+              "avgSPLP": 92.3,
+              "avgCDOM": 42.0,
+              "totalVol": 118000
+            }
+          }
+        },
+        {
+          "name": "Windsor Park (Edmonton)",
+          "totalSold": 6,
+          "totalVol": 8057800,
+          "totalOL": 2,
+          "avgCDOM": 106.5,
+          "avgSPLP": 100.4,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 1612200,
+              "avgSPLP": 101.0,
+              "avgCDOM": 30.5,
+              "totalVol": 6448800
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 1000000,
+              "avgSPLP": 100.1,
+              "avgCDOM": 273.0,
+              "totalVol": 1000000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 609000,
+              "avgSPLP": 98.4,
+              "avgCDOM": 244.0,
+              "totalVol": 609000
+            }
+          }
+        },
+        {
+          "name": "Allendale",
+          "totalSold": 5,
+          "totalVol": 2476100,
+          "totalOL": 1,
+          "avgCDOM": 26.2,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 495220,
+              "avgSPLP": 99.2,
+              "avgCDOM": 26.2,
+              "totalVol": 2476100
+            }
+          }
+        },
+        {
+          "name": "Aspen Gardens",
+          "totalSold": 5,
+          "totalVol": 4685272,
+          "totalOL": 4,
+          "avgCDOM": 8.2,
+          "avgSPLP": 101.1,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 3,
+              "avgSP": 729325,
+              "avgSPLP": 101.2,
+              "avgCDOM": 7.0,
+              "totalVol": 2917300
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 1767972,
+              "avgSPLP": 100.6,
+              "avgCDOM": 13.0,
+              "totalVol": 1767972
+            }
+          }
+        },
+        {
+          "name": "Athlone",
+          "totalSold": 5,
+          "totalVol": 1730000,
+          "totalOL": 1,
+          "avgCDOM": 25.8,
+          "avgSPLP": 99.5,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 360000,
+              "avgSPLP": 99.4,
+              "avgCDOM": 11.8,
+              "totalVol": 1440000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 290000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 82.0,
+              "totalVol": 290000
+            }
+          }
+        },
+        {
+          "name": "Bannerman",
+          "totalSold": 5,
+          "totalVol": 1584001,
+          "totalOL": 2,
+          "avgCDOM": 20.2,
+          "avgSPLP": 100.2,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 389334,
+              "avgSPLP": 101.7,
+              "avgCDOM": 20.7,
+              "totalVol": 1168001
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 208000,
+              "avgSPLP": 97.9,
+              "avgCDOM": 19.5,
+              "totalVol": 416000
+            }
+          }
+        },
+        {
+          "name": "Beaumaris",
+          "totalSold": 5,
+          "totalVol": 1488000,
+          "totalOL": 1,
+          "avgCDOM": 67.6,
+          "avgSPLP": 98.8,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 507000,
+              "avgSPLP": 101.4,
+              "avgCDOM": 12.0,
+              "totalVol": 507000
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 256000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 110.0,
+              "totalVol": 512000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 234500,
+              "avgSPLP": 98.6,
+              "avgCDOM": 53.0,
+              "totalVol": 469000
+            }
+          }
+        },
+        {
+          "name": "Belmead",
+          "totalSold": 5,
+          "totalVol": 2038350,
+          "totalOL": 1,
+          "avgCDOM": 17.6,
+          "avgSPLP": 99.8,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 460838,
+              "avgSPLP": 100.3,
+              "avgCDOM": 10.5,
+              "totalVol": 1843350
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 195000,
+              "avgSPLP": 98.0,
+              "avgCDOM": 46.0,
+              "totalVol": 195000
+            }
+          }
+        },
+        {
+          "name": "Boyle Street",
+          "totalSold": 5,
+          "totalVol": 873200,
+          "totalOL": 0,
+          "avgCDOM": 34.6,
+          "avgSPLP": 94.1,
+          "types": {
+            "Apartment Condo": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 174640,
+              "avgSPLP": 94.1,
+              "avgCDOM": 34.6,
+              "totalVol": 873200
+            }
+          }
+        },
+        {
+          "name": "Callingwood North",
+          "totalSold": 5,
+          "totalVol": 1068900,
+          "totalOL": 0,
+          "avgCDOM": 34.0,
+          "avgSPLP": 97.6,
+          "types": {
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 223500,
+              "avgSPLP": 96.5,
+              "avgCDOM": 25.7,
+              "totalVol": 670500
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 214400,
+              "avgSPLP": 98.9,
+              "avgCDOM": 75.0,
+              "totalVol": 214400
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 184000,
+              "avgSPLP": 99.5,
+              "avgCDOM": 18.0,
+              "totalVol": 184000
+            }
+          }
+        },
+        {
+          "name": "Canora",
+          "totalSold": 5,
+          "totalVol": 1925250,
+          "totalOL": 0,
+          "avgCDOM": 62.8,
+          "avgSPLP": 97.2,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 349500,
+              "avgSPLP": 98.5,
+              "avgCDOM": 3.0,
+              "totalVol": 349500
+            },
+            "Half Duplex": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 393938,
+              "avgSPLP": 96.8,
+              "avgCDOM": 77.8,
+              "totalVol": 1575750
+            }
+          }
+        },
+        {
+          "name": "Casselman",
+          "totalSold": 5,
+          "totalVol": 1123000,
+          "totalOL": 0,
+          "avgCDOM": 58.4,
+          "avgSPLP": 97.9,
+          "types": {
+            "Townhouse": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 224600,
+              "avgSPLP": 97.9,
+              "avgCDOM": 58.4,
+              "totalVol": 1123000
+            }
+          }
+        },
+        {
+          "name": "Cavanagh",
+          "totalSold": 5,
+          "totalVol": 2297900,
+          "totalOL": 0,
+          "avgCDOM": 78.8,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 588750,
+              "avgSPLP": 99.2,
+              "avgCDOM": 47.5,
+              "totalVol": 1177500
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 328000,
+              "avgSPLP": 95.1,
+              "avgCDOM": 65.0,
+              "totalVol": 328000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 396200,
+              "avgSPLP": 98.5,
+              "avgCDOM": 117.0,
+              "totalVol": 792400
+            }
+          }
+        },
+        {
+          "name": "Crestwood",
+          "totalSold": 5,
+          "totalVol": 4264900,
+          "totalOL": 0,
+          "avgCDOM": 13.2,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 898725,
+              "avgSPLP": 98.0,
+              "avgCDOM": 9.5,
+              "totalVol": 3594900
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 670000,
+              "avgSPLP": 98.5,
+              "avgCDOM": 28.0,
+              "totalVol": 670000
+            }
+          }
+        },
+        {
+          "name": "Ekota",
+          "totalSold": 5,
+          "totalVol": 1648500,
+          "totalOL": 3,
+          "avgCDOM": 32.8,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 408667,
+              "avgSPLP": 101.2,
+              "avgCDOM": 18.3,
+              "totalVol": 1226000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 166000,
+              "avgSPLP": 86.9,
+              "avgCDOM": 107.0,
+              "totalVol": 166000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 256500,
+              "avgSPLP": 102.6,
+              "avgCDOM": 2.0,
+              "totalVol": 256500
+            }
+          }
+        },
+        {
+          "name": "Forest Heights (Edmonton)",
+          "totalSold": 5,
+          "totalVol": 2847400,
+          "totalOL": 3,
+          "avgCDOM": 40.2,
+          "avgSPLP": 101.2,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 599850,
+              "avgSPLP": 101.0,
+              "avgCDOM": 47.0,
+              "totalVol": 2399400
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 448000,
+              "avgSPLP": 101.8,
+              "avgCDOM": 13.0,
+              "totalVol": 448000
+            }
+          }
+        },
+        {
+          "name": "Granville (Edmonton)",
+          "totalSold": 5,
+          "totalVol": 3125900,
+          "totalOL": 2,
+          "avgCDOM": 21.6,
+          "avgSPLP": 100.5,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 664000,
+              "avgSPLP": 100.6,
+              "avgCDOM": 23.2,
+              "totalVol": 2656000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 469900,
+              "avgSPLP": 100.0,
+              "avgCDOM": 15.0,
+              "totalVol": 469900
+            }
+          }
+        },
+        {
+          "name": "Greenfield",
+          "totalSold": 5,
+          "totalVol": 2616100,
+          "totalOL": 1,
+          "avgCDOM": 38.4,
+          "avgSPLP": 98.0,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 572150,
+              "avgSPLP": 98.3,
+              "avgCDOM": 40.8,
+              "totalVol": 2288600
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 327500,
+              "avgSPLP": 96.6,
+              "avgCDOM": 29.0,
+              "totalVol": 327500
+            }
+          }
+        },
+        {
+          "name": "Haddow",
+          "totalSold": 5,
+          "totalVol": 1641500,
+          "totalOL": 0,
+          "avgCDOM": 57.8,
+          "avgSPLP": 96.3,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 552500,
+              "avgSPLP": 97.3,
+              "avgCDOM": 16.0,
+              "totalVol": 552500
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 360000,
+              "avgSPLP": 98.7,
+              "avgCDOM": 19.0,
+              "totalVol": 360000
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 243000,
+              "avgSPLP": 95.2,
+              "avgCDOM": 84.7,
+              "totalVol": 729000
+            }
+          }
+        },
+        {
+          "name": "Jackson Heights",
+          "totalSold": 5,
+          "totalVol": 2169624,
+          "totalOL": 1,
+          "avgCDOM": 27.6,
+          "avgSPLP": 97.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 518041,
+              "avgSPLP": 97.7,
+              "avgCDOM": 27.0,
+              "totalVol": 1554124
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 307750,
+              "avgSPLP": 97.9,
+              "avgCDOM": 28.5,
+              "totalVol": 615500
+            }
+          }
+        },
+        {
+          "name": "Kildare",
+          "totalSold": 5,
+          "totalVol": 1394500,
+          "totalOL": 0,
+          "avgCDOM": 31.8,
+          "avgSPLP": 95.0,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 360167,
+              "avgSPLP": 93.9,
+              "avgCDOM": 26.3,
+              "totalVol": 1080500
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 157000,
+              "avgSPLP": 96.7,
+              "avgCDOM": 40.0,
+              "totalVol": 314000
+            }
+          }
+        },
+        {
+          "name": "Macewan",
+          "totalSold": 5,
+          "totalVol": 1836500,
+          "totalOL": 0,
+          "avgCDOM": 77.0,
+          "avgSPLP": 97.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 504000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 103.3,
+              "totalVol": 1512000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 162250,
+              "avgSPLP": 96.6,
+              "avgCDOM": 37.5,
+              "totalVol": 324500
+            }
+          }
+        },
+        {
+          "name": "Malmo Plains",
+          "totalSold": 5,
+          "totalVol": 2023100,
+          "totalOL": 1,
+          "avgCDOM": 17.0,
+          "avgSPLP": 97.4,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 563700,
+              "avgSPLP": 99.9,
+              "avgCDOM": 9.7,
+              "totalVol": 1691100
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 166000,
+              "avgSPLP": 93.6,
+              "avgCDOM": 28.0,
+              "totalVol": 332000
+            }
+          }
+        },
+        {
+          "name": "Meadowlark Park (Edmonton)",
+          "totalSold": 5,
+          "totalVol": 2197400,
+          "totalOL": 2,
+          "avgCDOM": 22.4,
+          "avgSPLP": 100.5,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 451600,
+              "avgSPLP": 101.2,
+              "avgCDOM": 15.0,
+              "totalVol": 1806400
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 391000,
+              "avgSPLP": 97.8,
+              "avgCDOM": 52.0,
+              "totalVol": 391000
+            }
+          }
+        },
+        {
+          "name": "Meyokumin",
+          "totalSold": 5,
+          "totalVol": 1500900,
+          "totalOL": 1,
+          "avgCDOM": 41.2,
+          "avgSPLP": 101.6,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 387500,
+              "avgSPLP": 104.8,
+              "avgCDOM": 8.5,
+              "totalVol": 775000
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 241967,
+              "avgSPLP": 99.4,
+              "avgCDOM": 63.0,
+              "totalVol": 725900
+            }
+          }
+        },
+        {
+          "name": "Meyonohk",
+          "totalSold": 5,
+          "totalVol": 1471350,
+          "totalOL": 0,
+          "avgCDOM": 22.6,
+          "avgSPLP": 97.4,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 432425,
+              "avgSPLP": 97.9,
+              "avgCDOM": 14.0,
+              "totalVol": 864850
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 202167,
+              "avgSPLP": 97.0,
+              "avgCDOM": 28.3,
+              "totalVol": 606500
+            }
+          }
+        },
+        {
+          "name": "North Glenora",
+          "totalSold": 5,
+          "totalVol": 2566500,
+          "totalOL": 1,
+          "avgCDOM": 49.4,
+          "avgSPLP": 97.5,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 1,
+              "avgSP": 513300,
+              "avgSPLP": 97.5,
+              "avgCDOM": 49.4,
+              "totalVol": 2566500
+            }
+          }
+        },
+        {
+          "name": "Oleskiw",
+          "totalSold": 5,
+          "totalVol": 4390225,
+          "totalOL": 0,
+          "avgCDOM": 23.6,
+          "avgSPLP": 98.2,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 878045,
+              "avgSPLP": 98.2,
+              "avgCDOM": 23.6,
+              "totalVol": 4390225
+            }
+          }
+        },
+        {
+          "name": "Parkview",
+          "totalSold": 5,
+          "totalVol": 5982400,
+          "totalOL": 0,
+          "avgCDOM": 89.8,
+          "avgSPLP": 97.9,
+          "types": {
+            "Detached": {
+              "sold": 5,
+              "overList": 0,
+              "avgSP": 1196480,
+              "avgSPLP": 97.9,
+              "avgCDOM": 89.8,
+              "totalVol": 5982400
+            }
+          }
+        },
+        {
+          "name": "Prince Charles",
+          "totalSold": 5,
+          "totalVol": 1927500,
+          "totalOL": 1,
+          "avgCDOM": 85.6,
+          "avgSPLP": 97.5,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 447500,
+              "avgSPLP": 99.5,
+              "avgCDOM": 122.0,
+              "totalVol": 895000
+            },
+            "Half Duplex": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 344167,
+              "avgSPLP": 96.1,
+              "avgCDOM": 61.3,
+              "totalVol": 1032500
+            }
+          }
+        },
+        {
+          "name": "Rhatigan Ridge",
+          "totalSold": 5,
+          "totalVol": 3621750,
+          "totalOL": 1,
+          "avgCDOM": 17.2,
+          "avgSPLP": 100.9,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 799188,
+              "avgSPLP": 101.1,
+              "avgCDOM": 19.0,
+              "totalVol": 3196750
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 425000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 10.0,
+              "totalVol": 425000
+            }
+          }
+        },
+        {
+          "name": "Rundle Heights",
+          "totalSold": 5,
+          "totalVol": 1252000,
+          "totalOL": 1,
+          "avgCDOM": 59.4,
+          "avgSPLP": 98.2,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 416000,
+              "avgSPLP": 102.8,
+              "avgCDOM": 10.5,
+              "totalVol": 832000
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 140000,
+              "avgSPLP": 95.1,
+              "avgCDOM": 92.0,
+              "totalVol": 420000
+            }
+          }
+        },
+        {
+          "name": "Sweet Grass",
+          "totalSold": 5,
+          "totalVol": 1637000,
+          "totalOL": 4,
+          "avgCDOM": 13.6,
+          "avgSPLP": 102.7,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 557500,
+              "avgSPLP": 106.8,
+              "avgCDOM": 10.5,
+              "totalVol": 1115000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 305000,
+              "avgSPLP": 101.7,
+              "avgCDOM": 9.0,
+              "totalVol": 305000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 108500,
+              "avgSPLP": 99.2,
+              "avgCDOM": 19.0,
+              "totalVol": 217000
+            }
+          }
+        },
+        {
+          "name": "Beacon Heights",
+          "totalSold": 4,
+          "totalVol": 1223197,
+          "totalOL": 3,
+          "avgCDOM": 14.8,
+          "avgSPLP": 100.6,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 360000,
+              "avgSPLP": 100.8,
+              "avgCDOM": 17.0,
+              "totalVol": 720000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 251598,
+              "avgSPLP": 100.5,
+              "avgCDOM": 12.5,
+              "totalVol": 503197
+            }
+          }
+        },
+        {
+          "name": "Bisset",
+          "totalSold": 4,
+          "totalVol": 1551500,
+          "totalOL": 1,
+          "avgCDOM": 13.5,
+          "avgSPLP": 100.1,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 437667,
+              "avgSPLP": 100.4,
+              "avgCDOM": 14.3,
+              "totalVol": 1313000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 238500,
+              "avgSPLP": 99.4,
+              "avgCDOM": 11.0,
+              "totalVol": 238500
+            }
+          }
+        },
+        {
+          "name": "Blackmud Creek",
+          "totalSold": 4,
+          "totalVol": 1601500,
+          "totalOL": 1,
+          "avgCDOM": 40.5,
+          "avgSPLP": 97.9,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 588500,
+              "avgSPLP": 99.3,
+              "avgCDOM": 31.0,
+              "totalVol": 1177000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 212250,
+              "avgSPLP": 96.5,
+              "avgCDOM": 50.0,
+              "totalVol": 424500
+            }
+          }
+        },
+        {
+          "name": "Blue Quill",
+          "totalSold": 4,
+          "totalVol": 1627100,
+          "totalOL": 1,
+          "avgCDOM": 79.2,
+          "avgSPLP": 97.6,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 582550,
+              "avgSPLP": 99.9,
+              "avgCDOM": 19.0,
+              "totalVol": 1165100
+            },
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 231000,
+              "avgSPLP": 95.3,
+              "avgCDOM": 139.5,
+              "totalVol": 462000
+            }
+          }
+        },
+        {
+          "name": "Bulyea Heights",
+          "totalSold": 4,
+          "totalVol": 2116000,
+          "totalOL": 2,
+          "avgCDOM": 16.5,
+          "avgSPLP": 100.0,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 694000,
+              "avgSPLP": 103.6,
+              "avgCDOM": 5.0,
+              "totalVol": 1388000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 351000,
+              "avgSPLP": 98.3,
+              "avgCDOM": 28.0,
+              "totalVol": 351000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 377000,
+              "avgSPLP": 94.4,
+              "avgCDOM": 28.0,
+              "totalVol": 377000
+            }
+          }
+        },
+        {
+          "name": "Carter Crest",
+          "totalSold": 4,
+          "totalVol": 2795100,
+          "totalOL": 2,
+          "avgCDOM": 76.2,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 810033,
+              "avgSPLP": 99.3,
+              "avgCDOM": 35.3,
+              "totalVol": 2430100
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 365000,
+              "avgSPLP": 96.6,
+              "avgCDOM": 199.0,
+              "totalVol": 365000
+            }
+          }
+        },
+        {
+          "name": "Central Mcdougall",
+          "totalSold": 4,
+          "totalVol": 702900,
+          "totalOL": 0,
+          "avgCDOM": 105.8,
+          "avgSPLP": 97.6,
+          "types": {
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 251500,
+              "avgSPLP": 99.4,
+              "avgCDOM": 72.0,
+              "totalVol": 503000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 99950,
+              "avgSPLP": 95.8,
+              "avgCDOM": 139.5,
+              "totalVol": 199900
+            }
+          }
+        },
+        {
+          "name": "Delton",
+          "totalSold": 4,
+          "totalVol": 1533500,
+          "totalOL": 1,
+          "avgCDOM": 105.2,
+          "avgSPLP": 88.4,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 245500,
+              "avgSPLP": 80.3,
+              "avgCDOM": 101.5,
+              "totalVol": 491000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 521250,
+              "avgSPLP": 96.5,
+              "avgCDOM": 109.0,
+              "totalVol": 1042500
+            }
+          }
+        },
+        {
+          "name": "Delwood",
+          "totalSold": 4,
+          "totalVol": 1612500,
+          "totalOL": 0,
+          "avgCDOM": 91.5,
+          "avgSPLP": 97.2,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 403125,
+              "avgSPLP": 97.2,
+              "avgCDOM": 91.5,
+              "totalVol": 1612500
+            }
+          }
+        },
+        {
+          "name": "Dunluce",
+          "totalSold": 4,
+          "totalVol": 1489000,
+          "totalOL": 1,
+          "avgCDOM": 74.5,
+          "avgSPLP": 98.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 426333,
+              "avgSPLP": 99.8,
+              "avgCDOM": 13.0,
+              "totalVol": 1279000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 210000,
+              "avgSPLP": 95.9,
+              "avgCDOM": 259.0,
+              "totalVol": 210000
+            }
+          }
+        },
+        {
+          "name": "Elmwood",
+          "totalSold": 4,
+          "totalVol": 1763300,
+          "totalOL": 1,
+          "avgCDOM": 32.5,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 440825,
+              "avgSPLP": 98.5,
+              "avgCDOM": 32.5,
+              "totalVol": 1763300
+            }
+          }
+        },
+        {
+          "name": "Empire Park",
+          "totalSold": 4,
+          "totalVol": 1023500,
+          "totalOL": 0,
+          "avgCDOM": 47.2,
+          "avgSPLP": 97.2,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 439500,
+              "avgSPLP": 97.7,
+              "avgCDOM": 11.0,
+              "totalVol": 439500
+            },
+            "Apartment Condo": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 194667,
+              "avgSPLP": 97.0,
+              "avgCDOM": 59.3,
+              "totalVol": 584000
+            }
+          }
+        },
+        {
+          "name": "Gariepy",
+          "totalSold": 4,
+          "totalVol": 2444700,
+          "totalOL": 0,
+          "avgCDOM": 28.8,
+          "avgSPLP": 97.7,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 691567,
+              "avgSPLP": 98.3,
+              "avgCDOM": 36.7,
+              "totalVol": 2074700
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 370000,
+              "avgSPLP": 95.9,
+              "avgCDOM": 5.0,
+              "totalVol": 370000
+            }
+          }
+        },
+        {
+          "name": "Gold Bar",
+          "totalSold": 4,
+          "totalVol": 1786000,
+          "totalOL": 2,
+          "avgCDOM": 27.0,
+          "avgSPLP": 100.6,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 446500,
+              "avgSPLP": 100.6,
+              "avgCDOM": 27.0,
+              "totalVol": 1786000
+            }
+          }
+        },
+        {
+          "name": "Greenview (Edmonton)",
+          "totalSold": 4,
+          "totalVol": 1641500,
+          "totalOL": 1,
+          "avgCDOM": 19.2,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 478667,
+              "avgSPLP": 98.2,
+              "avgCDOM": 21.3,
+              "totalVol": 1436000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 205500,
+              "avgSPLP": 97.9,
+              "avgCDOM": 13.0,
+              "totalVol": 205500
+            }
+          }
+        },
+        {
+          "name": "Hawks Ridge",
+          "totalSold": 4,
+          "totalVol": 2319776,
+          "totalOL": 1,
+          "avgCDOM": 145.0,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 651000,
+              "avgSPLP": 98.3,
+              "avgCDOM": 177.3,
+              "totalVol": 1953000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 366776,
+              "avgSPLP": 101.9,
+              "avgCDOM": 48.0,
+              "totalVol": 366776
+            }
+          }
+        },
+        {
+          "name": "Homesteader",
+          "totalSold": 4,
+          "totalVol": 2081000,
+          "totalOL": 0,
+          "avgCDOM": 38.8,
+          "avgSPLP": 97.0,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 621000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 38.7,
+              "totalVol": 1863000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 218000,
+              "avgSPLP": 94.8,
+              "avgCDOM": 39.0,
+              "totalVol": 218000
+            }
+          }
+        },
+        {
+          "name": "Hudson",
+          "totalSold": 4,
+          "totalVol": 1324399,
+          "totalOL": 1,
+          "avgCDOM": 53.8,
+          "avgSPLP": 100.0,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 575000,
+              "avgSPLP": 99.2,
+              "avgCDOM": 9.0,
+              "totalVol": 575000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 430000,
+              "avgSPLP": 101.2,
+              "avgCDOM": 12.0,
+              "totalVol": 430000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 159700,
+              "avgSPLP": 99.8,
+              "avgCDOM": 97.0,
+              "totalVol": 319399
+            }
+          }
+        },
+        {
+          "name": "Jamieson Place",
+          "totalSold": 4,
+          "totalVol": 2120000,
+          "totalOL": 2,
+          "avgCDOM": 19.2,
+          "avgSPLP": 99.7,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 2,
+              "avgSP": 530000,
+              "avgSPLP": 99.7,
+              "avgCDOM": 19.2,
+              "totalVol": 2120000
+            }
+          }
+        },
+        {
+          "name": "Kameyosek",
+          "totalSold": 4,
+          "totalVol": 1062800,
+          "totalOL": 2,
+          "avgCDOM": 44.5,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 424700,
+              "avgSPLP": 106.3,
+              "avgCDOM": 7.0,
+              "totalVol": 424700
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 212700,
+              "avgSPLP": 96.7,
+              "avgCDOM": 57.0,
+              "totalVol": 638100
+            }
+          }
+        },
+        {
+          "name": "Lago Lindo",
+          "totalSold": 4,
+          "totalVol": 1464000,
+          "totalOL": 1,
+          "avgCDOM": 34.2,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 399667,
+              "avgSPLP": 100.7,
+              "avgCDOM": 20.7,
+              "totalVol": 1199000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 265000,
+              "avgSPLP": 96.4,
+              "avgCDOM": 75.0,
+              "totalVol": 265000
+            }
+          }
+        },
+        {
+          "name": "Mayliewan",
+          "totalSold": 4,
+          "totalVol": 1879900,
+          "totalOL": 1,
+          "avgCDOM": 35.5,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 469975,
+              "avgSPLP": 99.2,
+              "avgCDOM": 35.5,
+              "totalVol": 1879900
+            }
+          }
+        },
+        {
+          "name": "Parkallen (Edmonton)",
+          "totalSold": 4,
+          "totalVol": 1890500,
+          "totalOL": 2,
+          "avgCDOM": 165.0,
+          "avgSPLP": 100.0,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 539167,
+              "avgSPLP": 99.6,
+              "avgCDOM": 56.7,
+              "totalVol": 1617500
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 273000,
+              "avgSPLP": 101.1,
+              "avgCDOM": 490.0,
+              "totalVol": 273000
+            }
+          }
+        },
+        {
+          "name": "Parkdale (Edmonton)",
+          "totalSold": 4,
+          "totalVol": 907000,
+          "totalOL": 1,
+          "avgCDOM": 68.0,
+          "avgSPLP": 97.5,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 226750,
+              "avgSPLP": 97.5,
+              "avgCDOM": 68.0,
+              "totalVol": 907000
+            }
+          }
+        },
+        {
+          "name": "Pembina",
+          "totalSold": 4,
+          "totalVol": 1053500,
+          "totalOL": 2,
+          "avgCDOM": 29.2,
+          "avgSPLP": 100.1,
+          "types": {
+            "Townhouse": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 315500,
+              "avgSPLP": 99.2,
+              "avgCDOM": 32.0,
+              "totalVol": 631000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 211250,
+              "avgSPLP": 100.9,
+              "avgCDOM": 26.5,
+              "totalVol": 422500
+            }
+          }
+        },
+        {
+          "name": "Ramsay Heights",
+          "totalSold": 4,
+          "totalVol": 1670500,
+          "totalOL": 0,
+          "avgCDOM": 39.5,
+          "avgSPLP": 97.4,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 606500,
+              "avgSPLP": 98.6,
+              "avgCDOM": 19.0,
+              "totalVol": 606500
+            },
+            "Townhouse": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 354667,
+              "avgSPLP": 97.0,
+              "avgCDOM": 46.3,
+              "totalVol": 1064000
+            }
+          }
+        },
+        {
+          "name": "Riverdale",
+          "totalSold": 4,
+          "totalVol": 1872000,
+          "totalOL": 0,
+          "avgCDOM": 61.2,
+          "avgSPLP": 97.8,
+          "types": {
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 622500,
+              "avgSPLP": 98.4,
+              "avgCDOM": 32.5,
+              "totalVol": 1245000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 313500,
+              "avgSPLP": 97.2,
+              "avgCDOM": 90.0,
+              "totalVol": 627000
+            }
+          }
+        },
+        {
+          "name": "Rossdale",
+          "totalSold": 4,
+          "totalVol": 2379050,
+          "totalOL": 1,
+          "avgCDOM": 24.2,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 754525,
+              "avgSPLP": 98.0,
+              "avgCDOM": 39.5,
+              "totalVol": 1509050
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 575000,
+              "avgSPLP": 100.9,
+              "avgCDOM": 8.0,
+              "totalVol": 575000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 295000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 10.0,
+              "totalVol": 295000
+            }
+          }
+        },
+        {
+          "name": "Skyrattler",
+          "totalSold": 4,
+          "totalVol": 829400,
+          "totalOL": 0,
+          "avgCDOM": 51.5,
+          "avgSPLP": 96.6,
+          "types": {
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 207350,
+              "avgSPLP": 96.6,
+              "avgCDOM": 51.5,
+              "totalVol": 829400
+            }
+          }
+        },
+        {
+          "name": "Suder Greens",
+          "totalSold": 4,
+          "totalVol": 1793000,
+          "totalOL": 0,
+          "avgCDOM": 75.2,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 507667,
+              "avgSPLP": 99.3,
+              "avgCDOM": 20.0,
+              "totalVol": 1523000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 270000,
+              "avgSPLP": 94.8,
+              "avgCDOM": 241.0,
+              "totalVol": 270000
+            }
+          }
+        },
+        {
+          "name": "Tawa",
+          "totalSold": 4,
+          "totalVol": 1012500,
+          "totalOL": 0,
+          "avgCDOM": 41.0,
+          "avgSPLP": 95.9,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 303000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 47.0,
+              "totalVol": 303000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 305000,
+              "avgSPLP": 98.4,
+              "avgCDOM": 8.0,
+              "totalVol": 305000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 202250,
+              "avgSPLP": 93.6,
+              "avgCDOM": 54.5,
+              "totalVol": 404500
+            }
+          }
+        },
+        {
+          "name": "Tipaskan",
+          "totalSold": 4,
+          "totalVol": 728700,
+          "totalOL": 0,
+          "avgCDOM": 103.2,
+          "avgSPLP": 95.9,
+          "types": {
+            "Townhouse": {
+              "sold": 4,
+              "overList": 0,
+              "avgSP": 182175,
+              "avgSPLP": 95.9,
+              "avgCDOM": 103.2,
+              "totalVol": 728700
+            }
+          }
+        },
+        {
+          "name": "Wellington",
+          "totalSold": 4,
+          "totalVol": 1566000,
+          "totalOL": 1,
+          "avgCDOM": 28.8,
+          "avgSPLP": 99.4,
+          "types": {
+            "Detached": {
+              "sold": 4,
+              "overList": 1,
+              "avgSP": 391500,
+              "avgSPLP": 99.4,
+              "avgCDOM": 28.8,
+              "totalVol": 1566000
+            }
+          }
+        },
+        {
+          "name": "Alces",
+          "totalSold": 3,
+          "totalVol": 1748433,
+          "totalOL": 0,
+          "avgCDOM": 111.0,
+          "avgSPLP": 98.3,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 657500,
+              "avgSPLP": 97.4,
+              "avgCDOM": 114.5,
+              "totalVol": 1315000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 433433,
+              "avgSPLP": 100.0,
+              "avgCDOM": 104.0,
+              "totalVol": 433433
+            }
+          }
+        },
+        {
+          "name": "Balwin",
+          "totalSold": 3,
+          "totalVol": 888500,
+          "totalOL": 2,
+          "avgCDOM": 18.7,
+          "avgSPLP": 98.2,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 329250,
+              "avgSPLP": 101.3,
+              "avgCDOM": 17.0,
+              "totalVol": 658500
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 230000,
+              "avgSPLP": 92.0,
+              "avgCDOM": 22.0,
+              "totalVol": 230000
+            }
+          }
+        },
+        {
+          "name": "Baturyn",
+          "totalSold": 3,
+          "totalVol": 696900,
+          "totalOL": 0,
+          "avgCDOM": 41.3,
+          "avgSPLP": 98.2,
+          "types": {
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 226000,
+              "avgSPLP": 98.3,
+              "avgCDOM": 49.5,
+              "totalVol": 452000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 244900,
+              "avgSPLP": 98.0,
+              "avgCDOM": 25.0,
+              "totalVol": 244900
+            }
+          }
+        },
+        {
+          "name": "Blatchford Area",
+          "totalSold": 3,
+          "totalVol": 1652561,
+          "totalOL": 2,
+          "avgCDOM": 36.0,
+          "avgSPLP": 106.3,
+          "types": {
+            "Townhouse": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 550854,
+              "avgSPLP": 106.3,
+              "avgCDOM": 36.0,
+              "totalVol": 1652561
+            }
+          }
+        },
+        {
+          "name": "Brander Gardens",
+          "totalSold": 3,
+          "totalVol": 2028222,
+          "totalOL": 1,
+          "avgCDOM": 6.7,
+          "avgSPLP": 104.1,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 820611,
+              "avgSPLP": 106.5,
+              "avgCDOM": 3.5,
+              "totalVol": 1641222
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 387000,
+              "avgSPLP": 99.3,
+              "avgCDOM": 13.0,
+              "totalVol": 387000
+            }
+          }
+        },
+        {
+          "name": "Britannia Youngstown",
+          "totalSold": 3,
+          "totalVol": 1084000,
+          "totalOL": 1,
+          "avgCDOM": 14.0,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 347500,
+              "avgSPLP": 99.5,
+              "avgCDOM": 17.0,
+              "totalVol": 695000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 389000,
+              "avgSPLP": 98.5,
+              "avgCDOM": 8.0,
+              "totalVol": 389000
+            }
+          }
+        },
+        {
+          "name": "Callingwood South",
+          "totalSold": 3,
+          "totalVol": 669000,
+          "totalOL": 1,
+          "avgCDOM": 80.3,
+          "avgSPLP": 99.5,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 300000,
+              "avgSPLP": 103.5,
+              "avgCDOM": 19.0,
+              "totalVol": 300000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 184500,
+              "avgSPLP": 97.5,
+              "avgCDOM": 111.0,
+              "totalVol": 369000
+            }
+          }
+        },
+        {
+          "name": "Cameron Heights (Edmonton)",
+          "totalSold": 3,
+          "totalVol": 2505500,
+          "totalOL": 0,
+          "avgCDOM": 26.0,
+          "avgSPLP": 98.4,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 835167,
+              "avgSPLP": 98.4,
+              "avgCDOM": 26.0,
+              "totalVol": 2505500
+            }
+          }
+        },
+        {
+          "name": "Capilano",
+          "totalSold": 3,
+          "totalVol": 2155500,
+          "totalOL": 2,
+          "avgCDOM": 12.7,
+          "avgSPLP": 100.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 718500,
+              "avgSPLP": 100.6,
+              "avgCDOM": 12.7,
+              "totalVol": 2155500
+            }
+          }
+        },
+        {
+          "name": "Chambery",
+          "totalSold": 3,
+          "totalVol": 1688500,
+          "totalOL": 1,
+          "avgCDOM": 17.0,
+          "avgSPLP": 98.9,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 562833,
+              "avgSPLP": 98.9,
+              "avgCDOM": 17.0,
+              "totalVol": 1688500
+            }
+          }
+        },
+        {
+          "name": "Cloverdale",
+          "totalSold": 3,
+          "totalVol": 3238500,
+          "totalOL": 0,
+          "avgCDOM": 130.0,
+          "avgSPLP": 93.6,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 2650000,
+              "avgSPLP": 88.3,
+              "avgCDOM": 304.0,
+              "totalVol": 2650000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 294250,
+              "avgSPLP": 96.3,
+              "avgCDOM": 43.0,
+              "totalVol": 588500
+            }
+          }
+        },
+        {
+          "name": "Crawford Plains",
+          "totalSold": 3,
+          "totalVol": 1334400,
+          "totalOL": 1,
+          "avgCDOM": 19.3,
+          "avgSPLP": 100.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 444800,
+              "avgSPLP": 100.8,
+              "avgCDOM": 19.3,
+              "totalVol": 1334400
+            }
+          }
+        },
+        {
+          "name": "Daly Grove",
+          "totalSold": 3,
+          "totalVol": 1135000,
+          "totalOL": 0,
+          "avgCDOM": 52.7,
+          "avgSPLP": 96.2,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 469000,
+              "avgSPLP": 97.9,
+              "avgCDOM": 50.0,
+              "totalVol": 938000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 197000,
+              "avgSPLP": 92.9,
+              "avgCDOM": 58.0,
+              "totalVol": 197000
+            }
+          }
+        },
+        {
+          "name": "Duggan",
+          "totalSold": 3,
+          "totalVol": 1545000,
+          "totalOL": 2,
+          "avgCDOM": 15.7,
+          "avgSPLP": 97.9,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 515000,
+              "avgSPLP": 97.9,
+              "avgCDOM": 15.7,
+              "totalVol": 1545000
+            }
+          }
+        },
+        {
+          "name": "Evansdale",
+          "totalSold": 3,
+          "totalVol": 1320000,
+          "totalOL": 0,
+          "avgCDOM": 27.0,
+          "avgSPLP": 98.8,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 440000,
+              "avgSPLP": 98.8,
+              "avgCDOM": 27.0,
+              "totalVol": 1320000
+            }
+          }
+        },
+        {
+          "name": "Hays Ridge Area",
+          "totalSold": 3,
+          "totalVol": 2445000,
+          "totalOL": 0,
+          "avgCDOM": 110.3,
+          "avgSPLP": 97.0,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 932500,
+              "avgSPLP": 97.1,
+              "avgCDOM": 128.0,
+              "totalVol": 1865000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 580000,
+              "avgSPLP": 96.8,
+              "avgCDOM": 75.0,
+              "totalVol": 580000
+            }
+          }
+        },
+        {
+          "name": "High Park (Edmonton)",
+          "totalSold": 3,
+          "totalVol": 1486000,
+          "totalOL": 0,
+          "avgCDOM": 42.0,
+          "avgSPLP": 96.7,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 465500,
+              "avgSPLP": 95.5,
+              "avgCDOM": 36.5,
+              "totalVol": 931000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 555000,
+              "avgSPLP": 99.1,
+              "avgCDOM": 53.0,
+              "totalVol": 555000
+            }
+          }
+        },
+        {
+          "name": "Hodgson",
+          "totalSold": 3,
+          "totalVol": 2096460,
+          "totalOL": 0,
+          "avgCDOM": 34.7,
+          "avgSPLP": 96.8,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 879000,
+              "avgSPLP": 97.8,
+              "avgCDOM": 34.5,
+              "totalVol": 1758000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 338460,
+              "avgSPLP": 94.7,
+              "avgCDOM": 35.0,
+              "totalVol": 338460
+            }
+          }
+        },
+        {
+          "name": "Idylwylde",
+          "totalSold": 3,
+          "totalVol": 1810000,
+          "totalOL": 0,
+          "avgCDOM": 21.3,
+          "avgSPLP": 97.6,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 567500,
+              "avgSPLP": 97.3,
+              "avgCDOM": 14.0,
+              "totalVol": 1135000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 675000,
+              "avgSPLP": 98.1,
+              "avgCDOM": 36.0,
+              "totalVol": 675000
+            }
+          }
+        },
+        {
+          "name": "Jasper Park",
+          "totalSold": 3,
+          "totalVol": 608500,
+          "totalOL": 0,
+          "avgCDOM": 36.3,
+          "avgSPLP": 91.5,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 413500,
+              "avgSPLP": 99.6,
+              "avgCDOM": 42.0,
+              "totalVol": 413500
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 97500,
+              "avgSPLP": 87.5,
+              "avgCDOM": 33.5,
+              "totalVol": 195000
+            }
+          }
+        },
+        {
+          "name": "Kenilworth",
+          "totalSold": 3,
+          "totalVol": 1536000,
+          "totalOL": 1,
+          "avgCDOM": 62.3,
+          "avgSPLP": 100.0,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 512000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 62.3,
+              "totalVol": 1536000
+            }
+          }
+        },
+        {
+          "name": "Kensington",
+          "totalSold": 3,
+          "totalVol": 1192500,
+          "totalOL": 0,
+          "avgCDOM": 18.3,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 397500,
+              "avgSPLP": 98.5,
+              "avgCDOM": 18.3,
+              "totalVol": 1192500
+            }
+          }
+        },
+        {
+          "name": "Killarney",
+          "totalSold": 3,
+          "totalVol": 1022000,
+          "totalOL": 1,
+          "avgCDOM": 19.3,
+          "avgSPLP": 98.8,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 378500,
+              "avgSPLP": 99.9,
+              "avgCDOM": 22.5,
+              "totalVol": 757000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 265000,
+              "avgSPLP": 96.4,
+              "avgCDOM": 13.0,
+              "totalVol": 265000
+            }
+          }
+        },
+        {
+          "name": "Lauderdale",
+          "totalSold": 3,
+          "totalVol": 1098000,
+          "totalOL": 2,
+          "avgCDOM": 77.0,
+          "avgSPLP": 98.5,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 366000,
+              "avgSPLP": 98.5,
+              "avgCDOM": 77.0,
+              "totalVol": 1098000
+            }
+          }
+        },
+        {
+          "name": "Mattson",
+          "totalSold": 3,
+          "totalVol": 1472000,
+          "totalOL": 0,
+          "avgCDOM": 37.7,
+          "avgSPLP": 97.5,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 542500,
+              "avgSPLP": 96.6,
+              "avgCDOM": 37.0,
+              "totalVol": 1085000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 387000,
+              "avgSPLP": 99.3,
+              "avgCDOM": 39.0,
+              "totalVol": 387000
+            }
+          }
+        },
+        {
+          "name": "McKernan",
+          "totalSold": 3,
+          "totalVol": 1958000,
+          "totalOL": 1,
+          "avgCDOM": 53.7,
+          "avgSPLP": 96.3,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 560000,
+              "avgSPLP": 93.5,
+              "avgCDOM": 79.0,
+              "totalVol": 560000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 699000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 41.0,
+              "totalVol": 1398000
+            }
+          }
+        },
+        {
+          "name": "Menisa",
+          "totalSold": 3,
+          "totalVol": 1249500,
+          "totalOL": 0,
+          "avgCDOM": 34.3,
+          "avgSPLP": 96.6,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 416500,
+              "avgSPLP": 96.6,
+              "avgCDOM": 34.3,
+              "totalVol": 1249500
+            }
+          }
+        },
+        {
+          "name": "Michaels Park",
+          "totalSold": 3,
+          "totalVol": 648000,
+          "totalOL": 1,
+          "avgCDOM": 38.3,
+          "avgSPLP": 97.3,
+          "types": {
+            "Townhouse": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 259500,
+              "avgSPLP": 98.1,
+              "avgCDOM": 23.0,
+              "totalVol": 519000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 129000,
+              "avgSPLP": 95.6,
+              "avgCDOM": 69.0,
+              "totalVol": 129000
+            }
+          }
+        },
+        {
+          "name": "Minchau",
+          "totalSold": 3,
+          "totalVol": 900500,
+          "totalOL": 2,
+          "avgCDOM": 27.0,
+          "avgSPLP": 100.4,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 345500,
+              "avgSPLP": 101.6,
+              "avgCDOM": 12.0,
+              "totalVol": 345500
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 169000,
+              "avgSPLP": 96.6,
+              "avgCDOM": 63.0,
+              "totalVol": 169000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 386000,
+              "avgSPLP": 103.0,
+              "avgCDOM": 6.0,
+              "totalVol": 386000
+            }
+          }
+        },
+        {
+          "name": "Northmount (Edmonton)",
+          "totalSold": 3,
+          "totalVol": 987500,
+          "totalOL": 0,
+          "avgCDOM": 26.0,
+          "avgSPLP": 96.8,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 387500,
+              "avgSPLP": 95.7,
+              "avgCDOM": 31.5,
+              "totalVol": 775000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 212500,
+              "avgSPLP": 99.1,
+              "avgCDOM": 15.0,
+              "totalVol": 212500
+            }
+          }
+        },
+        {
+          "name": "Ozerna",
+          "totalSold": 3,
+          "totalVol": 1427900,
+          "totalOL": 1,
+          "avgCDOM": 23.7,
+          "avgSPLP": 101.1,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 475967,
+              "avgSPLP": 101.1,
+              "avgCDOM": 23.7,
+              "totalVol": 1427900
+            }
+          }
+        },
+        {
+          "name": "Patricia Heights",
+          "totalSold": 3,
+          "totalVol": 2025000,
+          "totalOL": 3,
+          "avgCDOM": 14.7,
+          "avgSPLP": 105.5,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 3,
+              "avgSP": 675000,
+              "avgSPLP": 105.5,
+              "avgCDOM": 14.7,
+              "totalVol": 2025000
+            }
+          }
+        },
+        {
+          "name": "Richfield",
+          "totalSold": 3,
+          "totalVol": 1223150,
+          "totalOL": 1,
+          "avgCDOM": 53.7,
+          "avgSPLP": 100.4,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 440950,
+              "avgSPLP": 101.8,
+              "avgCDOM": 69.5,
+              "totalVol": 881900
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 341250,
+              "avgSPLP": 97.5,
+              "avgCDOM": 22.0,
+              "totalVol": 341250
+            }
+          }
+        },
+        {
+          "name": "Richford",
+          "totalSold": 3,
+          "totalVol": 1704000,
+          "totalOL": 0,
+          "avgCDOM": 23.3,
+          "avgSPLP": 98.7,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 970000,
+              "avgSPLP": 99.0,
+              "avgCDOM": 41.0,
+              "totalVol": 970000
+            },
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 367000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 14.5,
+              "totalVol": 734000
+            }
+          }
+        },
+        {
+          "name": "Rosslyn",
+          "totalSold": 3,
+          "totalVol": 1195500,
+          "totalOL": 1,
+          "avgCDOM": 23.7,
+          "avgSPLP": 99.2,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 398500,
+              "avgSPLP": 99.2,
+              "avgCDOM": 23.7,
+              "totalVol": 1195500
+            }
+          }
+        },
+        {
+          "name": "Spruce Avenue",
+          "totalSold": 3,
+          "totalVol": 949000,
+          "totalOL": 0,
+          "avgCDOM": 67.3,
+          "avgSPLP": 95.5,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 344500,
+              "avgSPLP": 93.3,
+              "avgCDOM": 95.5,
+              "totalVol": 689000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 260000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 11.0,
+              "totalVol": 260000
+            }
+          }
+        },
+        {
+          "name": "Steinhauer",
+          "totalSold": 3,
+          "totalVol": 1756900,
+          "totalOL": 1,
+          "avgCDOM": 17.7,
+          "avgSPLP": 100.5,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 585633,
+              "avgSPLP": 100.5,
+              "avgCDOM": 17.7,
+              "totalVol": 1756900
+            }
+          }
+        },
+        {
+          "name": "Strathearn",
+          "totalSold": 3,
+          "totalVol": 1686000,
+          "totalOL": 1,
+          "avgCDOM": 104.0,
+          "avgSPLP": 98.7,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 1,
+              "avgSP": 562000,
+              "avgSPLP": 98.7,
+              "avgCDOM": 104.0,
+              "totalVol": 1686000
+            }
+          }
+        },
+        {
+          "name": "Webber Greens",
+          "totalSold": 3,
+          "totalVol": 1309000,
+          "totalOL": 0,
+          "avgCDOM": 30.3,
+          "avgSPLP": 99.2,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 375000,
+              "avgSPLP": 98.7,
+              "avgCDOM": 63.0,
+              "totalVol": 375000
+            },
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 467000,
+              "avgSPLP": 99.4,
+              "avgCDOM": 14.0,
+              "totalVol": 934000
+            }
+          }
+        },
+        {
+          "name": "Wedgewood Heights",
+          "totalSold": 3,
+          "totalVol": 2048000,
+          "totalOL": 2,
+          "avgCDOM": 9.0,
+          "avgSPLP": 101.0,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 2,
+              "avgSP": 682667,
+              "avgSPLP": 101.0,
+              "avgCDOM": 9.0,
+              "totalVol": 2048000
+            }
+          }
+        },
+        {
+          "name": "Westridge (Edmonton)",
+          "totalSold": 3,
+          "totalVol": 3305000,
+          "totalOL": 0,
+          "avgCDOM": 35.3,
+          "avgSPLP": 97.9,
+          "types": {
+            "Detached": {
+              "sold": 3,
+              "overList": 0,
+              "avgSP": 1101667,
+              "avgSPLP": 97.9,
+              "avgCDOM": 35.3,
+              "totalVol": 3305000
+            }
+          }
+        },
+        {
+          "name": "Abbottsfield",
+          "totalSold": 2,
+          "totalVol": 392500,
+          "totalOL": 0,
+          "avgCDOM": 35.0,
+          "avgSPLP": 95.8,
+          "types": {
+            "Townhouse": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 196250,
+              "avgSPLP": 95.8,
+              "avgCDOM": 35.0,
+              "totalVol": 392500
+            }
+          }
+        },
+        {
+          "name": "Bearspaw (Edmonton)",
+          "totalSold": 2,
+          "totalVol": 1374900,
+          "totalOL": 0,
+          "avgCDOM": 14.0,
+          "avgSPLP": 96.4,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 687450,
+              "avgSPLP": 96.4,
+              "avgCDOM": 14.0,
+              "totalVol": 1374900
+            }
+          }
+        },
+        {
+          "name": "Belle Rive",
+          "totalSold": 2,
+          "totalVol": 1191000,
+          "totalOL": 0,
+          "avgCDOM": 20.5,
+          "avgSPLP": 98.1,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 595500,
+              "avgSPLP": 98.1,
+              "avgCDOM": 20.5,
+              "totalVol": 1191000
+            }
+          }
+        },
+        {
+          "name": "Blue Quill Estates",
+          "totalSold": 2,
+          "totalVol": 978000,
+          "totalOL": 0,
+          "avgCDOM": 17.0,
+          "avgSPLP": 98.6,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 565000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 13.0,
+              "totalVol": 565000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 413000,
+              "avgSPLP": 97.2,
+              "avgCDOM": 21.0,
+              "totalVol": 413000
+            }
+          }
+        },
+        {
+          "name": "Brintnell",
+          "totalSold": 2,
+          "totalVol": 799000,
+          "totalOL": 0,
+          "avgCDOM": 77.0,
+          "avgSPLP": 98.0,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 399500,
+              "avgSPLP": 98.0,
+              "avgCDOM": 77.0,
+              "totalVol": 799000
+            }
+          }
+        },
+        {
+          "name": "Brookside",
+          "totalSold": 2,
+          "totalVol": 1615000,
+          "totalOL": 2,
+          "avgCDOM": 4.0,
+          "avgSPLP": 100.9,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 807500,
+              "avgSPLP": 100.9,
+              "avgCDOM": 4.0,
+              "totalVol": 1615000
+            }
+          }
+        },
+        {
+          "name": "Canossa",
+          "totalSold": 2,
+          "totalVol": 1030000,
+          "totalOL": 0,
+          "avgCDOM": 22.5,
+          "avgSPLP": 97.3,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 515000,
+              "avgSPLP": 97.3,
+              "avgCDOM": 22.5,
+              "totalVol": 1030000
+            }
+          }
+        },
+        {
+          "name": "Carlisle",
+          "totalSold": 2,
+          "totalVol": 650900,
+          "totalOL": 1,
+          "avgCDOM": 42.0,
+          "avgSPLP": 93.3,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 325450,
+              "avgSPLP": 93.3,
+              "avgCDOM": 42.0,
+              "totalVol": 650900
+            }
+          }
+        },
+        {
+          "name": "Eastwood",
+          "totalSold": 2,
+          "totalVol": 665400,
+          "totalOL": 0,
+          "avgCDOM": 25.0,
+          "avgSPLP": 88.9,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 240000,
+              "avgSPLP": 80.0,
+              "avgCDOM": 9.0,
+              "totalVol": 240000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 425400,
+              "avgSPLP": 97.8,
+              "avgCDOM": 41.0,
+              "totalVol": 425400
+            }
+          }
+        },
+        {
+          "name": "Fulton Place",
+          "totalSold": 2,
+          "totalVol": 768000,
+          "totalOL": 0,
+          "avgCDOM": 136.5,
+          "avgSPLP": 96.7,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 493000,
+              "avgSPLP": 98.6,
+              "avgCDOM": 25.0,
+              "totalVol": 493000
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 275000,
+              "avgSPLP": 94.8,
+              "avgCDOM": 248.0,
+              "totalVol": 275000
+            }
+          }
+        },
+        {
+          "name": "Graydon Hill",
+          "totalSold": 2,
+          "totalVol": 897500,
+          "totalOL": 0,
+          "avgCDOM": 32.0,
+          "avgSPLP": 97.2,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 580000,
+              "avgSPLP": 96.7,
+              "avgCDOM": 38.0,
+              "totalVol": 580000
+            },
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 317500,
+              "avgSPLP": 97.7,
+              "avgCDOM": 26.0,
+              "totalVol": 317500
+            }
+          }
+        },
+        {
+          "name": "Heritage Valley Town Centre Area",
+          "totalSold": 2,
+          "totalVol": 364000,
+          "totalOL": 0,
+          "avgCDOM": 82.0,
+          "avgSPLP": 96.6,
+          "types": {
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 182000,
+              "avgSPLP": 96.6,
+              "avgCDOM": 82.0,
+              "totalVol": 364000
+            }
+          }
+        },
+        {
+          "name": "Highlands (Edmonton)",
+          "totalSold": 2,
+          "totalVol": 1079000,
+          "totalOL": 2,
+          "avgCDOM": 16.5,
+          "avgSPLP": 102.9,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 539500,
+              "avgSPLP": 102.9,
+              "avgCDOM": 16.5,
+              "totalVol": 1079000
+            }
+          }
+        },
+        {
+          "name": "Hillview",
+          "totalSold": 2,
+          "totalVol": 1085000,
+          "totalOL": 1,
+          "avgCDOM": 25.0,
+          "avgSPLP": 100.5,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 542500,
+              "avgSPLP": 100.5,
+              "avgCDOM": 25.0,
+              "totalVol": 1085000
+            }
+          }
+        },
+        {
+          "name": "Lansdowne",
+          "totalSold": 2,
+          "totalVol": 1785500,
+          "totalOL": 1,
+          "avgCDOM": 12.0,
+          "avgSPLP": 97.7,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 892750,
+              "avgSPLP": 97.7,
+              "avgCDOM": 12.0,
+              "totalVol": 1785500
+            }
+          }
+        },
+        {
+          "name": "Laurier Heights",
+          "totalSold": 2,
+          "totalVol": 1955000,
+          "totalOL": 1,
+          "avgCDOM": 22.0,
+          "avgSPLP": 100.3,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 977500,
+              "avgSPLP": 100.3,
+              "avgCDOM": 22.0,
+              "totalVol": 1955000
+            }
+          }
+        },
+        {
+          "name": "Leger",
+          "totalSold": 2,
+          "totalVol": 1226888,
+          "totalOL": 1,
+          "avgCDOM": 9.0,
+          "avgSPLP": 100.3,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 760000,
+              "avgSPLP": 101.3,
+              "avgCDOM": 11.0,
+              "totalVol": 760000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 466888,
+              "avgSPLP": 99.3,
+              "avgCDOM": 7.0,
+              "totalVol": 466888
+            }
+          }
+        },
+        {
+          "name": "Lendrum Place",
+          "totalSold": 2,
+          "totalVol": 1100000,
+          "totalOL": 1,
+          "avgCDOM": 6.0,
+          "avgSPLP": 100.5,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 550000,
+              "avgSPLP": 100.5,
+              "avgCDOM": 6.0,
+              "totalVol": 1100000
+            }
+          }
+        },
+        {
+          "name": "Lymburn",
+          "totalSold": 2,
+          "totalVol": 644500,
+          "totalOL": 1,
+          "avgCDOM": 18.5,
+          "avgSPLP": 100.7,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 412500,
+              "avgSPLP": 98.2,
+              "avgCDOM": 20.0,
+              "totalVol": 412500
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 232000,
+              "avgSPLP": 103.2,
+              "avgCDOM": 17.0,
+              "totalVol": 232000
+            }
+          }
+        },
+        {
+          "name": "Lynnwood",
+          "totalSold": 2,
+          "totalVol": 801500,
+          "totalOL": 0,
+          "avgCDOM": 121.0,
+          "avgSPLP": 98.4,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 400750,
+              "avgSPLP": 98.4,
+              "avgCDOM": 121.0,
+              "totalVol": 801500
+            }
+          }
+        },
+        {
+          "name": "McQueen",
+          "totalSold": 2,
+          "totalVol": 880000,
+          "totalOL": 2,
+          "avgCDOM": 4.5,
+          "avgSPLP": 103.5,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 440000,
+              "avgSPLP": 103.5,
+              "avgCDOM": 4.5,
+              "totalVol": 880000
+            }
+          }
+        },
+        {
+          "name": "Mccauley",
+          "totalSold": 2,
+          "totalVol": 354000,
+          "totalOL": 0,
+          "avgCDOM": 56.0,
+          "avgSPLP": 96.4,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 177000,
+              "avgSPLP": 96.4,
+              "avgCDOM": 56.0,
+              "totalVol": 354000
+            }
+          }
+        },
+        {
+          "name": "Mill Woods Town Centre",
+          "totalSold": 2,
+          "totalVol": 270000,
+          "totalOL": 0,
+          "avgCDOM": 45.0,
+          "avgSPLP": 91.6,
+          "types": {
+            "Apartment Condo": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 135000,
+              "avgSPLP": 91.6,
+              "avgCDOM": 45.0,
+              "totalVol": 270000
+            }
+          }
+        },
+        {
+          "name": "Ogilvie Ridge",
+          "totalSold": 2,
+          "totalVol": 847000,
+          "totalOL": 1,
+          "avgCDOM": 45.5,
+          "avgSPLP": 96.9,
+          "types": {
+            "Half Duplex": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 423500,
+              "avgSPLP": 96.9,
+              "avgCDOM": 45.5,
+              "totalVol": 847000
+            }
+          }
+        },
+        {
+          "name": "Rapperswill",
+          "totalSold": 2,
+          "totalVol": 1019000,
+          "totalOL": 1,
+          "avgCDOM": 18.5,
+          "avgSPLP": 99.6,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 604000,
+              "avgSPLP": 97.7,
+              "avgCDOM": 27.0,
+              "totalVol": 604000
+            },
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 415000,
+              "avgSPLP": 101.5,
+              "avgCDOM": 10.0,
+              "totalVol": 415000
+            }
+          }
+        },
+        {
+          "name": "Rio Terrace",
+          "totalSold": 2,
+          "totalVol": 1735000,
+          "totalOL": 0,
+          "avgCDOM": 37.0,
+          "avgSPLP": 94.7,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 867500,
+              "avgSPLP": 94.7,
+              "avgCDOM": 37.0,
+              "totalVol": 1735000
+            }
+          }
+        },
+        {
+          "name": "Sherwood",
+          "totalSold": 2,
+          "totalVol": 1105000,
+          "totalOL": 0,
+          "avgCDOM": 69.0,
+          "avgSPLP": 95.8,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 0,
+              "avgSP": 552500,
+              "avgSPLP": 95.8,
+              "avgCDOM": 69.0,
+              "totalVol": 1105000
+            }
+          }
+        },
+        {
+          "name": "Tweddle Place",
+          "totalSold": 2,
+          "totalVol": 846000,
+          "totalOL": 1,
+          "avgCDOM": 81.5,
+          "avgSPLP": 81.9,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 423000,
+              "avgSPLP": 81.9,
+              "avgCDOM": 81.5,
+              "totalVol": 846000
+            }
+          }
+        },
+        {
+          "name": "West Jasper Place",
+          "totalSold": 2,
+          "totalVol": 1132000,
+          "totalOL": 2,
+          "avgCDOM": 14.0,
+          "avgSPLP": 101.0,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 2,
+              "avgSP": 566000,
+              "avgSPLP": 101.0,
+              "avgCDOM": 14.0,
+              "totalVol": 1132000
+            }
+          }
+        },
+        {
+          "name": "Westbrook Estates",
+          "totalSold": 2,
+          "totalVol": 3575000,
+          "totalOL": 1,
+          "avgCDOM": 168.5,
+          "avgSPLP": 100.2,
+          "types": {
+            "Detached": {
+              "sold": 2,
+              "overList": 1,
+              "avgSP": 1787500,
+              "avgSPLP": 100.2,
+              "avgCDOM": 168.5,
+              "totalVol": 3575000
+            }
+          }
+        },
+        {
+          "name": "Westwood (Edmonton)",
+          "totalSold": 2,
+          "totalVol": 541000,
+          "totalOL": 0,
+          "avgCDOM": 44.0,
+          "avgSPLP": 97.4,
+          "types": {
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 448500,
+              "avgSPLP": 97.5,
+              "avgCDOM": 49.0,
+              "totalVol": 448500
+            },
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 92500,
+              "avgSPLP": 97.4,
+              "avgCDOM": 39.0,
+              "totalVol": 92500
+            }
+          }
+        },
+        {
+          "name": "Albany",
+          "totalSold": 1,
+          "totalVol": 188000,
+          "totalOL": 0,
+          "avgCDOM": 22.0,
+          "avgSPLP": 96.4,
+          "types": {
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 188000,
+              "avgSPLP": 96.4,
+              "avgCDOM": 22.0,
+              "totalVol": 188000
+            }
+          }
+        },
+        {
+          "name": "Aldergrove",
+          "totalSold": 1,
+          "totalVol": 217000,
+          "totalOL": 0,
+          "avgCDOM": 30.0,
+          "avgSPLP": 94.3,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 217000,
+              "avgSPLP": 94.3,
+              "avgCDOM": 30.0,
+              "totalVol": 217000
+            }
+          }
+        },
+        {
+          "name": "Argyll",
+          "totalSold": 1,
+          "totalVol": 500000,
+          "totalOL": 0,
+          "avgCDOM": 18.0,
+          "avgSPLP": 92.8,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 500000,
+              "avgSPLP": 92.8,
+              "avgCDOM": 18.0,
+              "totalVol": 500000
+            }
+          }
+        },
+        {
+          "name": "Bellevue",
+          "totalSold": 1,
+          "totalVol": 332000,
+          "totalOL": 0,
+          "avgCDOM": 7.0,
+          "avgSPLP": 99.7,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 332000,
+              "avgSPLP": 99.7,
+              "avgCDOM": 7.0,
+              "totalVol": 332000
+            }
+          }
+        },
+        {
+          "name": "Bergman",
+          "totalSold": 1,
+          "totalVol": 325000,
+          "totalOL": 0,
+          "avgCDOM": 80.0,
+          "avgSPLP": 92.9,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 325000,
+              "avgSPLP": 92.9,
+              "avgCDOM": 80.0,
+              "totalVol": 325000
+            }
+          }
+        },
+        {
+          "name": "Blackburne",
+          "totalSold": 1,
+          "totalVol": 670000,
+          "totalOL": 0,
+          "avgCDOM": 17.0,
+          "avgSPLP": 97.8,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 670000,
+              "avgSPLP": 97.8,
+              "avgCDOM": 17.0,
+              "totalVol": 670000
+            }
+          }
+        },
+        {
+          "name": "Breckenridge Greens",
+          "totalSold": 1,
+          "totalVol": 459250,
+          "totalOL": 0,
+          "avgCDOM": 8.0,
+          "avgSPLP": 99.8,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 459250,
+              "avgSPLP": 99.8,
+              "avgCDOM": 8.0,
+              "totalVol": 459250
+            }
+          }
+        },
+        {
+          "name": "Calder",
+          "totalSold": 1,
+          "totalVol": 400000,
+          "totalOL": 0,
+          "avgCDOM": 35.0,
+          "avgSPLP": 95.5,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 400000,
+              "avgSPLP": 95.5,
+              "avgCDOM": 35.0,
+              "totalVol": 400000
+            }
+          }
+        },
+        {
+          "name": "Cashman",
+          "totalSold": 1,
+          "totalVol": 326842,
+          "totalOL": 1,
+          "avgCDOM": 21.0,
+          "avgSPLP": 133.4,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 326842,
+              "avgSPLP": 133.4,
+              "avgCDOM": 21.0,
+              "totalVol": 326842
+            }
+          }
+        },
+        {
+          "name": "Cromdale",
+          "totalSold": 1,
+          "totalVol": 126000,
+          "totalOL": 0,
+          "avgCDOM": 64.0,
+          "avgSPLP": 97.0,
+          "types": {
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 126000,
+              "avgSPLP": 97.0,
+              "avgCDOM": 64.0,
+              "totalVol": 126000
+            }
+          }
+        },
+        {
+          "name": "Donsdale",
+          "totalSold": 1,
+          "totalVol": 725000,
+          "totalOL": 1,
+          "avgCDOM": 3.0,
+          "avgSPLP": 105.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 725000,
+              "avgSPLP": 105.1,
+              "avgCDOM": 3.0,
+              "totalVol": 725000
+            }
+          }
+        },
+        {
+          "name": "Dovercourt",
+          "totalSold": 1,
+          "totalVol": 476000,
+          "totalOL": 0,
+          "avgCDOM": 8.0,
+          "avgSPLP": 95.2,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 476000,
+              "avgSPLP": 95.2,
+              "avgCDOM": 8.0,
+              "totalVol": 476000
+            }
+          }
+        },
+        {
+          "name": "Ebbers",
+          "totalSold": 1,
+          "totalVol": 224900,
+          "totalOL": 0,
+          "avgCDOM": 29.0,
+          "avgSPLP": 97.8,
+          "types": {
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 224900,
+              "avgSPLP": 97.8,
+              "avgCDOM": 29.0,
+              "totalVol": 224900
+            }
+          }
+        },
+        {
+          "name": "Elsinore",
+          "totalSold": 1,
+          "totalVol": 633000,
+          "totalOL": 0,
+          "avgCDOM": 36.0,
+          "avgSPLP": 98.9,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 633000,
+              "avgSPLP": 98.9,
+              "avgCDOM": 36.0,
+              "totalVol": 633000
+            }
+          }
+        },
+        {
+          "name": "Gorman",
+          "totalSold": 1,
+          "totalVol": 609000,
+          "totalOL": 0,
+          "avgCDOM": 26.0,
+          "avgSPLP": 99.0,
+          "types": {
+            "Half Duplex": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 609000,
+              "avgSPLP": 99.0,
+              "avgCDOM": 26.0,
+              "totalVol": 609000
+            }
+          }
+        },
+        {
+          "name": "Hazeldean",
+          "totalSold": 1,
+          "totalVol": 495037,
+          "totalOL": 1,
+          "avgCDOM": 10.0,
+          "avgSPLP": 102.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 495037,
+              "avgSPLP": 102.1,
+              "avgCDOM": 10.0,
+              "totalVol": 495037
+            }
+          }
+        },
+        {
+          "name": "Horse Hill Neighbourhood 1A",
+          "totalSold": 1,
+          "totalVol": 609000,
+          "totalOL": 0,
+          "avgCDOM": 269.0,
+          "avgSPLP": 99.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 609000,
+              "avgSPLP": 99.1,
+              "avgCDOM": 269.0,
+              "totalVol": 609000
+            }
+          }
+        },
+        {
+          "name": "Mcleod",
+          "totalSold": 1,
+          "totalVol": 432100,
+          "totalOL": 1,
+          "avgCDOM": 11.0,
+          "avgSPLP": 101.7,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 432100,
+              "avgSPLP": 101.7,
+              "avgCDOM": 11.0,
+              "totalVol": 432100
+            }
+          }
+        },
+        {
+          "name": "Meltwater",
+          "totalSold": 1,
+          "totalVol": 2300000,
+          "totalOL": 0,
+          "avgCDOM": 557.0,
+          "avgSPLP": 82.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 2300000,
+              "avgSPLP": 82.1,
+              "avgCDOM": 557.0,
+              "totalVol": 2300000
+            }
+          }
+        },
+        {
+          "name": "Newton",
+          "totalSold": 1,
+          "totalVol": 350000,
+          "totalOL": 0,
+          "avgCDOM": 1.0,
+          "avgSPLP": 100.0,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 350000,
+              "avgSPLP": 100.0,
+              "avgCDOM": 1.0,
+              "totalVol": 350000
+            }
+          }
+        },
+        {
+          "name": "Potter Greens",
+          "totalSold": 1,
+          "totalVol": 452500,
+          "totalOL": 0,
+          "avgCDOM": 14.0,
+          "avgSPLP": 98.4,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 452500,
+              "avgSPLP": 98.4,
+              "avgCDOM": 14.0,
+              "totalVol": 452500
+            }
+          }
+        },
+        {
+          "name": "Quarry Ridge",
+          "totalSold": 1,
+          "totalVol": 660000,
+          "totalOL": 0,
+          "avgCDOM": 227.0,
+          "avgSPLP": 93.0,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 660000,
+              "avgSPLP": 93.0,
+              "avgCDOM": 227.0,
+              "totalVol": 660000
+            }
+          }
+        },
+        {
+          "name": "Riverview Area",
+          "totalSold": 1,
+          "totalVol": 965000,
+          "totalOL": 0,
+          "avgCDOM": 129.0,
+          "avgSPLP": 96.6,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 965000,
+              "avgSPLP": 96.6,
+              "avgCDOM": 129.0,
+              "totalVol": 965000
+            }
+          }
+        },
+        {
+          "name": "Sifton Park",
+          "totalSold": 1,
+          "totalVol": 222500,
+          "totalOL": 0,
+          "avgCDOM": 204.0,
+          "avgSPLP": 96.8,
+          "types": {
+            "Townhouse": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 222500,
+              "avgSPLP": 96.8,
+              "avgCDOM": 204.0,
+              "totalVol": 222500
+            }
+          }
+        },
+        {
+          "name": "Stewart Greens",
+          "totalSold": 1,
+          "totalVol": 730000,
+          "totalOL": 1,
+          "avgCDOM": 32.0,
+          "avgSPLP": 101.4,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 1,
+              "avgSP": 730000,
+              "avgSPLP": 101.4,
+              "avgCDOM": 32.0,
+              "totalVol": 730000
+            }
+          }
+        },
+        {
+          "name": "Terrace Heights (Edmonton)",
+          "totalSold": 1,
+          "totalVol": 127000,
+          "totalOL": 0,
+          "avgCDOM": 70.0,
+          "avgSPLP": 94.1,
+          "types": {
+            "Apartment Condo": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 127000,
+              "avgSPLP": 94.1,
+              "avgCDOM": 70.0,
+              "totalVol": 127000
+            }
+          }
+        },
+        {
+          "name": "Thorncliffe (Edmonton)",
+          "totalSold": 1,
+          "totalVol": 395000,
+          "totalOL": 0,
+          "avgCDOM": 157.0,
+          "avgSPLP": 94.1,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 395000,
+              "avgSPLP": 94.1,
+              "avgCDOM": 157.0,
+              "totalVol": 395000
+            }
+          }
+        },
+        {
+          "name": "York",
+          "totalSold": 1,
+          "totalVol": 399000,
+          "totalOL": 0,
+          "avgCDOM": 18.0,
+          "avgSPLP": 99.8,
+          "types": {
+            "Detached": {
+              "sold": 1,
+              "overList": 0,
+              "avgSP": 399000,
+              "avgSPLP": 99.8,
+              "avgCDOM": 18.0,
+              "totalVol": 399000
             }
           }
         }

@@ -962,6 +962,18 @@ function renderTable(){
 // --- Initialize: load data and render ---
 allData = NEIGHBOURHOOD_DATA;
 {
+    // Cap the dashboard to the most recent 12 months of data.
+    // The data file may accumulate more months over time; only the
+    // latest 12 are ever displayed (month label, summary views, the
+    // "NM Summary" count, etc.).
+    const MONTHS_TO_DISPLAY = 12;
+    const sortedKeys = Object.keys(allData.months).sort();
+    if (sortedKeys.length > MONTHS_TO_DISPLAY) {
+        const keep = sortedKeys.slice(-MONTHS_TO_DISPLAY);
+        const trimmed = {};
+        keep.forEach(k => { trimmed[k] = allData.months[k]; });
+        allData = { ...allData, months: trimmed, lastUpdated: keep[keep.length - 1] };
+    }
     // Always show most recent month
     loadMonth(allData.lastUpdated);
 }
